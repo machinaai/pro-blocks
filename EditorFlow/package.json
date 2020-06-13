@@ -1,0 +1,37 @@
+{
+  "name": "@pro-blocks/flow",
+  "version": "0.0.1",
+  "description": "Mil palabras no son tan buenas como una imagen. Un diagrama de flujo es la mejor manera de expresar la idea de un algoritmo.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/flow"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.0.0",
+    "@antv/data-set": "^0.11.0",
+    "bizcharts": "^3.5.3-beta.0",
+    "bizcharts-plugin-slider": "^2.1.1-beta.1",
+    "gg-editor": "^2.0.2",
+    "moment": "^2.22.2",
+    "numeral": "^2.0.6",
+    "react-fittext": "^1.0.0",
+    "umi-request": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/numeral": "^0.0.25"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

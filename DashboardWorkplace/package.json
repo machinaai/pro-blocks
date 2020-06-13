@@ -1,0 +1,27 @@
+{
+  "name": "@pro-blocks/workplace",
+  "version": "0.0.1",
+  "description": "El banco de trabajo extrae los datos más críticos de cada parte de la aplicación y los presenta en una página, lo cual es conveniente para el análisis global y la toma de decisiones.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/workplace"
+  },
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.0.0",
+    "bizcharts": "^3.5.3-beta.0",
+    "moment": "^2.22.2",
+    "prop-types": "^15.5.10",
+    "umi-request": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@pro-blocks/exception-404",
+  "version": "0.0.1",
+  "description": "404 Not Found En nombre de la solicitud fallida, el recurso solicitado no se encontró en el servidor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/machinaai/pro-blocks/tree/master/Exception404"
+  },
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "umi-request": "^1.0.8"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

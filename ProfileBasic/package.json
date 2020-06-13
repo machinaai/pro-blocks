@@ -1,0 +1,26 @@
+{
+  "name": "@pro-blocks/basic-profile",
+  "version": "0.0.1",
+  "description": "La página de detalles puede mostrar al usuario una descripción completa de un objeto, y puede editar un objeto.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/basicprofile"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "umi-request": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

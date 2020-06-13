@@ -1,0 +1,26 @@
+{
+  "name": "@pro-blocks/result-fail",
+  "version": "0.0.1",
+  "description": "Informe al usuario del resultado de la falla después de la operación y guíe la próxima acción del usuario.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/resultfail"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

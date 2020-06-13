@@ -1,0 +1,484 @@
+{
+  "list": [
+    {
+      "key": "EmptyPage",
+      "name": "Página en blanco",
+      "description": "Una página en blanco, ¡todo comienza aquí!",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/EmptyPage",
+      "path": "NewPage",
+      "features": [
+        "antd"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/EmptyPage/snapshot.png?raw=true",
+      "tags": [
+        "página en blanco"
+      ],
+      "previewUrl": "https://preview.pro.ant.design"
+    },
+    {
+      "name": "Centro personal",
+      "key": "AccountCenter",
+      "description": "El centro personal se usa generalmente para mostrar la información básica de usuarios temporales e información relacionada.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/AccountCenter",
+      "path": "AccountCenter",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/AccountCenter/snapshot.png?raw=true",
+      "tags": [
+        "Centro personal"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/account/center"
+    },
+    {
+      "name": "Configuraciones personales",
+      "key": "AccountSettings",
+      "description": "Por lo general, se usa para que el usuario establezca el nombre, avatar, propósito, privacidad y otra información.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/AccountSettings",
+      "path": "AccountSettings",
+      "features": [
+        "antd",
+        "i18n",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/AccountSettings/snapshot.png?raw=true",
+      "tags": [
+        "Configuraciones personales"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/account/settings"
+    },
+    {
+      "name": "Página de análisis",
+      "key": "DashboardAnalysis",
+      "description": "La presentación de múltiples dimensiones de profundización bajo el mismo tema en la página permite a los usuarios estudiar múltiples conjuntos de datos y descubrir tendencias. Los usuarios pueden manipular los datos y ajustar el rango de datos para satisfacer necesidades de análisis más precisas.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/DashboardAnalysis",
+      "path": "DashboardAnalysis",
+      "features": [
+        "antd",
+        "i18n",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardAnalysis/snapshot.png?raw=true",
+      "tags": [
+        "dashboard"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/dashboard/analysis"
+    },
+    {
+      "name": "Página de monitoreo",
+      "key": "DashboardMonitor",
+      "description": "Se usa para mostrar información detallada de informes de datos, y se puede configurar con texto, listas y gráficos visuales de acuerdo con los requisitos comerciales.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/DashboardMonitor",
+      "path": "DashboardMonitor",
+      "features": [
+        "antd",
+        "i18n",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardMonitor/snapshot.png?raw=true",
+      "tags": [
+        "dashboard"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/dashboard/monitor"
+    },
+    {
+      "name": "Página de trabajo",
+      "key": "DashboardWorkplace",
+      "description": "El banco de trabajo extrae los datos más críticos de cada parte de la aplicación y los presenta en una página, lo cual es conveniente para el análisis global y la toma de decisiones.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/DashboardWorkplace",
+      "path": "DashboardWorkplace",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardWorkplace/snapshot.png?raw=true",
+      "tags": [
+        "dashboard"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/dashboard/workplace"
+    },
+    {
+      "name": "Editor de procesos",
+      "key": "EditorFlow",
+      "description": "Mil palabras no son tan buenas como una imagen. Un diagrama de flujo es la mejor manera de expresar la idea de un algoritmo.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/EditorFlow",
+      "path": "EditorFlow",
+      "features": [
+        "antd",
+        "i18n"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/EditorFlow/snapshot.png?raw=true",
+      "tags": [
+        "Editor gráfico"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/editor/flow"
+    },
+    {
+      "name": "Editor de topología",
+      "key": "EditorKoni",
+      "description": "El diagrama de estructura de topología puede mostrar claramente la estructura de red compuesta por nodos de red y medios de comunicación.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/EditorKoni",
+      "path": "EditorKoni",
+      "features": [
+        "antd",
+        "i18n"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/EditorKoni/snapshot.png?raw=true",
+      "tags": [
+        "Editor gráfico"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/editor/koni"
+    },
+    {
+      "name": "Editor de mapas mentales",
+      "key": "EditorMind",
+      "description": "El mapa emtal es una herramienta efectiva para expresar el pensamiento divergente. Es simple pero muy efectivo. Es una herramienta de visualización muy práctica.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/EditorMind",
+      "path": "EditorMind",
+      "features": [
+        "antd",
+        "i18n"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/EditorMind/snapshot.png?raw=true",
+      "tags": [
+        "Editor gráfico"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/editor/mind"
+    },
+    {
+      "name": "403",
+      "key": "Exception403",
+      "description": "403 Forbidden Representa un error del cliente, que se refiere a la capacidad del servidor para procesar la solicitud, pero niega el acceso autorizado, generalmente causado por permisos anormales.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/Exception403",
+      "path": "Exception403",
+      "features": [
+        "antd"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/Exception403/snapshot.png?raw=true",
+      "tags": [
+        "Excepciones"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/exception/403"
+    },
+    {
+      "name": "404",
+      "key": "Exception404",
+      "description": "404 Not Found En nombre de la solicitud fallida, el recurso solicitado no se encontró en el servidor",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/Exception404",
+      "path": "Exception404",
+      "features": [
+        "antd"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/Exception404/snapshot.png?raw=true",
+      "tags": [
+        "Excepciones"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/exception/404"
+    },
+    {
+      "name": "500",
+      "key": "Exception500",
+      "description": "500 Internal Server Error，Es un código de respuesta que indica un error en el lado del servidor.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/Exception500",
+      "path": "Exception500",
+      "features": [
+        "antd",
+        "i18n"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/Exception500/snapshot.png?raw=true",
+      "tags": [
+        "Excepciones"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/exception/500"
+    },
+    {
+      "name": "Formularios avanzados",
+      "key": "FormAdvancedForm",
+      "description": "Los formularios avanzados a menudo son adecuados para escenarios en los que se ingresan y envían grandes cantidades de datos a la vez.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/FormAdvancedForm",
+      "path": "FormAdvancedForm",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/FormAdvancedForm/snapshot.png?raw=true",
+      "tags": [
+        "Forma",
+        "Avanzado"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/form/advanced/form"
+    },
+    {
+      "name": "Forma básica",
+      "key": "FormBasicForm",
+      "description": "表单页用于向用户收集或验证信息，基础表单常用于数据项较少的表单场景。",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/FormBasicForm",
+      "path": "FormBasicForm",
+      "features": [
+        "antd",
+        "i18n",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/FormBasicForm/snapshot.png?raw=true",
+      "tags": [
+        "Forma",
+        "Básico"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/form/basic/form"
+    },
+    {
+      "name": "Formulario paso a paso",
+      "key": "FormStepForm",
+      "description": "El uso de formularios distribuidos es dividir una tarea de formulario larga o desconocida en múltiples pasos y guiar al usuario a través del escenario.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/FormStepForm",
+      "path": "FormStepForm",
+      "features": [
+        "antd",
+        "i18n",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/FormStepForm/snapshot.png?raw=true",
+      "tags": [
+        "Forma"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/form/step/form"
+    },
+    {
+      "name": "Lista estándar",
+      "key": "ListBasicList",
+      "description": "Utilizado para mostrar un tipo de tema transaccional, los usuarios a menudo usan esta página como una entrada para iniciar una transacción, principalmente buscando artículos navegando.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ListBasicList",
+      "path": "ListBasicList",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListBasicList/snapshot.png?raw=true",
+      "tags": [
+        "Lista",
+        "Básico"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/list/basic/list"
+    },
+    {
+      "name": "Lista de tarjetas",
+      "key": "ListCardList",
+      "description": "La lista de tarjetas se usa generalmente para mostrar una lista con imágenes",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ListCardList",
+      "path": "ListCardList",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListCardList/snapshot.png?raw=true",
+      "tags": [
+        "Lista"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/list/card/list"
+    },
+    {
+      "name": "Lista de búsqueda",
+      "key": "ListSearch",
+      "description": "Una página básica de múltiples pestañas para mostrar listas de búsqueda",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ListSearch",
+      "path": "ListSearch",
+      "features": [
+        "antd"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListSearch/snapshot.png?raw=true",
+      "tags": [
+        "Lista",
+        "Buscar"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/list/search"
+    },
+    {
+      "name": "Lista de búsqueda (aplicación)",
+      "key": "ListSearchApplications",
+      "description": "A menudo se usa para mostrar una gran cantidad de elementos bajo un tema determinado, y proporciona una gran cantidad de funciones de filtrado de datos para ayudar a los usuarios a combinar los datos que necesitan.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ListSearchApplications",
+      "path": "ListSearchApplications",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListSearchApplications/snapshot.png?raw=true",
+      "tags": [
+        "Lista",
+        "Buscar"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/list/search/applications"
+    },
+    {
+      "name": "Lista de búsqueda (artículo)",
+      "key": "ListSearchArticles",
+      "description": "Se usa para mostrar una gran cantidad de elementos bajo un tema determinado, y proporciona una gran cantidad de funciones de filtrado de datos para ayudar a los usuarios a combinar los datos que necesitan.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ListSearchArticles",
+      "path": "ListSearchArticles",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListSearchArticles/snapshot.png?raw=true",
+      "tags": [
+        "Lista",
+        "Buscar"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/list/search/articles"
+    },
+    {
+      "name": "Lista de búsqueda (proyecto)",
+      "key": "ListSearchProjects",
+      "description": "Muestra una gran cantidad de elementos bajo un tema determinado, y proporciona una gran cantidad de funciones de filtrado de datos para ayudar a los usuarios a combinar los datos que necesitan.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ListSearchProjects",
+      "path": "ListSearchProjects",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListSearchProjects/snapshot.png?raw=true",
+      "tags": [
+        "Lista",
+        "Buscar"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/list/search/projects"
+    },
+    {
+      "name": "Formulario de consulta",
+      "key": "ListTableList",
+      "description": "Un formulario estándar para agregar, eliminar, modificar y verificar páginas puede derivar el 80% de las páginas de fondo.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ListTableList",
+      "path": "ListTableList",
+      "features": [
+        "antd"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListTableList/snapshot.png?raw=true",
+      "tags": [
+        "Lista",
+        "Tabla"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/list/table/list"
+    },
+    {
+      "name": "Página de detalles avanzados",
+      "key": "ProfileAdvanced",
+      "description": "Una página de detalles complejos puede mostrar la información básica de un objeto y su información y operaciones relacionadas.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ProfileAdvanced",
+      "path": "ProfileAdvanced",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ProfileAdvanced/snapshot.png?raw=true",
+      "tags": [
+        "Detalles",
+        "Avanzado"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/profile/advanced"
+    },
+    {
+      "name": "Página de detalles básicos",
+      "key": "ProfileBasic",
+      "description": "La página de detalles puede mostrar al usuario una descripción completa de un objeto, y puede editar un objeto.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ProfileBasic",
+      "path": "ProfileBasic",
+      "features": [
+        "antd",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ProfileBasic/snapshot.png?raw=true",
+      "tags": [
+        "Detalles",
+        "Básico"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/profile/basic"
+    },
+    {
+      "name": "Página de falla",
+      "key": "ResultFail",
+      "description": "Informe al usuario del resultado de la falla después de la operación y guíe la próxima acción del usuario.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ResultFail",
+      "path": "ResultFail",
+      "features": [
+        "antd",
+        "i18n"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ResultFail/snapshot.png?raw=true",
+      "tags": [
+        "Resultado"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/result/fail"
+    },
+    {
+      "name": "Página de éxito",
+      "key": "ResultSuccess",
+      "description": "Informa al usuario de los resultados exitosos después de la operación y guía las próximas acciones del usuario.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/ResultSuccess",
+      "path": "ResultSuccess",
+      "features": [
+        "antd",
+        "i18n"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ResultSuccess/snapshot.png?raw=true",
+      "tags": [
+        "Resultado"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/result/success"
+    },
+    {
+      "name": "Página de inicio de sesión",
+      "key": "UserLogin",
+      "description": "Interfaz de inicio de sesión de usuario, contraseña de nombre de usuario de soporte e inicio de sesión de número de teléfono móvil.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/UserLogin",
+      "path": "UserLogin",
+      "features": [
+        "antd",
+        "i18n",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/UserLogin/snapshot.png?raw=true",
+      "tags": [
+        "Usuario",
+        "iniciar sesión"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/user/login"
+    },
+    {
+      "name": "Página de registro",
+      "key": "UserRegister",
+      "description": "Se utiliza para el registro de usuarios para completar la información básica de la cuenta.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/UserRegister",
+      "path": "UserRegister",
+      "features": [
+        "antd",
+        "i18n",
+        "dva"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/UserRegister/snapshot.png?raw=true",
+      "tags": [
+        "Usuario",
+        "resitrar"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/user/register"
+    },
+    {
+      "name": "Página de resultados de registro",
+      "key": "UserRegisterResult",
+      "description": "Se usa para mostrar los resultados del registro.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/UserRegisterResult",
+      "path": "UserRegisterResult",
+      "features": [
+        "antd",
+        "i18n"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/UserRegisterResult/snapshot.png?raw=true",
+      "tags": [
+        "Usuario",
+        "resitrar",
+        "Resultado"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/user/register/result"
+    }
+  ]
+}

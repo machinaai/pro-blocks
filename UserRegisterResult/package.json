@@ -1,0 +1,24 @@
+{
+  "name": "@pro-blocks/user-register-result",
+  "version": "0.0.1",
+  "description": "Se usa para mostrar los resultados del registro.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/userregisterresult"
+  },
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react-router": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/react-router": "^5.0.2"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

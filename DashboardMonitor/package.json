@@ -1,0 +1,40 @@
+{
+  "name": "@pro-blocks/monitor",
+  "version": "0.0.1",
+  "description": "Se usa para mostrar información detallada de informes de datos, y se puede configurar con texto, listas y gráficos visuales de acuerdo con los requisitos comerciales.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/monitor"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.0.0",
+    "@antv/data-set": "^0.11.0",
+    "@antv/l7-react": "^2.1.9",
+    "@types/lodash.debounce": "^4.0.6",
+    "bizcharts": "^3.5.3-beta.0",
+    "bizcharts-plugin-slider": "^2.1.1-beta.1",
+    "classnames": "^2.2.6",
+    "lodash.debounce": "^4.0.8",
+    "mockjs": "^1.0.1-beta3",
+    "numeral": "^2.0.6",
+    "react-fittext": "^1.0.0",
+    "umi-request": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/numeral": "^0.0.25"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

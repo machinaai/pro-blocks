@@ -1,0 +1,36 @@
+{
+  "name": "@pro-blocks/flow",
+  "version": "0.0.1",
+  "description": "El diagrama de estructura de topología puede mostrar claramente la estructura de red compuesta por nodos de red y medios de comunicación.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/flow"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "@antv/data-set": "^0.11.0",
+    "bizcharts": "^3.5.3-beta.0",
+    "bizcharts-plugin-slider": "^2.1.1-beta.1",
+    "gg-editor": "^2.0.2",
+    "moment": "^2.22.2",
+    "numeral": "^2.0.6",
+    "react-fittext": "^1.0.0",
+    "umi-request": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/numeral": "^0.0.25"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}

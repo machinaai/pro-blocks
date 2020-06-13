@@ -1,0 +1,39 @@
+{
+  "name": "@pro-blocks/analysis",
+  "version": "0.0.1",
+  "description": "La presentación de múltiples dimensiones de profundización bajo el mismo tema en la página permite a los usuarios estudiar múltiples conjuntos de datos y descubrir tendencias. Los usuarios pueden manipular los datos y ajustar el rango de datos para satisfacer necesidades de análisis más precisas.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/analysis"
+  },
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.0.0",
+    "@antv/data-set": "^0.11.0",
+    "@types/lodash.debounce": "^4.0.6",
+    "bizcharts": "^3.5.3-beta.0",
+    "bizcharts-plugin-slider": "^2.1.1-beta.1",
+    "classnames": "^2.2.6",
+    "lodash.debounce": "^4.0.8",
+    "moment": "^2.22.2",
+    "numeral": "^2.0.6",
+    "react-fittext": "^1.0.0",
+    "umi-request": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/numeral": "^0.0.25"
+  },
+  "peerDependencies": {
+    "@ant-design/pro-layout": "^4.5.5"
+  },
+  "blockConfig": {
+    "specVersion": "0.1"
+  }
+}
