@@ -4,7 +4,7 @@
   "description": "Se utiliza para el registro de usuarios para completar la información básica de la cuenta.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/userregister"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/userregister"
   },
   "license": "MIT",
   "main": "src/index.js",

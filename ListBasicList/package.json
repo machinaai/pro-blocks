@@ -4,11 +4,11 @@
   "description": "Utilizado para mostrar un tipo de tema transaccional, los usuarios a menudo usan esta página como una entrada para iniciar una transacción, principalmente buscando artículos navegando.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/basiclist"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/basiclist"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

@@ -4,11 +4,11 @@
   "description": "Una página básica de múltiples pestañas para mostrar listas de búsqueda",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/searchlistapplications"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/searchlistapplications"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

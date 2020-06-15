@@ -4,11 +4,11 @@
   "description": "La presentación de múltiples dimensiones de profundización bajo el mismo tema en la página permite a los usuarios estudiar múltiples conjuntos de datos y descubrir tendencias. Los usuarios pueden manipular los datos y ajustar el rango de datos para satisfacer necesidades de análisis más precisas.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/analysis"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/analysis"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

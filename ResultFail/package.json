@@ -4,11 +4,11 @@
   "description": "Informe al usuario del resultado de la falla después de la operación y guíe la próxima acción del usuario.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/resultfail"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/resultfail"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

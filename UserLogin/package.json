@@ -4,7 +4,7 @@
   "description": "Interfaz de inicio de sesión de usuario, contraseña de nombre de usuario de soporte e inicio de sesión de número de teléfono móvil.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/userlogin"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/userlogin"
   },
   "license": "MIT",
   "main": "src/index.js",

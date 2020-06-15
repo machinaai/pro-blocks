@@ -4,11 +4,11 @@
   "description": "El uso de formularios distribuidos es dividir una tarea de formulario larga o desconocida en múltiples pasos y guiar al usuario a través del escenario.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/stepform"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/stepform"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

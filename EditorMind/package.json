@@ -4,11 +4,11 @@
   "description": "El mapa emtal es una herramienta efectiva para expresar el pensamiento divergente. Es simple pero muy efectivo. Es una herramienta de visualización muy práctica.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/flow"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/flow"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

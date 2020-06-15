@@ -1,14 +1,14 @@
 {
   "name": "@pro-blocks/basic-form",
   "version": "0.0.1",
-  "description": "表单页用于向用户收集或验证信息，基础表单常用于数据项较少的表单场景。",
+  "description": "Las páginas de formulario se usan para recopilar o verificar información de los usuarios, y los formularios básicos a menudo se usan en escenarios de formulario con menos elementos de datos.",
   "main": "src/index.js",
   "scripts": {
     "dev": "umi dev"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/basicform"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/basicform"
   },
   "dependencies": {
     "@ant-design/icons": "^4.0.0",
@@ -19,7 +19,7 @@
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "blockConfig": {
     "specVersion": "0.1"

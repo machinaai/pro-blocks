@@ -4,11 +4,11 @@
   "description": "Los formularios avanzados a menudo son adecuados para escenarios en los que se ingresan y envían grandes cantidades de datos a la vez.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/advancedform"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/advancedform"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

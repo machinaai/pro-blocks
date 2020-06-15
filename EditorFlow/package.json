@@ -4,11 +4,11 @@
   "description": "Mil palabras no son tan buenas como una imagen. Un diagrama de flujo es la mejor manera de expresar la idea de un algoritmo.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/flow"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/flow"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

@@ -4,11 +4,11 @@
   "description": "Informa al usuario de los resultados exitosos después de la operación y guía las próximas acciones del usuario.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/resultsuccess"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/resultsuccess"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

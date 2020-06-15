@@ -4,11 +4,11 @@
   "description": "El centro personal se usa generalmente para mostrar la información básica de usuarios temporales e información relacionada.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/accountcenter"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/accountcenter"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

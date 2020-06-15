@@ -4,11 +4,11 @@
   "description": "Se usa para mostrar información detallada de informes de datos, y se puede configurar con texto, listas y gráficos visuales de acuerdo con los requisitos comerciales.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/monitor"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/monitor"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

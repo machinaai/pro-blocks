@@ -4,11 +4,11 @@
   "description": "Un formulario estándar para agregar, eliminar, modificar y verificar páginas puede derivar el 80% de las páginas de fondo.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/tablelist"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/tablelist"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

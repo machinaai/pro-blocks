@@ -4,11 +4,11 @@
   "description": "El diagrama de estructura de topología puede mostrar claramente la estructura de red compuesta por nodos de red y medios de comunicación.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/flow"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/flow"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

@@ -4,11 +4,11 @@
   "description": "La lista de tarjetas se usa generalmente para mostrar una lista con imágenes",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/cardlist"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/cardlist"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

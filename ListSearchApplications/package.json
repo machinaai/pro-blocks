@@ -4,11 +4,11 @@
   "description": "A menudo se usa para mostrar una gran cantidad de elementos bajo un tema determinado, y proporciona una gran cantidad de funciones de filtrado de datos para ayudar a los usuarios a combinar los datos que necesitan.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/searchlistapplications"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/searchlistapplications"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

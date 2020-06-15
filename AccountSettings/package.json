@@ -4,11 +4,11 @@
   "description": "Por lo general, se usa para que el usuario establezca el nombre, avatar, propósito, privacidad y otra información.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/accountsettings"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/accountsettings"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {

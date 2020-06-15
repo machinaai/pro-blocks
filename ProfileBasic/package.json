@@ -4,11 +4,11 @@
   "description": "La página de detalles puede mostrar al usuario una descripción completa de un objeto, y puede editar un objeto.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/umi-blocks/ant-design-pro/basicprofile"
+    "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/basicprofile"
   },
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/machinaai"
   },
   "main": "src/index.js",
   "scripts": {
