@@ -10,7 +10,7 @@ import styles from './BaseView.less';
 
 const { Option } = Select;
 
-// 头像组件 方便以后独立，增加裁剪之类的功能
+// El componente avatar es conveniente para la independencia futura y agrega funciones como el recorte
 const AvatarView = ({ avatar }: { avatar: string }) => (
   <>
     <div className={styles.avatar_title}>
@@ -152,7 +152,7 @@ class BaseView extends Component<BaseViewProps> {
               ]}
             >
               <Select style={{ maxWidth: 220 }}>
-                <Option value="China">中国</Option>
+                <Option value="Mexico">México</Option>
               </Select>
             </Form.Item>
             <Form.Item

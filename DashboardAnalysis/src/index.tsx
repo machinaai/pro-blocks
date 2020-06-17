@@ -141,8 +141,8 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     }
     const menu = (
       <Menu>
-        <Menu.Item>操作一</Menu.Item>
-        <Menu.Item>操作二</Menu.Item>
+        <Menu.Item>Option 1</Menu.Item>
+        <Menu.Item>Option 2</Menu.Item>
       </Menu>
     );
 

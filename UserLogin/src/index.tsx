@@ -46,84 +46,84 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
   return (
     <div className={styles.main}>
       <LoginFrom activeKey={type} onTabChange={setType} onSubmit={handleSubmit}>
-        <Tab key="account" tab="账户密码登录">
+        <Tab key="account" tab="Inicio de sesión con contraseña">
           {status === 'error' && loginType === 'account' && !submitting && (
-            <LoginMessage content="账户或密码错误（admin/ant.design）" />
+            <LoginMessage content="Cuenta o contraseña incorrecta（admin/machina.ai）" />
           )}
 
           <UserName
             name="userName"
-            placeholder="用户名: admin or user"
+            placeholder="nombre de usuario: admin or user"
             rules={[
               {
                 required: true,
-                message: '请输入用户名!',
+                message: 'por favor ingrese el nombre de usuario!',
               },
             ]}
           />
           <Password
             name="password"
-            placeholder="密码: ant.design"
+            placeholder="password: machina.ai"
             rules={[
               {
                 required: true,
-                message: '请输入密码！',
+                message: '¡Por favor introduzca la contraseña!',
               },
             ]}
           />
         </Tab>
-        <Tab key="mobile" tab="手机号登录">
+        <Tab key="mobile" tab="Inicio de sesión móvil">
           {status === 'error' && loginType === 'mobile' && !submitting && (
-            <LoginMessage content="验证码错误" />
+            <LoginMessage content="Error de código de verificación" />
           )}
           <Mobile
             name="mobile"
-            placeholder="手机号"
+            placeholder="número de teléfono"
             rules={[
               {
                 required: true,
-                message: '请输入手机号！',
+                message: 'Por favor, introduzca el número de teléfono!',
               },
               {
                 pattern: /^1\d{10}$/,
-                message: '手机号格式错误！',
+                message: '¡Número de teléfono mal formado!',
               },
             ]}
           />
           <Captcha
             name="captcha"
-            placeholder="验证码"
+            placeholder="Captcha"
             countDown={120}
             getCaptchaButtonText=""
-            getCaptchaSecondText="秒"
+            getCaptchaSecondText="verificación"
             rules={[
               {
                 required: true,
-                message: '请输入验证码！',
+                message: 'por favor ingrese el código de verificación!',
               },
             ]}
           />
         </Tab>
         <div>
           <Checkbox checked={autoLogin} onChange={(e) => setAutoLogin(e.target.checked)}>
-            自动登录
+          recordar
           </Checkbox>
           <a
             style={{
               float: 'right',
             }}
           >
-            忘记密码
+            recuperar contraseña
           </a>
         </div>
-        <Submit loading={submitting}>登录</Submit>
+        <Submit loading={submitting}>iniciar sesión</Submit>
         <div className={styles.other}>
-          其他登录方式
+          Otros métodos de inicio de sesión
           <AlipayCircleOutlined className={styles.icon} />
           <TaobaoCircleOutlined className={styles.icon} />
           <WeiboCircleOutlined className={styles.icon} />
           <Link className={styles.register} to="/user/register">
-            注册账户
+          Registrar Cuenta
           </Link>
         </div>
       </LoginFrom>

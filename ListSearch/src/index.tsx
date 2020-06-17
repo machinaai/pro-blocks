@@ -52,23 +52,23 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
     const tabList = [
       {
         key: 'articles',
-        tab: '文章',
+        tab: 'artículo',
       },
       {
         key: 'projects',
-        tab: '项目',
+        tab: 'proyecto',
       },
       {
         key: 'applications',
-        tab: '应用',
+        tab: 'solicitud',
       },
     ];
 
     const mainSearch = (
       <div style={{ textAlign: 'center' }}>
         <Input.Search
-          placeholder="请输入"
-          enterButton="搜索"
+          placeholder="por favor escribe"
+          enterButton="buscar"
           size="large"
           onSearch={this.handleFormSubmit}
           style={{ maxWidth: 522, width: '100%' }}

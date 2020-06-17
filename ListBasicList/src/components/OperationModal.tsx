@@ -51,18 +51,18 @@ const OperationModal: FC<OperationModalProps> = (props) => {
 
   const modalFooter = done
     ? { footer: null, onCancel: onDone }
-    : { okText: '保存', onOk: handleSubmit, onCancel };
+    : { okText: 'Salvar', onOk: handleSubmit, onCancel };
 
   const getModalContent = () => {
     if (done) {
       return (
         <Result
           status="success"
-          title="操作成功"
-          subTitle="一系列的信息描述，很短同样也可以带标点。"
+          title="Operación exitosa"
+          subTitle="Una serie de descripciones de información que son cortas y que también pueden puntuarse."
           extra={
             <Button type="primary" onClick={onDone}>
-              知道了
+              entendido
             </Button>
           }
           className={styles.formResult}
@@ -73,39 +73,39 @@ const OperationModal: FC<OperationModalProps> = (props) => {
       <Form {...formLayout} form={form} onFinish={handleFinish}>
         <Form.Item
           name="title"
-          label="任务名称"
-          rules={[{ required: true, message: '请输入任务名称' }]}
+          label="nombre de la tarea"
+          rules={[{ required: true, message: 'Por favor ingrese un nombre de tarea' }]}
         >
-          <Input placeholder="请输入" />
+          <Input placeholder="por favor escribe" />
         </Form.Item>
         <Form.Item
           name="createdAt"
-          label="开始时间"
-          rules={[{ required: true, message: '请选择开始时间' }]}
+          label="Iniciado en"
+          rules={[{ required: true, message: 'Por favor seleccione una hora de inicio' }]}
         >
           <DatePicker
             showTime
-            placeholder="请选择"
+            placeholder="por favor elige"
             format="YYYY-MM-DD HH:mm:ss"
             style={{ width: '100%' }}
           />
         </Form.Item>
         <Form.Item
           name="owner"
-          label="任务负责人"
-          rules={[{ required: true, message: '请选择任务负责人' }]}
+          label="Líder de la tarea"
+          rules={[{ required: true, message: 'Por favor seleccione la persona a cargo' }]}
         >
-          <Select placeholder="请选择">
-            <Select.Option value="付晓晓">付晓晓</Select.Option>
-            <Select.Option value="周毛毛">周毛毛</Select.Option>
+          <Select placeholder="por favor elige">
+            <Select.Option value="hernandez">Hernández</Select.Option>
+            <Select.Option value="lopez">López</Select.Option>
           </Select>
         </Form.Item>
         <Form.Item
           name="subDescription"
-          label="产品描述"
-          rules={[{ message: '请输入至少五个字符的产品描述！', min: 5 }]}
+          label="Descripción del producto"
+          rules={[{ message: '¡Ingrese una descripción del producto de al menos cinco caracteres!', min: 5 }]}
         >
-          <TextArea rows={4} placeholder="请输入至少五个字符" />
+          <TextArea rows={4} placeholder="Por favor ingrese al menos cinco caracteres" />
         </Form.Item>
       </Form>
     );
@@ -113,7 +113,7 @@ const OperationModal: FC<OperationModalProps> = (props) => {
 
   return (
     <Modal
-      title={done ? null : `任务${current ? '编辑' : '添加'}`}
+      title={done ? null : `tarea${current ? 'editar' : 'añadir'}`}
       className={styles.standardListForm}
       width={640}
       bodyStyle={done ? { padding: '72px 0' } : { padding: '28px 0 0' }}

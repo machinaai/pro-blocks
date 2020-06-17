@@ -53,7 +53,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
                           defaultMessage="Total transactions today"
                         />
                       }
-                      suffix="元"
+                      suffix="$"
                       value={numeral(124543233).format('0,0')}
                     />
                   </Col>
@@ -88,7 +88,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
                           defaultMessage="Total transactions per second"
                         />
                       }
-                      suffix="元"
+                      suffix="$"
                       value={numeral(234).format('0,0')}
                     />
                   </Col>

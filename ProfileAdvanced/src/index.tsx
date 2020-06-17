@@ -32,19 +32,19 @@ const ButtonGroup = Button.Group;
 
 const menu = (
   <Menu>
-    <Menu.Item key="1">选项一</Menu.Item>
-    <Menu.Item key="2">选项二</Menu.Item>
-    <Menu.Item key="3">选项三</Menu.Item>
+    <Menu.Item key="1">Opción 1</Menu.Item>
+    <Menu.Item key="2">Opción 2</Menu.Item>
+    <Menu.Item key="3">Opción 3</Menu.Item>
   </Menu>
 );
 
 const mobileMenu = (
   <Menu>
-    <Menu.Item key="1">操作一</Menu.Item>
-    <Menu.Item key="2">操作二</Menu.Item>
-    <Menu.Item key="3">选项一</Menu.Item>
-    <Menu.Item key="4">选项二</Menu.Item>
-    <Menu.Item key="">选项三</Menu.Item>
+    <Menu.Item key="1">Operación 1</Menu.Item>
+    <Menu.Item key="2">Operación 2</Menu.Item>
+    <Menu.Item key="3">Operación 3</Menu.Item>
+    <Menu.Item key="4">Operación 4</Menu.Item>
+    <Menu.Item key="5">Operación 5</Menu.Item>
   </Menu>
 );
 
@@ -59,22 +59,22 @@ const action = (
             overlay={mobileMenu}
             placement="bottomRight"
           >
-            主操作
+            Operación principal
           </Dropdown.Button>
         );
       }
       return (
         <Fragment>
           <ButtonGroup>
-            <Button>操作一</Button>
-            <Button>操作二</Button>
+            <Button>Operación 1</Button>
+            <Button>Operación 2</Button>
             <Dropdown overlay={menu} placement="bottomRight">
               <Button>
                 <EllipsisOutlined />
               </Button>
             </Dropdown>
           </ButtonGroup>
-          <Button type="primary">主操作</Button>
+          <Button type="primary">Operación principal</Button>
         </Fragment>
       );
     }}
@@ -83,8 +83,8 @@ const action = (
 
 const extra = (
   <div className={styles.moreInfo}>
-    <Statistic title="状态" value="待审批" />
-    <Statistic title="订单金额" value={568.08} prefix="¥" />
+    <Statistic title="estado" value="estado" />
+    <Statistic title="Total de la orden" value={568.08} prefix="$" />
   </div>
 );
 
@@ -92,14 +92,14 @@ const description = (
   <RouteContext.Consumer>
     {({ isMobile }) => (
       <Descriptions className={styles.headerList} size="small" column={isMobile ? 1 : 2}>
-        <Descriptions.Item label="创建人">曲丽丽</Descriptions.Item>
-        <Descriptions.Item label="订购产品">XX 服务</Descriptions.Item>
-        <Descriptions.Item label="创建时间">2017-07-07</Descriptions.Item>
-        <Descriptions.Item label="关联单据">
+        <Descriptions.Item label="fundador">Alejandro Hernández</Descriptions.Item>
+        <Descriptions.Item label="Pedido de productos">XX Servicio</Descriptions.Item>
+        <Descriptions.Item label="Tiempo de creación">2017-07-07</Descriptions.Item>
+        <Descriptions.Item label="Documentos relacionados">
           <a href="">12421</a>
         </Descriptions.Item>
-        <Descriptions.Item label="生效日期">2017-07-07 ~ 2017-08-08</Descriptions.Item>
-        <Descriptions.Item label="备注">请于两个工作日内确认</Descriptions.Item>
+        <Descriptions.Item label="Fecha efectiva">2017-07-07 ~ 2017-08-08</Descriptions.Item>
+        <Descriptions.Item label="Observaciones">Por favor confirme dentro de dos días hábiles</Descriptions.Item>
       </Descriptions>
     )}
   </RouteContext.Consumer>
@@ -108,7 +108,7 @@ const description = (
 const desc1 = (
   <div className={classNames(styles.textSecondary, styles.stepDescription)}>
     <Fragment>
-      曲丽丽
+      Alejandro Henández
       <DingdingOutlined style={{ marginLeft: 8 }} />
     </Fragment>
     <div>2016-12-12 12:32</div>
@@ -118,23 +118,23 @@ const desc1 = (
 const desc2 = (
   <div className={styles.stepDescription}>
     <Fragment>
-      周毛毛
+      Arturo López
       <DingdingOutlined style={{ color: '#00A0E9', marginLeft: 8 }} />
     </Fragment>
     <div>
-      <a href="">催一下</a>
+      <a href="">Prisa</a>
     </div>
   </div>
 );
 
 const popoverContent = (
   <div style={{ width: 160 }}>
-    吴加号
+    Nombre del recurso
     <span className={styles.textSecondary} style={{ float: 'right' }}>
-      <Badge status="default" text={<span style={{ color: 'rgba(0, 0, 0, 0.45)' }}>未响应</span>} />
+      <Badge status="default" text={<span style={{ color: 'rgba(0, 0, 0, 0.45)' }}>Ninguna respuesta</span>} />
     </span>
     <div className={styles.textSecondary} style={{ marginTop: 4 }}>
-      耗时：2小时25分钟
+      Consumo de tiempo: 2 horas y 25 minutos.
     </div>
   </div>
 );
@@ -160,47 +160,47 @@ const customDot = (
 const operationTabList = [
   {
     key: 'tab1',
-    tab: '操作日志一',
+    tab: 'Registro de operación 1',
   },
   {
     key: 'tab2',
-    tab: '操作日志二',
+    tab: 'Registro de operación 2',
   },
   {
     key: 'tab3',
-    tab: '操作日志三',
+    tab: 'Registro de operación 3',
   },
 ];
 
 const columns = [
   {
-    title: '操作类型',
+    title: 'Tipo de operación',
     dataIndex: 'type',
     key: 'type',
   },
   {
-    title: '操作人',
+    title: 'Operador',
     dataIndex: 'name',
     key: 'name',
   },
   {
-    title: '执行结果',
+    title: 'Resultados ',
     dataIndex: 'status',
     key: 'status',
     render: (text: string) => {
       if (text === 'agree') {
-        return <Badge status="success" text="成功" />;
+        return <Badge status="success" text="exitoso" />;
       }
-      return <Badge status="error" text="驳回" />;
+      return <Badge status="error" text="error" />;
     },
   },
   {
-    title: '操作时间',
+    title: 'Hora de actualización',
     dataIndex: 'updatedAt',
     key: 'updatedAt',
   },
   {
-    title: '备注',
+    title: 'Observaciones',
     dataIndex: 'memo',
     key: 'memo',
   },
@@ -267,7 +267,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     };
     return (
       <PageHeaderWrapper
-        title="单号：234231029431"
+        title="Id：234231029431"
         extra={action}
         className={styles.pageHeader}
         content={description}
@@ -277,17 +277,17 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
         tabList={[
           {
             key: 'detail',
-            tab: '详情',
+            tab: 'Detalles',
           },
           {
             key: 'rule',
-            tab: '规则',
+            tab: 'regla',
           },
         ]}
       >
         <div className={styles.main}>
           <GridContent>
-            <Card title="流程进度" style={{ marginBottom: 24 }}>
+            <Card title="Progreso del proceso" style={{ marginBottom: 24 }}>
               <RouteContext.Consumer>
                 {({ isMobile }) => (
                   <Steps
@@ -295,32 +295,32 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
                     progressDot={customDot}
                     current={1}
                   >
-                    <Step title="创建项目" description={desc1} />
-                    <Step title="部门初审" description={desc2} />
-                    <Step title="财务复核" />
-                    <Step title="完成" />
+                    <Step title="Crear proyecto" description={desc1} />
+                    <Step title="Examen preliminar departamental" description={desc2} />
+                    <Step title="Revisión financiera" />
+                    <Step title="Aplicar" />
                   </Steps>
                 )}
               </RouteContext.Consumer>
             </Card>
-            <Card title="用户信息" style={{ marginBottom: 24 }} bordered={false}>
+            <Card title="Información de usuario" style={{ marginBottom: 24 }} bordered={false}>
               <Descriptions style={{ marginBottom: 24 }}>
-                <Descriptions.Item label="用户姓名">付小小</Descriptions.Item>
-                <Descriptions.Item label="会员卡号">32943898021309809423</Descriptions.Item>
-                <Descriptions.Item label="身份证">3321944288191034921</Descriptions.Item>
-                <Descriptions.Item label="联系方式">18112345678</Descriptions.Item>
-                <Descriptions.Item label="联系地址">
-                  曲丽丽 18100000000 浙江省杭州市西湖区黄姑山路工专路交叉路口
+                <Descriptions.Item label="nombre de usuario">Sunana</Descriptions.Item>
+                <Descriptions.Item label="número de tarjeta de miembro">32943898021309809423</Descriptions.Item>
+                <Descriptions.Item label="tarjeta de identificación">3321944288191034921</Descriptions.Item>
+                <Descriptions.Item label="Contacto">18112345678</Descriptions.Item>
+                <Descriptions.Item label="dirección de contacto">
+                  Calzada de las bombas 456 interior 4
                 </Descriptions.Item>
               </Descriptions>
-              <Descriptions style={{ marginBottom: 24 }} title="信息组">
-                <Descriptions.Item label="某某数据">725</Descriptions.Item>
-                <Descriptions.Item label="该数据更新时间">2017-08-08</Descriptions.Item>
+              <Descriptions style={{ marginBottom: 24 }} title="Grupo de información">
+                <Descriptions.Item label="Datos XX">725</Descriptions.Item>
+                <Descriptions.Item label="Actualización de los datos">2017-08-08</Descriptions.Item>
                 <Descriptions.Item
                   label={
                     <span>
-                      某某数据
-                      <Tooltip title="数据说明">
+                      Datos XX
+                      <Tooltip title="los datos muestran">
                         <InfoCircleOutlined
                           style={{ color: 'rgba(0, 0, 0, 0.43)', marginLeft: 4 }}
                         />
@@ -330,34 +330,34 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
                 >
                   725
                 </Descriptions.Item>
-                <Descriptions.Item label="该数据更新时间">2017-08-08</Descriptions.Item>
+                <Descriptions.Item label="Actialización de los datos">2017-08-08</Descriptions.Item>
               </Descriptions>
-              <h4 style={{ marginBottom: 16 }}>信息组</h4>
-              <Card type="inner" title="多层级信息组">
-                <Descriptions style={{ marginBottom: 16 }} title="组名称">
-                  <Descriptions.Item label="负责人">林东东</Descriptions.Item>
-                  <Descriptions.Item label="角色码">1234567</Descriptions.Item>
-                  <Descriptions.Item label="所属部门">XX公司 - YY部</Descriptions.Item>
-                  <Descriptions.Item label="过期时间">2017-08-08</Descriptions.Item>
-                  <Descriptions.Item label="描述">
-                    这段描述很长很长很长很长很长很长很长很长很长很长很长很长很长很长...
+              <h4 style={{ marginBottom: 16 }}>Grupo de información</h4>
+              <Card type="inner" title="Grupo de información multinivel">
+                <Descriptions style={{ marginBottom: 16 }} title="Nombre del grupo">
+                  <Descriptions.Item label="principal">Nombre del Grupo</Descriptions.Item>
+                  <Descriptions.Item label="id">1234567</Descriptions.Item>
+                  <Descriptions.Item label="Departamento">compañia XX - unidad YY</Descriptions.Item>
+                  <Descriptions.Item label="fecha de caducidad">2017-08-08</Descriptions.Item>
+                  <Descriptions.Item label="descripción">
+                   Esta descripción es muy larga, muy larga, muy larga, muy larga, muy larga, muy larga, muy larga, muy larga, muy larga, muy larga, muy larga...
                   </Descriptions.Item>
                 </Descriptions>
                 <Divider style={{ margin: '16px 0' }} />
-                <Descriptions style={{ marginBottom: 16 }} title="组名称" column={1}>
-                  <Descriptions.Item label="学名">
+                <Descriptions style={{ marginBottom: 16 }} title="Nombre del grupo" column={1}>
+                  <Descriptions.Item label="nombre científico">
                     Citrullus lanatus (Thunb.) Matsum. et
-                    Nakai一年生蔓生藤本；茎、枝粗壮，具明显的棱。卷须较粗..
+                    Nakai cultiva vides anualmente; los tallos y ramas son gruesos y tienen bordes obvios. Zarcillos gruesos..
                   </Descriptions.Item>
                 </Descriptions>
                 <Divider style={{ margin: '16px 0' }} />
-                <Descriptions title="组名称">
-                  <Descriptions.Item label="负责人">付小小</Descriptions.Item>
-                  <Descriptions.Item label="角色码">1234568</Descriptions.Item>
+                <Descriptions title="Nombre del grupo">
+                  <Descriptions.Item label="principal">Grupo Uno</Descriptions.Item>
+                  <Descriptions.Item label="id">1234568</Descriptions.Item>
                 </Descriptions>
               </Card>
             </Card>
-            <Card title="用户近半年来电记录" style={{ marginBottom: 24 }} bordered={false}>
+            <Card title="Historial de llamadas de usuarios en los últimos seis meses." style={{ marginBottom: 24 }} bordered={false}>
               <Empty />
             </Card>
             <Card

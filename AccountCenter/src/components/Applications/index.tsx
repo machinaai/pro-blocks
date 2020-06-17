@@ -30,7 +30,7 @@ export function formatWan(val: number) {
             marginLeft: 2,
           }}
         >
-          万
+          k
         </span>
       </span>
     );
@@ -65,11 +65,11 @@ const Applications: React.FC<Partial<ModalState>> = (props) => {
   }> = ({ activeUser, newUser }) => (
     <div className={stylesApplications.cardInfo}>
       <div>
-        <p>活跃用户</p>
+        <p>usuario activo</p>
         <p>{activeUser}</p>
       </div>
       <div>
-        <p>新增用户</p>
+        <p>Usuario nuevo</p>
         <p>{newUser}</p>
       </div>
     </div>
@@ -94,13 +94,13 @@ const Applications: React.FC<Partial<ModalState>> = (props) => {
             hoverable
             bodyStyle={{ paddingBottom: 20 }}
             actions={[
-              <Tooltip key="download" title="下载">
+              <Tooltip key="download" title="descargar">
                 <DownloadOutlined />
               </Tooltip>,
-              <Tooltip title="编辑" key="edit">
+              <Tooltip title="editar" key="editar">
                 <EditOutlined />
               </Tooltip>,
-              <Tooltip title="分享" key="share">
+              <Tooltip title="compartir" key="compartir">
                 <ShareAltOutlined />
               </Tooltip>,
               <Dropdown overlay={itemMenu} key="ellipsis">

@@ -115,9 +115,9 @@ class Pie extends Component<PieProps, PieState> {
   // for custom lengend view
   getLegendData = () => {
     if (!this.chart) return;
-    const geom = this.chart.getAllGeoms()[0]; // 获取所有的图形
+    const geom = this.chart.getAllGeoms()[0]; // Obtener todos los gráficos
     if (!geom) return;
-    const items = (geom as any).get('dataArray') || []; // 获取图形对应的
+    const items = (geom as any).get('dataArray') || []; // Consigue el correspondiente
 
     const legendData = items.map((item: { color: any; _origin: any }[]) => {
       /* eslint no-underscore-dangle:0 */
@@ -208,7 +208,7 @@ class Pie extends Component<PieProps, PieState> {
       selected = false;
       tooltip = false;
       formatColor = (value: string) => {
-        if (value === '占比') {
+        if (value === 'proportion') {
           return color || 'rgba(24, 144, 255, 0.85)';
         }
         return '#F0F2F5';
@@ -216,11 +216,11 @@ class Pie extends Component<PieProps, PieState> {
 
       data = [
         {
-          x: '占比',
+          x: 'proportion',
           y: parseFloat(`${percent}`),
         },
         {
-          x: '反比',
+          x: 'proportion',
           y: 100 - parseFloat(`${percent}`),
         },
       ];

@@ -70,7 +70,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
     }
     const account = form.getFieldValue('mail');
     if (BLOCK_NAME_CAMEL_CASE.status === 'ok') {
-      message.success('注册成功！');
+      message.success('¡registro exitoso!');
       history.push({
         pathname: '/user/register-result',
         state: {
@@ -124,12 +124,12 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   };
   const checkPassword = (_: any, value: string) => {
     const promise = Promise;
-    // 没有值的情况
+    // Cuando no hay valor
     if (!value) {
       setvisible(!!value);
       return promise.reject(formatMessage({ id: 'BLOCK_NAME.password.required' }));
     }
-    // 有值的情况
+    
     if (!visible) {
       setvisible(!!value);
     }

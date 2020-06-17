@@ -30,24 +30,24 @@ const covers = [
   'https://gw.alipayobjects.com/zos/rmsportal/gLaIAoVWTtLbBWZNYEMg.png',
 ];
 const desc = [
-  '那是一种内在的东西， 他们到达不了，也无法触及的',
-  '希望是一个好东西，也许是最好的，好东西是不会消亡的',
-  '生命就像一盒巧克力，结果往往出人意料',
-  '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
-  '那时候我只会想自己想要什么，从不想自己拥有什么',
+  'Eso es algo interno, no pueden alcanzarlo, no pueden tocarlo',
+  'La esperanza es algo bueno, tal vez lo mejor, las cosas buenas no se extinguirán',
+  'La vida es como una caja de bombones, los resultados son a menudo inesperados',
+  'Hay tantas tabernas en la ciudad, pero ella acaba de entrar a mi taberna',
+  'En ese momento, solo quería pensar en lo que quería y nunca quise tener'
 ];
 
 const user = [
-  '付小小',
-  '曲丽丽',
-  '林东东',
-  '周星星',
-  '吴加好',
-  '朱偏右',
-  '鱼酱',
-  '乐哥',
-  '谭小仪',
-  '仲尼',
+  'Rodolfo',
+  'Arturo',
+  'Alejandro',
+  'Daniel',
+  'Carlos',
+  'Susana',
+  'Fabiola',
+  'Catherine',
+  'Erika',
+  'Pedro',
 ];
 
 function fakeList(count: number): CardListItemDataType[] {
@@ -71,28 +71,28 @@ function fakeList(count: number): CardListItemDataType[] {
       createdAt: new Date(new Date().getTime() - 1000 * 60 * 60 * 2 * i).getTime(),
       subDescription: desc[i % 5],
       description:
-        '在中台产品的研发过程中，会出现不同的设计规范和实现方式，但其中往往存在很多类似的页面和组件，这些类似的组件会被抽离成一套标准规范。',
+        'En el proceso de I + D de productos de etapa intermedia, aparecerán diferentes especificaciones de diseño y métodos de implementación, pero a menudo hay muchas páginas y componentes similares, que se separarán en un conjunto de especificaciones estándar.',
       activeUser: Math.ceil(Math.random() * 100000) + 100000,
       newUser: Math.ceil(Math.random() * 1000) + 1000,
       star: Math.ceil(Math.random() * 100) + 100,
       like: Math.ceil(Math.random() * 100) + 100,
       message: Math.ceil(Math.random() * 10) + 10,
       content:
-        '段落示意：蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。蚂蚁金服设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，提供跨越设计与开发的体验解决方案。',
+        'Bosquejo del párrafo: React Design Platform, con una carga de trabajo mínima, se conecta a la perfección con un ecosistena de microservicios, proporcionando soluciones de experiencia que abarcan diseño y desarrollo.',
       members: [
         {
-          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ZiESqWwCXBRQoaPONSJe.png',
-          name: '曲丽丽',
+          avatar: 'https://raw.githubusercontent.com/machinaai/logos/master/member1.png',
+          name: 'Catherine',
           id: 'member1',
         },
         {
-          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/tBOxZPlITHqwlGjsJWaF.png',
-          name: '王昭君',
+          avatar: 'https://raw.githubusercontent.com/machinaai/logos/master/member2.png',
+          name: 'Arturo',
           id: 'member2',
         },
         {
-          avatar: 'https://gw.alipayobjects.com/zos/rmsportal/sBxjgqiuHMGRkIjqlQCd.png',
-          name: '董娜娜',
+          avatar: 'https://raw.githubusercontent.com/machinaai/logos/master/member3.png',
+          name: 'Alejandro',
           id: 'member3',
         },
       ],

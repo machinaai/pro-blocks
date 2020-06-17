@@ -32,7 +32,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
     const newData = data?.map((item) => ({ ...item }));
     const target = getRowByKey(key, newData);
     if (target) {
-      // 进入编辑状态时保存原始数据
+      // Guardar datos originales al ingresar al estado de edición
       if (!target.editable) {
         cacheOriginData[key] = { ...target };
         setCacheOriginData(cacheOriginData);
@@ -88,7 +88,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
       }
       const target = getRowByKey(key) || ({} as any);
       if (!target.workId || !target.name || !target.department) {
-        message.error('请填写完整成员信息。');
+        message.error('Complete la información completa del miembro.');
         (e.target as HTMLInputElement).focus();
         setLoading(false);
         return;
@@ -112,7 +112,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
     setClickedCancel(true);
     e.preventDefault();
     const newData = [...(data as TableFormDateType[])];
-    // 编辑前的原始数据
+    // Datos sin procesar antes de editar
     let cacheData = [];
     cacheData = newData.map((item) => {
       if (item.key === key) {
@@ -135,7 +135,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
 
   const columns = [
     {
-      title: '成员姓名',
+      title: 'Nombre del miembro',
       dataIndex: 'name',
       key: 'name',
       width: '20%',
@@ -147,7 +147,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
               autoFocus
               onChange={(e) => handleFieldChange(e, 'name', record.key)}
               onKeyPress={(e) => handleKeyPress(e, record.key)}
-              placeholder="成员姓名"
+              placeholder="Nombre del miembro"
             />
           );
         }
@@ -155,7 +155,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
       },
     },
     {
-      title: '工号',
+      title: 'Número de trabajo',
       dataIndex: 'workId',
       key: 'workId',
       width: '20%',
@@ -166,7 +166,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
               value={text}
               onChange={(e) => handleFieldChange(e, 'workId', record.key)}
               onKeyPress={(e) => handleKeyPress(e, record.key)}
-              placeholder="工号"
+              placeholder="Número de trabajo"
             />
           );
         }
@@ -174,7 +174,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
       },
     },
     {
-      title: '所属部门',
+      title: 'Departamento',
       dataIndex: 'department',
       key: 'department',
       width: '40%',
@@ -185,7 +185,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
               value={text}
               onChange={(e) => handleFieldChange(e, 'department', record.key)}
               onKeyPress={(e) => handleKeyPress(e, record.key)}
-              placeholder="所属部门"
+              placeholder="Departamento"
             />
           );
         }
@@ -193,7 +193,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
       },
     },
     {
-      title: '操作',
+      title: 'Operación',
       key: 'action',
       render: (text: string, record: TableFormDateType) => {
         if (!!record.editable && loading) {
@@ -203,28 +203,28 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
           if (record.isNew) {
             return (
               <span>
-                <a onClick={(e) => saveRow(e, record.key)}>添加</a>
+                <a onClick={(e) => saveRow(e, record.key)}>añadir</a>
                 <Divider type="vertical" />
-                <Popconfirm title="是否要删除此行？" onConfirm={() => remove(record.key)}>
-                  <a>删除</a>
+                <Popconfirm title="¿Quieres eliminar éste registro?" onConfirm={() => remove(record.key)}>
+                  <a>Eliminar</a>
                 </Popconfirm>
               </span>
             );
           }
           return (
             <span>
-              <a onClick={(e) => saveRow(e, record.key)}>保存</a>
+              <a onClick={(e) => saveRow(e, record.key)}>guardar</a>
               <Divider type="vertical" />
-              <a onClick={(e) => cancel(e, record.key)}>取消</a>
+              <a onClick={(e) => cancel(e, record.key)}>cancelar</a>
             </span>
           );
         }
         return (
           <span>
-            <a onClick={(e) => toggleEditable(e, record.key)}>编辑</a>
+            <a onClick={(e) => toggleEditable(e, record.key)}>editar</a>
             <Divider type="vertical" />
-            <Popconfirm title="是否要删除此行？" onConfirm={() => remove(record.key)}>
-              <a>删除</a>
+            <Popconfirm title="¿Quieres eliminar ésta registro?" onConfirm={() => remove(record.key)}>
+              <a>Eliminar</a>
             </Popconfirm>
           </span>
         );
@@ -247,7 +247,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
         onClick={newMember}
       >
         <PlusOutlined />
-        新增成员
+        Nuevo miembro
       </Button>
     </>
   );

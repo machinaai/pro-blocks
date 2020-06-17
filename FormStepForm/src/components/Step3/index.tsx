@@ -26,11 +26,11 @@ const Step3: React.FC<Step3Props> = (props) => {
   const information = (
     <div className={styles.information}>
       <Descriptions column={1}>
-        <Descriptions.Item label="付款账户"> {payAccount}</Descriptions.Item>
-        <Descriptions.Item label="收款账户"> {receiverAccount}</Descriptions.Item>
-        <Descriptions.Item label="收款人姓名"> {receiverName}</Descriptions.Item>
-        <Descriptions.Item label="转账金额">
-          <Statistic value={amount} suffix="元" />
+        <Descriptions.Item label="Cuenta de pago"> {payAccount}</Descriptions.Item>
+        <Descriptions.Item label="Cuentas por cobrar"> {receiverAccount}</Descriptions.Item>
+        <Descriptions.Item label="Nombre del beneficiario"> {receiverName}</Descriptions.Item>
+        <Descriptions.Item label="monto de la transferencia">
+          <Statistic value={amount} suffix="$" />
         </Descriptions.Item>
       </Descriptions>
     </div>
@@ -38,16 +38,16 @@ const Step3: React.FC<Step3Props> = (props) => {
   const extra = (
     <>
       <Button type="primary" onClick={onFinish}>
-        再转一笔
+        Volver a empezar
       </Button>
-      <Button>查看账单</Button>
+      <Button>Ver factura</Button>
     </>
   );
   return (
     <Result
       status="success"
-      title="操作成功"
-      subTitle="预计两小时内到账"
+      title="Operación exitosa"
+      subTitle="Se espera que llegue dentro de dos horas"
       extra={extra}
       className={styles.result}
     >

@@ -68,7 +68,7 @@ class GeographicView extends Component<GeographicViewProps> {
     if (!list || list.length < 1) {
       return (
         <Option key={0} value={0}>
-          没有找到选项
+          No se encontraron opciones
         </Option>
       );
     }

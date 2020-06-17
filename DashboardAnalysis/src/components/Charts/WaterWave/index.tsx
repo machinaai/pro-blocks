@@ -41,7 +41,7 @@ class WaterWave extends Component<WaterWaveProps> {
   componentDidUpdate(props: WaterWaveProps) {
     const { percent } = this.props;
     if (props.percent !== percent) {
-      // 不加这个会造成绘制缓慢
+      // Not adding this will cause slow drawing
       this.renderChart('update');
     }
   }
@@ -90,12 +90,12 @@ class WaterWave extends Component<WaterWaveProps> {
 
     const axisLength = canvasWidth - lineWidth;
     const unit = axisLength / 8;
-    const range = 0.2; // 振幅
+    const range = 0.2; // amplitud
     let currRange = range;
     const xOffset = lineWidth;
-    let sp = 0; // 周期偏移量
+    let sp = 0; // Period offset
     let currData = 0;
-    const waveupsp = 0.005; // 水波上涨速度
+    const waveupsp = 0.005; // Water wave rising speed
 
     let arcStack: number[][] = [];
     const bR = radius - lineWidth;

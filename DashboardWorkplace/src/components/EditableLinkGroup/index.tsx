@@ -32,7 +32,7 @@ const EditableLinkGroup: React.FC<EditableLinkGroupProps> = (props) => {
         ),
       )}
       <Button size="small" type="primary" ghost onClick={onAdd}>
-        <PlusOutlined /> 添加
+        <PlusOutlined /> añadir
       </Button>
     </div>
   );

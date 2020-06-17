@@ -58,9 +58,9 @@ class Radar extends Component<RadarProps, RadarState> {
   // for custom lengend view
   getLegendData = () => {
     if (!this.chart) return;
-    const geom = this.chart.getAllGeoms()[0]; // 获取所有的图形
+    const geom = this.chart.getAllGeoms()[0]; // Obtener todos los gráficos
     if (!geom) return;
-    const items = (geom as any).get('dataArray') || []; // 获取图形对应的
+    const items = (geom as any).get('dataArray') || []; // Consigue el correspondiente
 
     const legendData = items.map((item: { color: any; _origin: any }[]) => {
       // eslint-disable-next-line no-underscore-dangle

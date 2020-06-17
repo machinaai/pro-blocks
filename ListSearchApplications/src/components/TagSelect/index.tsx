@@ -54,9 +54,9 @@ class TagSelect extends Component<TagSelectProps, TagSelectState> {
   static defaultProps = {
     hideCheckAll: false,
     actionsText: {
-      expandText: '展开',
-      collapseText: '收起',
-      selectAllText: '全部',
+      expandText: 'Desplegar',
+      collapseText: 'Colapso',
+      selectAllText: 'Todas',
     },
   };
 
@@ -133,7 +133,7 @@ class TagSelect extends Component<TagSelectProps, TagSelectState> {
     const { value, expand } = this.state;
     const { children, hideCheckAll, className, style, expandable, actionsText = {} } = this.props;
     const checkedAll = this.getAllTags().length === value.length;
-    const { expandText = '展开', collapseText = '收起', selectAllText = '全部' } = actionsText;
+    const { expandText = 'Expandir', collapseText = 'Colapsar', selectAllText = 'Todo' } = actionsText;
 
     const cls = classNames(styles.tagSelect, className, {
       [styles.hasExpandTag]: expandable,

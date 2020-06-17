@@ -18,7 +18,7 @@ const Model: ModelType = {
   effects: {
     *submitAdvancedForm({ payload }, { call }) {
       yield call(fakeSubmitForm, payload);
-      message.success('提交成功');
+      message.success('Enviado exitosamente');
     },
   },
 };

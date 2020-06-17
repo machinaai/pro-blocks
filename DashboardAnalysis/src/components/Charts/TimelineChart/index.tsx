@@ -72,9 +72,9 @@ const TimelineChart: React.FC<TimelineChartProps> = (props) => {
     })
     .transform({
       type: 'fold',
-      fields: [titleMap.y1, titleMap.y2], // 展开字段集
-      key: 'key', // key字段
-      value: 'value', // value字段
+      fields: [titleMap.y1, titleMap.y2], // Expand Field Set
+      key: 'key', // key
+      value: 'value', // value
     });
 
   const timeScale = {

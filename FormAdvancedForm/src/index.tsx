@@ -14,18 +14,18 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 
 const fieldLabels = {
-  name: '仓库名',
-  url: '仓库域名',
-  owner: '仓库管理员',
-  approver: '审批人',
-  dateRange: '生效日期',
-  type: '仓库类型',
-  name2: '任务名',
-  url2: '任务描述',
-  owner2: '执行人',
-  approver2: '责任人',
-  dateRange2: '生效日期',
-  type2: '任务类型',
+   nombre: 'Nombre del almacén',
+   url: 'Nombre de dominio de almacén',
+   propietario: 'Administrador de almacén',
+   aprobador: 'Aprobador',
+   dateRange: 'Fecha efectiva',
+   tipo: 'Tipo de almacén',
+   nombre2: 'Nombre de la tarea',
+   url2: 'Descripción de la tarea',
+   propietario2: 'Ejecutor',
+   approver2: 'Persona responsable',
+   dateRange2: 'Fecha efectiva',
+   type2: 'Tipo de tarea',
 };
 
 const tableData = [
@@ -92,7 +92,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
     return (
       <span className={styles.errorIcon}>
         <Popover
-          title="表单校验信息"
+          title="Información de verificación de formulario"
           content={errorList}
           overlayClassName={styles.errorPopover}
           trigger="click"
@@ -131,29 +131,29 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      <PageHeaderWrapper content="高级表单常见于一次性输入和提交大批量数据的场景。">
-        <Card title="仓库管理" className={styles.card} bordered={false}>
+      <PageHeaderWrapper content="Los formularios avanzados se usan comúnmente para ingresar y enviar grandes cantidades de datos a la vez.">
+        <Card title="Gestion de almacenes" className={styles.card} bordered={false}>
           <Row gutter={16}>
             <Col lg={6} md={12} sm={24}>
               <Form.Item
                 label={fieldLabels.name}
                 name="name"
-                rules={[{ required: true, message: '请输入仓库名称' }]}
+                rules={[{ required: true, message: 'Por favor ingrese el nombre del almacén' }]}
               >
-                <Input placeholder="请输入仓库名称" />
+                <Input placeholder="Por favor ingrese el nombre del almacén" />
               </Form.Item>
             </Col>
             <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
               <Form.Item
                 label={fieldLabels.url}
                 name="url"
-                rules={[{ required: true, message: '请选择' }]}
+                rules={[{ required: true, message: 'por favor elige' }]}
               >
                 <Input
                   style={{ width: '100%' }}
                   addonBefore="http://"
                   addonAfter=".com"
-                  placeholder="请输入"
+                  placeholder="por favor escriba"
                 />
               </Form.Item>
             </Col>
@@ -161,11 +161,11 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.owner}
                 name="owner"
-                rules={[{ required: true, message: '请选择管理员' }]}
+                rules={[{ required: true, message: 'Por favor seleccione un administrador' }]}
               >
-                <Select placeholder="请选择管理员">
-                  <Option value="xiao">付晓晓</Option>
-                  <Option value="mao">周毛毛</Option>
+                <Select placeholder="Por favor seleccione un administrador">
+                  <Option value="hernandez">Hernández</Option>
+                  <Option value="lopez">López</Option>
                 </Select>
               </Form.Item>
             </Col>
@@ -175,11 +175,11 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.approver}
                 name="approver"
-                rules={[{ required: true, message: '请选择审批员' }]}
+                rules={[{ required: true, message: 'Por favor seleccione un aprobador' }]}
               >
-                <Select placeholder="请选择审批员">
-                  <Option value="xiao">付晓晓</Option>
-                  <Option value="mao">周毛毛</Option>
+                <Select placeholder="Por favor seleccione un aprobador">
+                  <Option value="hernandez">Hernández</Option>
+                  <Option value="lopez">López</Option>
                 </Select>
               </Form.Item>
             </Col>
@@ -187,54 +187,54 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.dateRange}
                 name="dateRange"
-                rules={[{ required: true, message: '请选择生效日期' }]}
+                rules={[{ required: true, message: 'Por favor seleccione fecha de vigencia' }]}
               >
-                <RangePicker placeholder={['开始日期', '结束日期']} style={{ width: '100%' }} />
+                <RangePicker placeholder={['fecha de inicio', 'Fecha final']} style={{ width: '100%' }} />
               </Form.Item>
             </Col>
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
               <Form.Item
                 label={fieldLabels.type}
                 name="type"
-                rules={[{ required: true, message: '请选择仓库类型' }]}
+                rules={[{ required: true, message: 'Por favor seleccione el tipo de almacén' }]}
               >
-                <Select placeholder="请选择仓库类型">
-                  <Option value="private">私密</Option>
-                  <Option value="public">公开</Option>
+                <Select placeholder="Por favor seleccione el tipo de almacén">
+                  <Option value="private">privado</Option>
+                  <Option value="public">público</Option>
                 </Select>
               </Form.Item>
             </Col>
           </Row>
         </Card>
-        <Card title="任务管理" className={styles.card} bordered={false}>
+        <Card title="Administración de tareas" className={styles.card} bordered={false}>
           <Row gutter={16}>
             <Col lg={6} md={12} sm={24}>
               <Form.Item
                 label={fieldLabels.name2}
                 name="name2"
-                rules={[{ required: true, message: '请输入' }]}
+                rules={[{ required: true, message: 'por favor escribe' }]}
               >
-                <Input placeholder="请输入" />
+                <Input placeholder="por favor escribe" />
               </Form.Item>
             </Col>
             <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
               <Form.Item
                 label={fieldLabels.url2}
                 name="url2"
-                rules={[{ required: true, message: '请选择' }]}
+                rules={[{ required: true, message: 'por favor escribe' }]}
               >
-                <Input placeholder="请输入" />
+                <Input placeholder="por favor escribe" />
               </Form.Item>
             </Col>
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
               <Form.Item
                 label={fieldLabels.owner2}
                 name="owner2"
-                rules={[{ required: true, message: '请选择管理员' }]}
+                rules={[{ required: true, message: 'Por favor seleccione un administrador' }]}
               >
-                <Select placeholder="请选择管理员">
-                  <Option value="xiao">付晓晓</Option>
-                  <Option value="mao">周毛毛</Option>
+                <Select placeholder="Por favor seleccione un administrador">
+                  <Option value="hernandez">Hernández</Option>
+                  <Option value="lopez">López</Option>
                 </Select>
               </Form.Item>
             </Col>
@@ -244,11 +244,11 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.approver2}
                 name="approver2"
-                rules={[{ required: true, message: '请选择审批员' }]}
+                rules={[{ required: true, message: 'Por favor seleccione un aprobador' }]}
               >
-                <Select placeholder="请选择审批员">
-                  <Option value="xiao">付晓晓</Option>
-                  <Option value="mao">周毛毛</Option>
+                <Select placeholder="Por favor seleccione un aprobador">
+                  <Option value="hernandez">Hernández</Option>
+                  <Option value="lopez">López</Option>
                 </Select>
               </Form.Item>
             </Col>
@@ -256,10 +256,10 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.dateRange2}
                 name="dateRange2"
-                rules={[{ required: true, message: '请输入' }]}
+                rules={[{ required: true, message: 'por favor escribe' }]}
               >
                 <TimePicker
-                  placeholder="提醒时间"
+                  placeholder="Tiempo recordatorio"
                   style={{ width: '100%' }}
                   getPopupContainer={(trigger) => {
                     if (trigger && trigger.parentNode) {
@@ -274,17 +274,17 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.type2}
                 name="type2"
-                rules={[{ required: true, message: '请选择仓库类型' }]}
+                rules={[{ required: true, message: 'Por favor seleccione el tipo de almacén' }]}
               >
-                <Select placeholder="请选择仓库类型">
-                  <Option value="private">私密</Option>
-                  <Option value="public">公开</Option>
+                <Select placeholder="Por favor seleccione el tipo de almacén">
+                  <Option value="private">privado</Option>
+                  <Option value="public">público</Option>
                 </Select>
               </Form.Item>
             </Col>
           </Row>
         </Card>
-        <Card title="成员管理" bordered={false}>
+        <Card title="Gestión de miembros" bordered={false}>
           <Form.Item name="members">
             <TableForm />
           </Form.Item>
@@ -293,7 +293,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
       <FooterToolbar>
         {getErrorInfo(error)}
         <Button type="primary" onClick={() => form?.submit()} loading={submitting}>
-          提交
+         enviar
         </Button>
       </FooterToolbar>
     </Form>

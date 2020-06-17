@@ -8,34 +8,34 @@ import styles from './style.less';
 
 const progressColumns = [
   {
-    title: '时间',
+    title: 'hora',
     dataIndex: 'time',
     key: 'time',
   },
   {
-    title: '当前进度',
+    title: 'Progreso actual',
     dataIndex: 'rate',
     key: 'rate',
   },
   {
-    title: '状态',
+    title: 'estado',
     dataIndex: 'status',
     key: 'status',
     render: (text: string) => {
       if (text === 'success') {
-        return <Badge status="success" text="成功" />;
+        return <Badge status="success" text="éxito" />;
       }
-      return <Badge status="processing" text="进行中" />;
+      return <Badge status="processing" text="procesando" />;
     },
   },
 
   {
-    title: '操作员ID',
+    title: 'ID del operador',
     dataIndex: 'operator',
     key: 'operator',
   },
   {
-    title: '耗时',
+    title: 'Costo en Tiempo',
     dataIndex: 'cost',
     key: 'cost',
   },
@@ -73,7 +73,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
         amount += Number(item.amount);
       });
       goodsData = basicGoods.concat({
-        id: '总计',
+        id: 'total',
         num,
         amount,
       });
@@ -93,7 +93,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     };
     const goodsColumns = [
       {
-        title: '商品编号',
+        title: 'Número de producto',
         dataIndex: 'id',
         key: 'id',
         render: (text: React.ReactNode, row: any, index: number) => {
@@ -101,7 +101,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
             return <a href="">{text}</a>;
           }
           return {
-            children: <span style={{ fontWeight: 600 }}>总计</span>,
+            children: <span style={{ fontWeight: 600 }}>total</span>,
             props: {
               colSpan: 4,
             },
@@ -109,26 +109,26 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
         },
       },
       {
-        title: '商品名称',
+        title: 'nombre del producto',
         dataIndex: 'name',
         key: 'name',
         render: renderContent,
       },
       {
-        title: '商品条码',
+        title: 'código de barras',
         dataIndex: 'barcode',
         key: 'barcode',
         render: renderContent,
       },
       {
-        title: '单价',
+        title: 'precio unitario',
         dataIndex: 'price',
         key: 'price',
         align: 'right' as 'left' | 'right' | 'center',
         render: renderContent,
       },
       {
-        title: '数量（件）',
+        title: 'Cantidad（Piezas）',
         dataIndex: 'num',
         key: 'num',
         align: 'right' as 'left' | 'right' | 'center',
@@ -140,7 +140,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
         },
       },
       {
-        title: '金额',
+        title: 'Cantidad',
         dataIndex: 'amount',
         key: 'amount',
         align: 'right' as 'left' | 'right' | 'center',
@@ -155,22 +155,22 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     return (
       <PageHeaderWrapper>
         <Card bordered={false}>
-          <Descriptions title="退款申请" style={{ marginBottom: 32 }}>
-            <Descriptions.Item label="取货单号">1000000000</Descriptions.Item>
-            <Descriptions.Item label="状态">已取货</Descriptions.Item>
-            <Descriptions.Item label="销售单号">1234123421</Descriptions.Item>
-            <Descriptions.Item label="子订单">3214321432</Descriptions.Item>
+          <Descriptions title="solicitud de reembolso" style={{ marginBottom: 32 }}>
+            <Descriptions.Item label="Número de petición">1000000000</Descriptions.Item>
+            <Descriptions.Item label="estado">Recogido</Descriptions.Item>
+            <Descriptions.Item label="Número de venta">1234123421</Descriptions.Item>
+            <Descriptions.Item label="Orden derivada">3214321432</Descriptions.Item>
           </Descriptions>
           <Divider style={{ marginBottom: 32 }} />
-          <Descriptions title="用户信息" style={{ marginBottom: 32 }}>
-            <Descriptions.Item label="用户姓名">付小小</Descriptions.Item>
-            <Descriptions.Item label="联系电话">18100000000</Descriptions.Item>
-            <Descriptions.Item label="常用快递">菜鸟仓储</Descriptions.Item>
-            <Descriptions.Item label="取货地址">浙江省杭州市西湖区万塘路18号</Descriptions.Item>
-            <Descriptions.Item label="备注">无</Descriptions.Item>
+          <Descriptions title="Información de usuario" style={{ marginBottom: 32 }}>
+            <Descriptions.Item label="nombre de usuario">Juan</Descriptions.Item>
+            <Descriptions.Item label="número de contacto">18100000000</Descriptions.Item>
+            <Descriptions.Item label="Uso">Nuevo almacenamiento</Descriptions.Item>
+            <Descriptions.Item label="Dirección de entrega">Avenida 14, numero 23 interior 3</Descriptions.Item>
+            <Descriptions.Item label="Observaciones">No</Descriptions.Item>
           </Descriptions>
           <Divider style={{ marginBottom: 32 }} />
-          <div className={styles.title}>退货商品</div>
+          <div className={styles.title}>Retorno de Mercancía</div>
           <Table
             style={{ marginBottom: 24 }}
             pagination={false}
@@ -179,7 +179,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
             columns={goodsColumns}
             rowKey="id"
           />
-          <div className={styles.title}>退货进度</div>
+          <div className={styles.title}>Progreso del retorno</div>
           <Table
             style={{ marginBottom: 16 }}
             pagination={false}

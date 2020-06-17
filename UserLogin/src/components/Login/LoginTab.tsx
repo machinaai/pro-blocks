@@ -39,7 +39,7 @@ const WrapContext: React.FC<TabPaneProps> & {
   </LoginContext.Consumer>
 );
 
-// 标志位 用来判断是不是自定义组件
+// La bandera se usa para determinar si es un componente personalizado
 WrapContext.typeName = 'LoginTab';
 
 export default WrapContext;

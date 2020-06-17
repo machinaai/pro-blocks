@@ -10,29 +10,29 @@ import { TableListItem } from './data.d';
 import { queryRule, updateRule, addRule, removeRule } from './service';
 
 /**
- * 添加节点
+ * Agregar nodo
  * @param fields
  */
 const handleAdd = async (fields: TableListItem) => {
-  const hide = message.loading('正在添加');
+  const hide = message.loading('Agregando');
   try {
     await addRule({ ...fields });
     hide();
-    message.success('添加成功');
+    message.success('Agregado exitosamente');
     return true;
   } catch (error) {
     hide();
-    message.error('添加失败请重试！');
+    message.error('¡Error al agregar, por favor intente nuevamente!');
     return false;
   }
 };
 
 /**
- * 更新节点
+ * Nodo de actualización
  * @param fields
  */
 const handleUpdate = async (fields: FormValueType) => {
-  const hide = message.loading('正在配置');
+  const hide = message.loading('Configurando');
   try {
     await updateRule({
       name: fields.name,
@@ -41,32 +41,32 @@ const handleUpdate = async (fields: FormValueType) => {
     });
     hide();
 
-    message.success('配置成功');
+    message.success('Configurado con éxito');
     return true;
   } catch (error) {
     hide();
-    message.error('配置失败请重试！');
+    message.error('¡Intente nuevamente si la configuración falla!');
     return false;
   }
 };
 
 /**
- *  删除节点
+ *  Eliminar un nodo
  * @param selectedRows
  */
 const handleRemove = async (selectedRows: TableListItem[]) => {
-  const hide = message.loading('正在删除');
+  const hide = message.loading('borrando');
   if (!selectedRows) return true;
   try {
     await removeRule({
       key: selectedRows.map((row) => row.key),
     });
     hide();
-    message.success('删除成功，即将刷新');
+    message.success('Eliminado correctamente, se actualizará pronto');
     return true;
   } catch (error) {
     hide();
-    message.error('删除失败，请重试');
+    message.error('Error al eliminar, por favor intente nuevamente');
     return false;
   }
 };
@@ -78,40 +78,40 @@ const TableList: React.FC<{}> = () => {
   const actionRef = useRef<ActionType>();
   const columns: ProColumns<TableListItem>[] = [
     {
-      title: '规则名称',
+      title: 'Nombre de la regla',
       dataIndex: 'name',
       rules: [
         {
           required: true,
-          message: '规则名称为必填项',
+          message: 'Se requiere el nombre de la regla',
         },
       ],
     },
     {
-      title: '描述',
+      title: 'descripción',
       dataIndex: 'desc',
       valueType: 'textarea',
     },
     {
-      title: '服务调用次数',
+      title: 'Llamadas de servicio',
       dataIndex: 'callNo',
       sorter: true,
       hideInForm: true,
-      renderText: (val: string) => `${val} 万`,
+      renderText: (val: string) => `${val} K`,
     },
     {
-      title: '状态',
+      title: 'estado',
       dataIndex: 'status',
       hideInForm: true,
       valueEnum: {
-        0: { text: '关闭', status: 'Default' },
-        1: { text: '运行中', status: 'Processing' },
-        2: { text: '已上线', status: 'Success' },
-        3: { text: '异常', status: 'Error' },
+        0: { text: 'default', status: 'Default' },
+        1: { text: 'processing', status: 'Processing' },
+        2: { text: 'success', status: 'Success' },
+        3: { text: 'error', status: 'Error' },
       },
     },
     {
-      title: '上次调度时间',
+      title: 'Última hora programada',
       dataIndex: 'updatedAt',
       sorter: true,
       valueType: 'dateTime',
@@ -122,13 +122,13 @@ const TableList: React.FC<{}> = () => {
           return false;
         }
         if (`${status}` === '3') {
-          return <Input {...rest} placeholder="请输入异常原因！" />;
+          return <Input {...rest} placeholder="Por favor, introduzca el motivo" />;
         }
         return defaultRender(item);
       },
     },
     {
-      title: '操作',
+      title: 'operando',
       dataIndex: 'option',
       valueType: 'option',
       render: (_, record) => (
@@ -139,10 +139,10 @@ const TableList: React.FC<{}> = () => {
               setStepFormValues(record);
             }}
           >
-            配置
+            Configuración
           </a>
           <Divider type="vertical" />
-          <a href="">订阅警报</a>
+          <a href="">Suscríbase a las alertas</a>
         </>
       ),
     },
@@ -151,12 +151,12 @@ const TableList: React.FC<{}> = () => {
   return (
     <PageHeaderWrapper>
       <ProTable<TableListItem>
-        headerTitle="查询表格"
+        headerTitle="Formulario de consulta"
         actionRef={actionRef}
         rowKey="key"
         toolBarRender={(action, { selectedRows }) => [
           <Button type="primary" onClick={() => handleModalVisible(true)}>
-            <PlusOutlined /> 新建
+            <PlusOutlined /> Nuevo
           </Button>,
           selectedRows && selectedRows.length > 0 && (
             <Dropdown
@@ -170,22 +170,22 @@ const TableList: React.FC<{}> = () => {
                   }}
                   selectedKeys={[]}
                 >
-                  <Menu.Item key="remove">批量删除</Menu.Item>
-                  <Menu.Item key="approval">批量审批</Menu.Item>
+                  <Menu.Item key="remove">Eliminar todos</Menu.Item>
+                  <Menu.Item key="approval">Aprobar todos</Menu.Item>
                 </Menu>
               }
             >
               <Button>
-                批量操作 <DownOutlined />
+               Operaciones masivas <DownOutlined />
               </Button>
             </Dropdown>
           ),
         ]}
         tableAlertRender={({ selectedRowKeys, selectedRows }) => (
           <div>
-            已选择 <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a> 项&nbsp;&nbsp;
+            seleccionado <a style={{ fontWeight: 600 }}>{selectedRowKeys.length}</a> articulo(s)&nbsp;&nbsp;
             <span>
-              服务调用次数总计 {selectedRows.reduce((pre, item) => pre + item.callNo, 0)} 万
+            Total de llamadas de servicio {selectedRows.reduce((pre, item) => pre + item.callNo, 0)} K
             </span>
           </div>
         )}

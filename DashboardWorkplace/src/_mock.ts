@@ -24,7 +24,7 @@ for (let i = 0; i < fakeY2.length; i += 1) {
 const salesData = [];
 for (let i = 0; i < 12; i += 1) {
   salesData.push({
-    x: `${i + 1}月`,
+    x: `Mes ${i + 1}`,
     y: Math.floor(Math.random() * 1000) + 200,
   });
 }
@@ -32,7 +32,7 @@ const searchData = [];
 for (let i = 0; i < 50; i += 1) {
   searchData.push({
     index: i + 1,
-    keyword: `搜索关键词-${i}`,
+    keyword: `search keyword-${i}`,
     count: Math.floor(Math.random() * 1000),
     range: Math.floor(Math.random() * 100),
     status: Math.floor((Math.random() * 10) % 2),
@@ -40,77 +40,77 @@ for (let i = 0; i < 50; i += 1) {
 }
 const salesTypeData = [
   {
-    x: '家用电器',
+    x: 'Electrodomésticos',
     y: 4544,
   },
   {
-    x: '食用酒水',
+    x: 'Licores',
     y: 3321,
   },
   {
-    x: '个护健康',
+    x: 'Salud',
     y: 3113,
   },
   {
-    x: '服饰箱包',
+    x: 'Vestido',
     y: 2341,
   },
   {
-    x: '母婴产品',
+    x: 'Blancos',
     y: 1231,
   },
   {
-    x: '其他',
+    x: 'otros',
     y: 1231,
   },
 ];
 
 const salesTypeDataOnline = [
   {
-    x: '家用电器',
+    x: 'Electrodomésticos',
     y: 244,
   },
   {
-    x: '食用酒水',
+    x: 'Licores',
     y: 321,
   },
   {
-    x: '个护健康',
+    x: 'Salud',
     y: 311,
   },
   {
-    x: '服饰箱包',
+    x: 'Vestido',
     y: 41,
   },
   {
-    x: '母婴产品',
+    x: 'Blancos',
     y: 121,
   },
   {
-    x: '其他',
+    x: 'otros',
     y: 111,
   },
 ];
 
 const salesTypeDataOffline = [
   {
-    x: '家用电器',
+    x: 'Electrodomésticos',
     y: 99,
   },
   {
-    x: '食用酒水',
+    x: 'Licores',
     y: 188,
   },
   {
-    x: '个护健康',
+    x: 'Salud',
     y: 344,
   },
   {
-    x: '服饰箱包',
+    x: 'Vestido',
     y: 255,
   },
   {
-    x: '其他',
+    x: 'otros',
     y: 65,
   },
 ];
@@ -170,9 +170,9 @@ const getNotice = [
     id: 'xxx1',
     title: titles[0],
     logo: avatars[0],
-    description: '那是一种内在的东西，他们到达不了，也无法触及的',
+    description: 'Es algo interno, no pueden alcanzarlo, no pueden tocarlo.',
     updatedAt: new Date(),
-    member: '科学搬砖组',
+    member: 'Grupo científico de ladrillos en movimiento',
     href: '',
     memberLink: '',
   },
@@ -180,9 +180,9 @@ const getNotice = [
     id: 'xxx2',
     title: titles[1],
     logo: avatars[1],
-    description: '希望是一个好东西，也许是最好的，好东西是不会消亡的',
+    description: 'La esperanza es algo bueno, quizás lo mejor, las cosas buenas no morirán',
     updatedAt: new Date('2017-07-24'),
-    member: '全组都是吴彦祖',
+    member: 'Todo el Grupo es un solo Grupo',
     href: '',
     memberLink: '',
   },
@@ -190,9 +190,9 @@ const getNotice = [
     id: 'xxx3',
     title: titles[2],
     logo: avatars[2],
-    description: '城镇中有那么多的酒馆，她却偏偏走进了我的酒馆',
+    description: 'Hay tantas tabernas en la ciudad, pero ella acaba de entrar a mi taberna.',
     updatedAt: new Date(),
-    member: '中二少女团',
+    member: 'S2 Girls Group',
     href: '',
     memberLink: '',
   },
@@ -200,9 +200,9 @@ const getNotice = [
     id: 'xxx4',
     title: titles[3],
     logo: avatars[3],
-    description: '那时候我只会想自己想要什么，从不想自己拥有什么',
+    description: 'En ese momento, solo quería pensar en lo que quería y nunca quise tener',
     updatedAt: new Date('2017-07-23'),
-    member: '程序员日常',
+    member: 'Programador diario',
     href: '',
     memberLink: '',
   },
@@ -210,9 +210,9 @@ const getNotice = [
     id: 'xxx5',
     title: titles[4],
     logo: avatars[4],
-    description: '凛冬将至',
+    description: 'Winter is comming',
     updatedAt: new Date('2017-07-23'),
-    member: '高逼格设计天团',
+    member: 'High Sky Design Sky Mission',
     href: '',
     memberLink: '',
   },
@@ -220,9 +220,9 @@ const getNotice = [
     id: 'xxx6',
     title: titles[5],
     logo: avatars[5],
-    description: '生命就像一盒巧克力，结果往往出人意料',
+    description: 'La vida es como una caja de bombones, los resultados son a menudo inesperados.',
     updatedAt: new Date('2017-07-23'),
-    member: '骗你来学计算机',
+    member: 'Engañarte para aprender computación',
     href: '',
     memberLink: '',
   },
@@ -233,105 +233,105 @@ const getActivities = [
     id: 'trend-1',
     updatedAt: new Date(),
     user: {
-      name: '曲丽丽',
+      name: 'Catherine',
       avatar: avatars2[0],
     },
     group: {
-      name: '高逼格设计天团',
+      name: 'High Sky Design Sky Mission',
       link: 'http://github.com/',
     },
     project: {
-      name: '六月迭代',
+      name: 'Iteración de junio',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: 'Cree un nuevo proyecto @{group} en @{project}',
   },
   {
     id: 'trend-2',
     updatedAt: new Date(),
     user: {
-      name: '付小小',
+      name: 'Alejandro',
       avatar: avatars2[1],
     },
     group: {
-      name: '高逼格设计天团',
+      name: 'High Sky Design Sky Mission',
       link: 'http://github.com/',
     },
     project: {
-      name: '六月迭代',
+      name: 'Iteración de junio',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: 'en @{group} Nuevo proyecto @{project}',
   },
   {
     id: 'trend-3',
     updatedAt: new Date(),
     user: {
-      name: '林东东',
+      name: 'Catherine',
       avatar: avatars2[2],
     },
     group: {
-      name: '中二少女团',
+      name: 'S2 Girls Group',
       link: 'http://github.com/',
     },
     project: {
-      name: '六月迭代',
+      name: 'Iteración de junio',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: 'en @{group} Nuevo proyecto @{project}',
   },
   {
     id: 'trend-4',
     updatedAt: new Date(),
     user: {
-      name: '周星星',
+      name: 'Daniel',
       avatar: avatars2[4],
     },
     project: {
-      name: '5 月日常迭代',
+      name: '5a iteración diaria mensual',
       link: 'http://github.com/',
     },
-    template: '将 @{project} 更新至已发布状态',
+    template: 'será @{project} actualizado al estado: publicado',
   },
   {
     id: 'trend-5',
     updatedAt: new Date(),
     user: {
-      name: '朱偏右',
+      name: 'Arturo',
       avatar: avatars2[3],
     },
     project: {
-      name: '工程效能',
+      name: 'Eficiencia de ingeniería',
       link: 'http://github.com/',
     },
     comment: {
-      name: '留言',
+      name: 'deja un mensaje',
       link: 'http://github.com/',
     },
-    template: '在 @{project} 发布了 @{comment}',
+    template: 'en @{project} se ha anunciado @{comment}',
   },
   {
     id: 'trend-6',
     updatedAt: new Date(),
     user: {
-      name: '乐哥',
+      name: 'El hermano',
       avatar: avatars2[5],
     },
     group: {
-      name: '程序员日常',
+      name: 'Programador diario',
       link: 'http://github.com/',
     },
     project: {
-      name: '品牌迭代',
+      name: 'Iteración de marca',
       link: 'http://github.com/',
     },
-    template: '在 @{group} 新建项目 @{project}',
+    template: 'en @{group} de ha creado nuevo proyecto @{project}',
   },
 ];
 
 const radarOriginData = [
   {
-    name: '个人',
+    name: 'personal',
     ref: 10,
     koubei: 8,
     output: 4,
@@ -339,7 +339,7 @@ const radarOriginData = [
     hot: 7,
   },
   {
-    name: '团队',
+    name: 'equipo',
     ref: 3,
     koubei: 9,
     output: 6,
@@ -347,7 +347,7 @@ const radarOriginData = [
     hot: 1,
   },
   {
-    name: '部门',
+    name: 'Departamento',
     ref: 4,
     koubei: 1,
     output: 6,
@@ -358,11 +358,11 @@ const radarOriginData = [
 
 const radarData: any[] = [];
 const radarTitleMap = {
-  ref: '引用',
-  koubei: '口碑',
-  output: '产量',
-  contribute: '贡献',
-  hot: '热度',
+  ref: 'Citar',
+  koubei: 'compartir',
+  output: 'rendimiento',
+  contribute: 'contribuir',
+  hot: 'caliente',
 };
 radarOriginData.forEach((item) => {
   Object.keys(item).forEach((key) => {
@@ -392,54 +392,54 @@ export default {
     radarData,
   },
 
-  'GET  /api/currentUser': {
-    name: 'Serati Ma',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+  'GET /api/currentUser': {
+    name: 'Rodolfo',
+    avatar: 'https://raw.githubusercontent.com/machinaai/logos/master/architect.png',
     userid: '00000001',
-    email: 'antdesign@alipay.com',
-    signature: '海纳百川，有容乃大',
-    title: '交互专家',
-    group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+    email: 'rsanvicente@machina.ai',
+    signature: 'The Architect',
+    title: 'Developer',
+    group: 'machina.ai',
     tags: [
       {
         key: '0',
-        label: '很有想法的',
+        label: 'Arquitecto',
       },
       {
         key: '1',
-        label: '专注设计',
+        label: 'UI Expert',
       },
       {
         key: '2',
-        label: '辣~',
+        label: 'Java Script Architect',
       },
       {
         key: '3',
-        label: '大长腿',
+        label: 'Necesita aprender React',
       },
       {
         key: '4',
-        label: '川妹子',
+        label: 'y buena codificacion',
       },
       {
         key: '5',
-        label: '海纳百川',
+        label: 'tiene buenos sentimientos',
       },
     ],
     notifyCount: 12,
     unreadCount: 11,
-    country: 'China',
+    country: 'Mexico',
     geographic: {
       province: {
-        label: '浙江省',
+        label: 'CDMX',
         key: '330000',
       },
       city: {
-        label: '杭州市',
+        label: 'Liverpol',
         key: '330100',
       },
     },
-    address: '西湖区工专路 77 号',
-    phone: '0752-268888888',
+    address: 'Liverpool',
+    phone: '5556581111',
   },
 };

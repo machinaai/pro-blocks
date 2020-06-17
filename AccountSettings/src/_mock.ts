@@ -1,67 +1,67 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Request, Response } from 'express';
-import city from './geographic/city.json';
-import province from './geographic/province.json';
+//import city from './geographic/city.json';
+//import province from './geographic/province.json';
 
 function getProvince(_: Request, res: Response) {
-  return res.json(province);
+  return res.json('{}');
 }
 
 function getCity(req: Request, res: Response) {
-  return res.json(city[req.params.province]);
+  return res.json('{}');
 }
-// 代码中会兼容本地 service mock 以及部署站点的静态数据
+
 export default {
-  // 支持值为 Object 和 Array
-  'GET  /api/currentUser': {
-    name: 'Serati Ma',
-    avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
+  // Supported values are Object and Array
+  'GET /api/currentUser': {
+    name: 'Rodolfo',
+    avatar: 'https://raw.githubusercontent.com/machinaai/logos/master/architect.png',
     userid: '00000001',
-    email: 'antdesign@alipay.com',
-    signature: '海纳百川，有容乃大',
-    title: '交互专家',
-    group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+    email: 'rsanvicente@machina.ai',
+    signature: 'The Architect',
+    title: 'Developer',
+    group: 'machina.ai',
     tags: [
       {
         key: '0',
-        label: '很有想法的',
+        label: 'Arquitecto',
       },
       {
         key: '1',
-        label: '专注设计',
+        label: 'UI Expert',
       },
       {
         key: '2',
-        label: '辣~',
+        label: 'Java Script Architect',
       },
       {
         key: '3',
-        label: '大长腿',
+        label: 'Necesita aprender React',
       },
       {
         key: '4',
-        label: '川妹子',
+        label: 'y buena codificacion',
       },
       {
         key: '5',
-        label: '海纳百川',
+        label: 'tiene buenos sentimientos',
       },
     ],
     notifyCount: 12,
     unreadCount: 11,
-    country: 'China',
+    country: 'Mexico',
     geographic: {
       province: {
-        label: '浙江省',
+        label: 'CDMX',
         key: '330000',
       },
       city: {
-        label: '杭州市',
+        label: 'Liverpol',
         key: '330100',
       },
     },
-    address: '西湖区工专路 77 号',
-    phone: '0752-268888888',
+    address: 'Liverpool',
+    phone: '5556581111',
   },
   'GET  /api/geographic/province': getProvince,
   'GET  /api/geographic/city/:province': getCity,

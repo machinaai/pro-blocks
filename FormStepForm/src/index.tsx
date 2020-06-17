@@ -37,13 +37,13 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   }, [current]);
 
   return (
-    <PageHeaderWrapper content="将一个冗长或用户不熟悉的表单任务分成多个步骤，指导用户完成。">
+    <PageHeaderWrapper content="Divida una tarea de formulario larga o desconocida en varios pasos para guiar al usuario a través de ella.">
       <Card bordered={false}>
         <>
           <Steps current={currentStep} className={styles.steps}>
-            <Step title="填写转账信息" />
-            <Step title="确认转账信息" />
-            <Step title="完成" />
+            <Step title="Complete la información de transferencia" />
+            <Step title="Confirmar información de transferencia" />
+            <Step title="Envíar" />
           </Steps>
           {stepComponent}
         </>

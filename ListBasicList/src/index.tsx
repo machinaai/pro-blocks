@@ -57,7 +57,7 @@ const ListContent = ({
       <p>{owner}</p>
     </div>
     <div className={styles.listContentItem}>
-      <span>开始时间</span>
+      <span>Tiempo de empezar</span>
       <p>{moment(createdAt).format('YYYY-MM-DD HH:mm')}</p>
     </div>
     <div className={styles.listContentItem}>
@@ -114,10 +114,10 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     if (key === 'edit') showEditModal(currentItem);
     else if (key === 'delete') {
       Modal.confirm({
-        title: '删除任务',
-        content: '确定删除该任务吗？',
-        okText: '确认',
-        cancelText: '取消',
+        title: 'Eliminar tarea',
+        content: '¿Seguro que quieres eliminar esta tarea?',
+        okText: 'confirmar',
+        cancelText: 'cancelar',
         onOk: () => deleteItem(currentItem.id),
       });
     }
@@ -126,11 +126,11 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
   const extraContent = (
     <div className={styles.extraContent}>
       <RadioGroup defaultValue="all">
-        <RadioButton value="all">全部</RadioButton>
-        <RadioButton value="progress">进行中</RadioButton>
-        <RadioButton value="waiting">等待中</RadioButton>
+        <RadioButton value="all">Todas</RadioButton>
+        <RadioButton value="progress">Procesando</RadioButton>
+        <RadioButton value="waiting">Esperando</RadioButton>
       </RadioGroup>
-      <Search className={styles.extraContentSearch} placeholder="请输入" onSearch={() => ({})} />
+      <Search className={styles.extraContentSearch} placeholder="por favor introduzca" onSearch={() => ({})} />
     </div>
   );
 
@@ -140,13 +140,13 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     <Dropdown
       overlay={
         <Menu onClick={({ key }) => editAndDelete(key, item)}>
-          <Menu.Item key="edit">编辑</Menu.Item>
-          <Menu.Item key="delete">删除</Menu.Item>
+          <Menu.Item key="edit">editar</Menu.Item>
+          <Menu.Item key="delete">borrar</Menu.Item>
         </Menu>
       }
     >
       <a>
-        更多 <DownOutlined />
+        Más <DownOutlined />
       </a>
     </Dropdown>
   );
@@ -190,13 +190,13 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
           <Card bordered={false}>
             <Row>
               <Col sm={8} xs={24}>
-                <Info title="我的待办" value="8个任务" bordered />
+                <Info title="Tareas" value="8" bordered />
               </Col>
               <Col sm={8} xs={24}>
-                <Info title="本周任务平均处理时间" value="32分钟" bordered />
+                <Info title="Tiempo promedio de procesamiento de tareas esta semana" value="32 minutos" bordered />
               </Col>
               <Col sm={8} xs={24}>
-                <Info title="本周完成任务数" value="24个任务" />
+                <Info title="Tareas completadas esta semana" value="24" />
               </Col>
             </Row>
           </Card>
@@ -204,7 +204,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
           <Card
             className={styles.listCard}
             bordered={false}
-            title="基本列表"
+            title="Lista básica"
             style={{ marginTop: 24 }}
             bodyStyle={{ padding: '0 32px 40px 32px' }}
             extra={extraContent}
@@ -216,7 +216,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
               ref={addBtn}
             >
               <PlusOutlined />
-              添加
+              añadir
             </Button>
 
             <List
@@ -235,7 +235,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
                         showEditModal(item);
                       }}
                     >
-                      编辑
+                      editar
                     </a>,
                     <MoreBtn key="more" item={item} />,
                   ]}

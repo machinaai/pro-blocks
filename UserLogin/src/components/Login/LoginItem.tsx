@@ -60,7 +60,7 @@ const getFormItemOptions = ({
 const LoginItem: React.FC<LoginItemProps> = (props) => {
   const [count, setCount] = useState<number>(props.countDown || 0);
   const [timing, setTiming] = useState(false);
-  // 这么写是为了防止restProps中 带入 onChange, defaultValue, rules props tabUtil
+  
   const {
     onChange,
     customProps,
@@ -80,7 +80,7 @@ const LoginItem: React.FC<LoginItemProps> = (props) => {
     if (result === false) {
       return;
     }
-    message.success('获取验证码成功！验证码为：1234');
+    message.success('¡Obtuve con éxito el código de verificación! El código de verificación es：1234');
     setTiming(true);
   }, []);
 
@@ -93,7 +93,7 @@ const LoginItem: React.FC<LoginItemProps> = (props) => {
           if (preSecond <= 1) {
             setTiming(false);
             clearInterval(interval);
-            // 重置秒数
+            // Restablecer segundos
             return countDown || 60;
           }
           return preSecond - 1;
@@ -131,7 +131,7 @@ const LoginItem: React.FC<LoginItemProps> = (props) => {
                   onGetCaptcha(value);
                 }}
               >
-                {timing ? `${count} 秒` : '获取验证码'}
+                {timing ? `${count} verificación` : 'obtener el código de verificación'}
               </Button>
             </Col>
           </Row>

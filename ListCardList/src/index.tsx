@@ -44,21 +44,21 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     const content = (
       <div className={styles.pageHeaderContent}>
         <p>
-          段落示意：蚂蚁金服务设计平台 ant.design，用最小的工作量，无缝接入蚂蚁金服生态，
-          提供跨越设计与开发的体验解决方案。
+          Párrafo: Plataforma de Diseño de Servicios Financieros，permite acceder sin esfuerzo al ecosistemas de microservicios，
+          brinda una solución de experiencia que abarca diseño y desarrollo front-end.
         </p>
         <div className={styles.contentLink}>
           <a>
             <img alt="" src="https://gw.alipayobjects.com/zos/rmsportal/MjEImQtenlyueSmVEfUD.svg" />{' '}
-            快速开始
+            Inicio rápido
           </a>
           <a>
             <img alt="" src="https://gw.alipayobjects.com/zos/rmsportal/NbuDUAuBlIApFuDvWiND.svg" />{' '}
-            产品简介
+            Producto breve
           </a>
           <a>
             <img alt="" src="https://gw.alipayobjects.com/zos/rmsportal/ohOEPSYdDTNnyMbGuyLb.svg" />{' '}
-            产品文档
+            Documentación del producto
           </a>
         </div>
       </div>
@@ -67,7 +67,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     const extraContent = (
       <div className={styles.extraImg}>
         <img
-          alt="这是一个标题"
+          alt="Este es un título"
           src="https://gw.alipayobjects.com/zos/rmsportal/RzwpdLnhmvDJToTdfDPe.png"
         />
       </div>
@@ -96,7 +96,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
                     <Card
                       hoverable
                       className={styles.card}
-                      actions={[<a key="option1">操作一</a>, <a key="option2">操作二</a>]}
+                      actions={[<a key="option1">Opcion 1</a>, <a key="option2">Opcion 2</a>]}
                     >
                       <Card.Meta
                         avatar={<img alt="" className={styles.cardAvatar} src={item.avatar} />}
@@ -114,7 +114,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
               return (
                 <List.Item>
                   <Button type="dashed" className={styles.newButton}>
-                    <PlusOutlined /> 新增产品
+                    <PlusOutlined /> Nuevo producto
                   </Button>
                 </List.Item>
               );

@@ -51,26 +51,26 @@ const Step1: React.FC<Step1Props> = (props) => {
         initialValues={data}
       >
         <Form.Item
-          label="付款账户"
+          label="Cuenta de cargo"
           name="payAccount"
-          rules={[{ required: true, message: '请选择付款账户' }]}
+          rules={[{ required: true, message: 'Por favor seleccione una cuenta de cargo' }]}
         >
           <Select placeholder="test@example.com">
-            <Option value="ant-design@alipay.com">ant-design@alipay.com</Option>
+            <Option value="react-design@machina.ai">react-design@machina.ai</Option>
           </Select>
         </Form.Item>
-        <Form.Item label="收款账户">
+        <Form.Item label="Cuentas por cobrar">
           <Input.Group compact>
-            <Select defaultValue="alipay" style={{ width: 100 }}>
-              <Option value="alipay">支付宝</Option>
-              <Option value="bank">银行账户</Option>
+            <Select defaultValue="mibanco" style={{ width: 100 }}>
+              <Option value="mibanco">Mi banco</Option>
+              <Option value="bank">otro banco</Option>
             </Select>
             <Form.Item
               noStyle
               name="receiverAccount"
               rules={[
-                { required: true, message: '请输入收款人账户' },
-                { type: 'email', message: '账户名应为邮箱格式' },
+                { required: true, message: 'Por favor ingrese la cuenta del beneficiario' },
+                { type: 'email', message: 'El nombre de la cuenta debe estar en formato de correo electrónico' },
               ]}
             >
               <Input style={{ width: 'calc(100% - 100px)' }} placeholder="test@example.com" />
@@ -78,24 +78,24 @@ const Step1: React.FC<Step1Props> = (props) => {
           </Input.Group>
         </Form.Item>
         <Form.Item
-          label="收款人姓名"
+          label="Nombre del beneficiario"
           name="receiverName"
-          rules={[{ required: true, message: '请输入收款人姓名' }]}
+          rules={[{ required: true, message: 'Por favor ingrese el nombre del beneficiario' }]}
         >
-          <Input placeholder="请输入收款人姓名" />
+          <Input placeholder="Por favor ingrese el nombre del beneficiario" />
         </Form.Item>
         <Form.Item
-          label="转账金额"
+          label="monto de la transferencia"
           name="amount"
           rules={[
-            { required: true, message: '请输入转账金额' },
+            { required: true, message: 'Por favor ingrese el monto de la transferencia' },
             {
               pattern: /^(\d+)((?:\.\d+)?)$/,
-              message: '请输入合法金额数字',
+              message: 'Por favor ingrese un monto válido',
             },
           ]}
         >
-          <Input prefix="￥" placeholder="请输入金额" />
+          <Input prefix="$" placeholder="Por favor ingrese la cantidad" />
         </Form.Item>
         <Form.Item
           wrapperCol={{
@@ -107,20 +107,20 @@ const Step1: React.FC<Step1Props> = (props) => {
           }}
         >
           <Button type="primary" onClick={onValidateForm}>
-            下一步
+            Próximo paso
           </Button>
         </Form.Item>
       </Form>
       <Divider style={{ margin: '40px 0 24px' }} />
       <div className={styles.desc}>
-        <h3>说明</h3>
-        <h4>转账到支付宝账户</h4>
+        <h3>Descripción</h3>
+        <h4>Transferencia a cuenta del mismo banco</h4>
         <p>
-          如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。
+          Si es necesario, puede hacer algunas preguntas comunes sobre el producto aquí. Si es necesario, puede poner algunas preguntas frecuentes sobre el producto aquí. Si es necesario, puede poner algunas preguntas frecuentes sobre el producto aquí.
         </p>
-        <h4>转账到银行卡</h4>
+        <h4>Transferencia a tarjeta bancaria</h4>
         <p>
-          如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。如果需要，这里可以放一些关于产品的常见问题说明。
+        Si necesita transferir dinero a una tarjeta bancaria, puede hacer algunas preguntas frecuentes sobre el producto aquí. Si es necesario, puede poner algunas preguntas frecuentes sobre el producto aquí. Si es necesario, puede poner algunas preguntas frecuentes sobre el producto aquí.
         </p>
       </div>
     </>

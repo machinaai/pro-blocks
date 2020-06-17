@@ -84,7 +84,7 @@ class DetailForm extends React.Component<DetailFormProps> {
   };
 
   renderGroupDetail = () => {
-    const { label = '新建分组' } = this.item.getModel();
+    const { label = 'Nuevo grupo' } = this.item.getModel();
 
     return (
       <Form initialValues={{ label }}>

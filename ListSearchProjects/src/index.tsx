@@ -92,8 +92,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
         <Form
           layout="inline"
           onValuesChange={() => {
-            // 表单项变化时请求数据
-            // 模拟查询表单生效
+            // Solicitar datos cuando cambie el elemento del formulario
+            // El formulario de consulta de simulación surte efecto
             dispatch({
               type: 'BLOCK_NAME_CAMEL_CASE/fetch',
               payload: {
@@ -102,38 +102,38 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
             });
           }}
         >
-          <StandardFormRow title="所属类目" block style={{ paddingBottom: 11 }}>
+          <StandardFormRow title="Afiliación" block style={{ paddingBottom: 11 }}>
             <FormItem name="category">
               <TagSelect expandable>
-                <TagSelect.Option value="cat1">类目一</TagSelect.Option>
-                <TagSelect.Option value="cat2">类目二</TagSelect.Option>
-                <TagSelect.Option value="cat3">类目三</TagSelect.Option>
-                <TagSelect.Option value="cat4">类目四</TagSelect.Option>
-                <TagSelect.Option value="cat5">类目五</TagSelect.Option>
-                <TagSelect.Option value="cat6">类目六</TagSelect.Option>
-                <TagSelect.Option value="cat7">类目七</TagSelect.Option>
-                <TagSelect.Option value="cat8">类目八</TagSelect.Option>
-                <TagSelect.Option value="cat9">类目九</TagSelect.Option>
-                <TagSelect.Option value="cat10">类目十</TagSelect.Option>
-                <TagSelect.Option value="cat11">类目十一</TagSelect.Option>
-                <TagSelect.Option value="cat12">类目十二</TagSelect.Option>
+                <TagSelect.Option value="cat1">Categoría 1</TagSelect.Option>
+                <TagSelect.Option value="cat2">Categoría 2</TagSelect.Option>
+                <TagSelect.Option value="cat3">Categoría 3</TagSelect.Option>
+                <TagSelect.Option value="cat4">Categoría 4</TagSelect.Option>
+                <TagSelect.Option value="cat5">Categoría 5</TagSelect.Option>
+                <TagSelect.Option value="cat6">Categoría 6</TagSelect.Option>
+                <TagSelect.Option value="cat7">Categoría 7</TagSelect.Option>
+                <TagSelect.Option value="cat8">Categoría 8</TagSelect.Option>
+                <TagSelect.Option value="cat9">Categoría 9</TagSelect.Option>
+                <TagSelect.Option value="cat10">Categoría 10</TagSelect.Option>
+                <TagSelect.Option value="cat11">Categoría 11</TagSelect.Option>
+                <TagSelect.Option value="cat12">Categoría 12</TagSelect.Option>
               </TagSelect>
             </FormItem>
           </StandardFormRow>
-          <StandardFormRow title="其它选项" grid last>
+          <StandardFormRow title="Otras opciones" grid last>
             <Row gutter={16}>
               <Col lg={8} md={10} sm={10} xs={24}>
-                <FormItem {...formItemLayout} label="作者" name="author">
-                  <Select placeholder="不限" style={{ maxWidth: 200, width: '100%' }}>
-                    <Option value="lisa">王昭君</Option>
+                <FormItem {...formItemLayout} label="Autor" name="author">
+                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
+                    <Option value="lisa">lisa</Option>
                   </Select>
                 </FormItem>
               </Col>
               <Col lg={8} md={10} sm={10} xs={24}>
-                <FormItem {...formItemLayout} label="好评度" name="rate">
-                  <Select placeholder="不限" style={{ maxWidth: 200, width: '100%' }}>
-                    <Option value="good">优秀</Option>
-                    <Option value="normal">普通</Option>
+                <FormItem {...formItemLayout} label="Alabanza de" name="rate">
+                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
+                    <Option value="good">bueno</Option>
+                    <Option value="normal">normal</Option>
                   </Select>
                 </FormItem>
               </Col>

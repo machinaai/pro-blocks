@@ -25,7 +25,7 @@ for (let i = 0; i < fakeY2.length; i += 1) {
 const salesData = [];
 for (let i = 0; i < 12; i += 1) {
   salesData.push({
-    x: `${i + 1}月`,
+    x: `Mes ${i + 1}`,
     y: Math.floor(Math.random() * 1000) + 200,
   });
 }
@@ -33,7 +33,7 @@ const searchData = [];
 for (let i = 0; i < 50; i += 1) {
   searchData.push({
     index: i + 1,
-    keyword: `搜索关键词-${i}`,
+    keyword: `buscar la palabra clave-${i}`,
     count: Math.floor(Math.random() * 1000),
     range: Math.floor(Math.random() * 100),
     status: Math.floor((Math.random() * 10) % 2),
@@ -41,77 +41,77 @@ for (let i = 0; i < 50; i += 1) {
 }
 const salesTypeData = [
   {
-    x: '家用电器',
+    x: 'Electrodomésticos',
     y: 4544,
   },
   {
-    x: '食用酒水',
+    x: 'Licores',
     y: 3321,
   },
   {
-    x: '个护健康',
+    x: 'Cuidado de la salud',
     y: 3113,
   },
   {
-    x: '服饰箱包',
+    x: 'Ropa',
     y: 2341,
   },
   {
-    x: '母婴产品',
+    x: 'Blancos',
     y: 1231,
   },
   {
-    x: '其他',
+    x: 'otro',
     y: 1231,
   },
 ];
 
 const salesTypeDataOnline = [
   {
-    x: '家用电器',
+    x: 'Electrodomésticos',
     y: 244,
   },
   {
-    x: '食用酒水',
+    x: 'Licores',
     y: 321,
   },
   {
-    x: '个护健康',
+    x: 'Cuidado de la salud',
     y: 311,
   },
   {
-    x: '服饰箱包',
+    x: 'Ropa',
     y: 41,
   },
   {
-    x: '母婴产品',
+    x: 'Blancos',
     y: 121,
   },
   {
-    x: '其他',
+    x: 'otro',
     y: 111,
   },
 ];
 
 const salesTypeDataOffline = [
   {
-    x: '家用电器',
+    x: 'Electrodomésticos',
     y: 99,
   },
   {
-    x: '食用酒水',
+    x: 'Licores',
     y: 188,
   },
   {
-    x: '个护健康',
+    x: 'Cuidado de la salud',
     y: 344,
   },
   {
-    x: '服饰箱包',
+    x: 'Ropa',
     y: 255,
   },
   {
-    x: '其他',
+    x: 'otro',
     y: 65,
   },
 ];
@@ -134,7 +134,7 @@ for (let i = 0; i < 20; i += 1) {
 
 const radarOriginData = [
   {
-    name: '个人',
+    name: 'personal',
     ref: 10,
     koubei: 8,
     output: 4,
@@ -142,7 +142,7 @@ const radarOriginData = [
     hot: 7,
   },
   {
-    name: '团队',
+    name: 'equipo',
     ref: 3,
     koubei: 9,
     output: 6,
@@ -150,7 +150,7 @@ const radarOriginData = [
     hot: 1,
   },
   {
-    name: '部门',
+    name: 'Departamento',
     ref: 4,
     koubei: 1,
     output: 6,
@@ -161,11 +161,11 @@ const radarOriginData = [
 
 const radarData: RadarData[] = [];
 const radarTitleMap = {
-  ref: '引用',
-  koubei: '口碑',
-  output: '产量',
-  contribute: '贡献',
-  hot: '热度',
+  ref: 'Citar',
+  koubei: 'compartir',
+  output: 'rendimiento',
+  contribute: 'contribuir',
+  hot: 'caliente',
 };
 radarOriginData.forEach((item) => {
   Object.keys(item).forEach((key) => {

@@ -210,9 +210,9 @@
       "previewUrl": "https://preview.pro.ant.design/form/advanced/form"
     },
     {
-      "name": "Forma básica",
+      "name": "Forma Básica",
       "key": "FormBasicForm",
-      "description": "表单页用于向用户收集或验证信息，基础表单常用于数据项较少的表单场景。",
+      "description": "Las páginas de formulario se usan para recopilar o verificar información de los usuarios, y los formularios básicos a menudo se usan en escenarios de formulario con menos elementos de datos.",
       "url": "https://github.com/machinaai/pro-blocks/tree/master/FormBasicForm",
       "path": "FormBasicForm",
       "features": [

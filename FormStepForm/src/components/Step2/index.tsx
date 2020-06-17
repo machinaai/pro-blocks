@@ -66,23 +66,23 @@ const Step2: React.FC<Step2Props> = (props) => {
       <Alert
         closable
         showIcon
-        message="确认转账后，资金将直接打入对方账户，无法退回。"
+        message="Después de confirmar la transferencia, los fondos se acreditarán directamente a la cuenta de la otra parte y no podrán devolverse."
         style={{ marginBottom: 24 }}
       />
       <Descriptions column={1}>
-        <Descriptions.Item label="付款账户"> {payAccount}</Descriptions.Item>
-        <Descriptions.Item label="收款账户"> {receiverAccount}</Descriptions.Item>
-        <Descriptions.Item label="收款人姓名"> {receiverName}</Descriptions.Item>
-        <Descriptions.Item label="转账金额">
-          <Statistic value={amount} suffix="元" />
+        <Descriptions.Item label="Cuenta de pago"> {payAccount}</Descriptions.Item>
+        <Descriptions.Item label="Cuentas por cobrar"> {receiverAccount}</Descriptions.Item>
+        <Descriptions.Item label="Nombre del beneficiario"> {receiverName}</Descriptions.Item>
+        <Descriptions.Item label="monto de la transferencia">
+          <Statistic value={amount} suffix="$" />
         </Descriptions.Item>
       </Descriptions>
       <Divider style={{ margin: '24px 0' }} />
       <Form.Item
-        label="支付密码"
+        label="Contraseña de pago"
         name="password"
         required={false}
-        rules={[{ required: true, message: '需要支付密码才能进行支付' }]}
+        rules={[{ required: true, message: 'Se requiere contraseña de pago para realizar el pago' }]}
       >
         <Input type="password" autoComplete="off" style={{ width: '80%' }} />
       </Form.Item>
@@ -97,10 +97,10 @@ const Step2: React.FC<Step2Props> = (props) => {
         }}
       >
         <Button type="primary" onClick={onValidateForm} loading={submitting}>
-          提交
+          enviar
         </Button>
         <Button onClick={onPrev} style={{ marginLeft: 8 }}>
-          上一步
+         Anterior
         </Button>
       </Form.Item>
     </Form>

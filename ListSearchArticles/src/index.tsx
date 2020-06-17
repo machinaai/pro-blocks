@@ -50,24 +50,24 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
 
   const owners = [
     {
-      id: 'wzj',
-      name: '我自己',
+      id: 'rod',
+      name: 'Rodolfo',
     },
     {
-      id: 'wjh',
-      name: '吴家豪',
+      id: 'art',
+      name: 'Arturo',
     },
     {
-      id: 'zxx',
-      name: '周星星',
+      id: 'alj',
+      name: 'Alejandro',
     },
     {
-      id: 'zly',
-      name: '赵丽颖',
+      id: 'crl',
+      name: 'Carlos',
     },
     {
-      id: 'ym',
-      name: '姚明',
+      id: 'ssn',
+      name: 'Susana',
     },
   ];
 
@@ -115,10 +115,10 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
       <Button onClick={fetchMore} style={{ paddingLeft: 48, paddingRight: 48 }}>
         {loading ? (
           <span>
-            <LoadingOutlined /> 加载中...
+            <LoadingOutlined /> Cargando...
           </span>
         ) : (
-          '加载更多'
+          'cargar más'
         )}
       </Button>
     </div>
@@ -142,27 +142,27 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
             });
           }}
         >
-          <StandardFormRow title="所属类目" block style={{ paddingBottom: 11 }}>
+          <StandardFormRow title="Afiliación" block style={{ paddingBottom: 11 }}>
             <FormItem name="category">
               <TagSelect expandable>
-                <TagSelect.Option value="cat1">类目一</TagSelect.Option>
-                <TagSelect.Option value="cat2">类目二</TagSelect.Option>
-                <TagSelect.Option value="cat3">类目三</TagSelect.Option>
-                <TagSelect.Option value="cat4">类目四</TagSelect.Option>
-                <TagSelect.Option value="cat5">类目五</TagSelect.Option>
-                <TagSelect.Option value="cat6">类目六</TagSelect.Option>
-                <TagSelect.Option value="cat7">类目七</TagSelect.Option>
-                <TagSelect.Option value="cat8">类目八</TagSelect.Option>
-                <TagSelect.Option value="cat9">类目九</TagSelect.Option>
-                <TagSelect.Option value="cat10">类目十</TagSelect.Option>
-                <TagSelect.Option value="cat11">类目十一</TagSelect.Option>
-                <TagSelect.Option value="cat12">类目十二</TagSelect.Option>
+                <TagSelect.Option value="cat1">Categoría 1</TagSelect.Option>
+                <TagSelect.Option value="cat2">Categoría 2</TagSelect.Option>
+                <TagSelect.Option value="cat3">Categoría 3</TagSelect.Option>
+                <TagSelect.Option value="cat4">Categoría 4</TagSelect.Option>
+                <TagSelect.Option value="cat5">Categoría 5</TagSelect.Option>
+                <TagSelect.Option value="cat6">Categoría 6</TagSelect.Option>
+                <TagSelect.Option value="cat7">Categoría 7</TagSelect.Option>
+                <TagSelect.Option value="cat8">Categoría 8</TagSelect.Option>
+                <TagSelect.Option value="cat9">Categoría 9</TagSelect.Option>
+                <TagSelect.Option value="cat10">Categoría 10</TagSelect.Option>
+                <TagSelect.Option value="cat11">Categoría 11</TagSelect.Option>
+                <TagSelect.Option value="cat12">Categoría 12</TagSelect.Option>
               </TagSelect>
             </FormItem>
           </StandardFormRow>
           <StandardFormRow title="owner" grid>
             <FormItem name="owner" noStyle>
-              <Select mode="multiple" placeholder="选择 owner">
+              <Select mode="multiple" placeholder="Seleccione owner">
                 {owners.map((owner) => (
                   <Option key={owner.id} value={owner.id}>
                     {owner.name}
@@ -171,22 +171,22 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               </Select>
             </FormItem>
             <a className={styles.selfTrigger} onClick={setOwner}>
-              只看自己的
+              Solo mira el tuyo
             </a>
           </StandardFormRow>
-          <StandardFormRow title="其它选项" grid last>
+          <StandardFormRow title="Otras opciones" grid last>
             <Row gutter={16}>
               <Col xl={8} lg={10} md={12} sm={24} xs={24}>
-                <FormItem {...formItemLayout} label="活跃用户" name="user">
-                  <Select placeholder="不限" style={{ maxWidth: 200, width: '100%' }}>
-                    <Option value="lisa">李三</Option>
+                <FormItem {...formItemLayout} label="usuario activo" name="user">
+                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
+                    <Option value="lisa">lisa</Option>
                   </Select>
                 </FormItem>
               </Col>
               <Col xl={8} lg={10} md={12} sm={24} xs={24}>
-                <FormItem {...formItemLayout} label="好评度" name="rate">
-                  <Select placeholder="不限" style={{ maxWidth: 200, width: '100%' }}>
-                    <Option value="good">优秀</Option>
+                <FormItem {...formItemLayout} label="Alabanza de" name="rate">
+                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
+                    <Option value="good">bueno</Option>
                   </Select>
                 </FormItem>
               </Col>
@@ -224,9 +224,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                 }
                 description={
                   <span>
-                    <Tag>Ant Design</Tag>
-                    <Tag>设计语言</Tag>
-                    <Tag>蚂蚁金服</Tag>
+                    <Tag>React Design</Tag>
+                    <Tag>Lenguaje de diseño</Tag>
                   </span>
                 }
               />
