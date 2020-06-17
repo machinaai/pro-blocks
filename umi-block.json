@@ -78,7 +78,7 @@
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardMonitor/snapshot.png?raw=true",
       "tags": [
-        "dashboard"
+        "Dashboard"
       ],
       "previewUrl": "https://preview.pro.ant.design/dashboard/monitor"
     },
@@ -131,7 +131,7 @@
       "previewUrl": "https://preview.pro.ant.design/editor/koni"
     },
     {
-      "name": "editor.mind",
+      "name": "Editor de mapas mentales",
       "key": "EditorMind",
       "description": "El mapa mental es una herramienta efectiva para expresar el pensamiento divergente. Es simple pero muy efectivo. Es una herramienta de visualización muy práctica.",
       "url": "https://github.com/machinaai/pro-blocks/tree/master/EditorMind",
