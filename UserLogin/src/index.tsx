@@ -116,7 +116,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
             recuperar contraseña
           </a>
         </div>
-        <Submit loading={submitting}>iniciar sesión</Submit>
+        <Submit loading={submitting}>Iniciar Sesión</Submit>
         <div className={styles.other}>
           Otros métodos de inicio de sesión
           <AlipayCircleOutlined className={styles.icon} />

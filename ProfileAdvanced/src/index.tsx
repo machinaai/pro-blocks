@@ -83,7 +83,7 @@ const action = (
 
 const extra = (
   <div className={styles.moreInfo}>
-    <Statistic title="estado" value="estado" />
+    <Statistic title="Estado" value="recibido" />
     <Statistic title="Total de la orden" value={568.08} prefix="$" />
   </div>
 );
@@ -92,7 +92,7 @@ const description = (
   <RouteContext.Consumer>
     {({ isMobile }) => (
       <Descriptions className={styles.headerList} size="small" column={isMobile ? 1 : 2}>
-        <Descriptions.Item label="fundador">Alejandro Hernández</Descriptions.Item>
+        <Descriptions.Item label="Fundador">Alejandro Hernández</Descriptions.Item>
         <Descriptions.Item label="Pedido de productos">XX Servicio</Descriptions.Item>
         <Descriptions.Item label="Tiempo de creación">2017-07-07</Descriptions.Item>
         <Descriptions.Item label="Documentos relacionados">
@@ -122,7 +122,7 @@ const desc2 = (
       <DingdingOutlined style={{ color: '#00A0E9', marginLeft: 8 }} />
     </Fragment>
     <div>
-      <a href="">Prisa</a>
+      <a href="">Avanzar</a>
     </div>
   </div>
 );
@@ -281,7 +281,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
           },
           {
             key: 'rule',
-            tab: 'regla',
+            tab: 'Regla',
           },
         ]}
       >
@@ -296,7 +296,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
                     current={1}
                   >
                     <Step title="Crear proyecto" description={desc1} />
-                    <Step title="Examen preliminar departamental" description={desc2} />
+                    <Step title="Análisis preliminar departamental" description={desc2} />
                     <Step title="Revisión financiera" />
                     <Step title="Aplicar" />
                   </Steps>

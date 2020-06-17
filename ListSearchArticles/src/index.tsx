@@ -184,7 +184,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
                 </FormItem>
               </Col>
               <Col xl={8} lg={10} md={12} sm={24} xs={24}>
-                <FormItem {...formItemLayout} label="Alabanza de" name="rate">
+                <FormItem {...formItemLayout} label="Rating" name="rate">
                   <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
                     <Option value="good">bueno</Option>
                   </Select>

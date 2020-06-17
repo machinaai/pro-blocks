@@ -19,13 +19,13 @@ export interface GaugeProps {
 const defaultFormatter = (val: string): string => {
   switch (val) {
     case '2':
-      return 'difference';
+      return 'refence';
     case '4':
-      return 'in';
+      return 'warn';
     case '6':
       return 'ok';
     case '8':
-      return 'excellent';
+      return 'great';
     default:
       return '';
   }

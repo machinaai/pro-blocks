@@ -190,7 +190,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
               bodyStyle={{ padding: 0 }}
               bordered={false}
               className={styles.activeCard}
-              title="dinámica"
+              title="Dinámica"
               loading={activitiesLoading}
             >
               <List<ActivitiesType>

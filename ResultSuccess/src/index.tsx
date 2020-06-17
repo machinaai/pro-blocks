@@ -11,7 +11,7 @@ const { Step } = Steps;
 const desc1 = (
   <div className={styles.title}>
     <div style={{ margin: '8px 0 4px' }}>
-      <FormattedMessage id="BLOCK_NAME.success.step1-operator" defaultMessage="Qu Lili" />
+      <FormattedMessage id="BLOCK_NAME.success.step1-operator" defaultMessage="Operador 1" />
       <DingdingOutlined style={{ marginLeft: 8, color: '#00A0E9' }} />
     </div>
     <div>2016-12-12 12:32</div>
@@ -48,7 +48,7 @@ const content = (
       <Descriptions.Item
         label={<FormattedMessage id="BLOCK_NAME.success.principal" defaultMessage="Principal：" />}
       >
-        <FormattedMessage id="BLOCK_NAME.success.step1-operator" defaultMessage="Qu Lili" />
+        <FormattedMessage id="BLOCK_NAME.success.step1-operator" defaultMessage="Operador 1" />
       </Descriptions.Item>
       <Descriptions.Item
         label={

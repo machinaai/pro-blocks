@@ -7,7 +7,7 @@ export default {
   'BLOCK_NAME.success.principal': 'Principal',
   'BLOCK_NAME.success.operate-time': 'Effective time',
   'BLOCK_NAME.success.step1-title': 'Create project',
-  'BLOCK_NAME.success.step1-operator': 'Qu Lili',
+  'BLOCK_NAME.success.step1-operator': 'Operador 1',
   'BLOCK_NAME.success.step2-title': 'Departmental preliminary review',
   'BLOCK_NAME.success.step2-operator': 'Zhou Maomao',
   'BLOCK_NAME.success.step2-extra': 'Urge',

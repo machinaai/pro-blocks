@@ -244,7 +244,7 @@ const getActivities = [
       name: 'Iteración de junio',
       link: 'http://github.com/',
     },
-    template: 'Cree un nuevo proyecto @{group} en @{project}',
+    template: 'creó un nuevo proyecto @{group} en @{project}',
   },
   {
     id: 'trend-2',

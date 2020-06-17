@@ -148,7 +148,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
                 </Form.Item>
               </Col>
               <Col lg={8} md={10} sm={10} xs={24}>
-                <Form.Item {...formItemLayout} name="rate" label="Alabanza de">
+                <Form.Item {...formItemLayout} name="rate" label="Rating">
                   <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
                     <Option value="good">excelente</Option>
                     <Option value="normal">normal</Option>
