@@ -41,8 +41,8 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
       <Card bordered={false}>
         <>
           <Steps current={currentStep} className={styles.steps}>
-            <Step title="Complete la información de transferencia" />
-            <Step title="Confirmar información de transferencia" />
+            <Step title="Complete la información" />
+            <Step title="Confirmar" />
             <Step title="Envíar" />
           </Steps>
           {stepComponent}

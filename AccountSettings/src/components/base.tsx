@@ -4,7 +4,7 @@ import { connect, FormattedMessage, formatMessage } from 'umi';
 import React, { Component } from 'react';
 
 import { CurrentUser } from '../data.d';
-import GeographicView from './GeographicView';
+//import GeographicView from './GeographicView';
 import PhoneView from './PhoneView';
 import styles from './BaseView.less';
 
@@ -154,33 +154,6 @@ class BaseView extends Component<BaseViewProps> {
               <Select style={{ maxWidth: 220 }}>
                 <Option value="Mexico">México</Option>
               </Select>
-            </Form.Item>
-            <Form.Item
-              name="geographic"
-              label={formatMessage({ id: 'BLOCK_NAME.basic.geographic' })}
-              rules={[
-                {
-                  required: true,
-                  message: formatMessage({ id: 'BLOCK_NAME.basic.geographic-message' }, {}),
-                },
-                {
-                  validator: validatorGeographic,
-                },
-              ]}
-            >
-              <GeographicView />
-            </Form.Item>
-            <Form.Item
-              name="address"
-              label={formatMessage({ id: 'BLOCK_NAME.basic.address' })}
-              rules={[
-                {
-                  required: true,
-                  message: formatMessage({ id: 'BLOCK_NAME.basic.address-message' }, {}),
-                },
-              ]}
-            >
-              <Input />
             </Form.Item>
             <Form.Item
               name="phone"

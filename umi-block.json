@@ -11,7 +11,7 @@
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/EmptyPage/snapshot.png?raw=true",
       "tags": [
-        "Página en blanco"
+        "página en blanco"
       ],
       "previewUrl": "https://preview.pro.ant.design"
     },
@@ -61,7 +61,7 @@
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardAnalysis/snapshot.png?raw=true",
       "tags": [
-        "Dashboard"
+        "dashboard"
       ],
       "previewUrl": "https://preview.pro.ant.design/dashboard/analysis"
     },
@@ -78,7 +78,7 @@
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardMonitor/snapshot.png?raw=true",
       "tags": [
-        "Dashboard"
+        "dashboard"
       ],
       "previewUrl": "https://preview.pro.ant.design/dashboard/monitor"
     },
@@ -94,7 +94,7 @@
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardWorkplace/snapshot.png?raw=true",
       "tags": [
-        "Dashboard"
+        "dashboard"
       ],
       "previewUrl": "https://preview.pro.ant.design/dashboard/workplace"
     },
@@ -133,7 +133,7 @@
     {
       "name": "Editor de mapas mentales",
       "key": "EditorMind",
-      "description": "El mapa mental es una herramienta efectiva para expresar el pensamiento divergente. Es simple pero muy efectivo. Es una herramienta de visualización muy práctica.",
+      "description": "El mapa emtal es una herramienta efectiva para expresar el pensamiento divergente. Es simple pero muy efectivo. Es una herramienta de visualización muy práctica.",
       "url": "https://github.com/machinaai/pro-blocks/tree/master/EditorMind",
       "path": "EditorMind",
       "features": [
@@ -210,7 +210,7 @@
       "previewUrl": "https://preview.pro.ant.design/form/advanced/form"
     },
     {
-      "name": "Forma Básica",
+      "name": "Forma básica",
       "key": "FormBasicForm",
       "description": "Las páginas de formulario se usan para recopilar o verificar información de los usuarios, y los formularios básicos a menudo se usan en escenarios de formulario con menos elementos de datos.",
       "url": "https://github.com/machinaai/pro-blocks/tree/master/FormBasicForm",
@@ -458,7 +458,7 @@
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/UserRegister/snapshot.png?raw=true",
       "tags": [
         "Usuario",
-        "Registrar"
+        "resitrar"
       ],
       "previewUrl": "https://preview.pro.ant.design/user/register"
     },
@@ -475,7 +475,7 @@
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/UserRegisterResult/snapshot.png?raw=true",
       "tags": [
         "Usuario",
-        "Registrar",
+        "resitrar",
         "Resultado"
       ],
       "previewUrl": "https://preview.pro.ant.design/user/register/result"
