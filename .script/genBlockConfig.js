@@ -73,7 +73,7 @@ const tagsKey = {
   success: 'remove',
   user: 'Usuario',
   login: 'Iniciar sesión',
-  register: 'resitrar',
+  register: 'Registrar',
   account: 'remove',
   center: 'Centro personal',
   settings: 'Configuraciones personales',

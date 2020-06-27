@@ -458,7 +458,7 @@
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/UserRegister/snapshot.png?raw=true",
       "tags": [
         "Usuario",
-        "resitrar"
+        "Registrar"
       ],
       "previewUrl": "https://preview.pro.ant.design/user/register"
     },
@@ -475,7 +475,7 @@
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/UserRegisterResult/snapshot.png?raw=true",
       "tags": [
         "Usuario",
-        "resitrar",
+        "Registrar",
         "Resultado"
       ],
       "previewUrl": "https://preview.pro.ant.design/user/register/result"
