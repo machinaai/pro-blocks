@@ -1,4 +1,5 @@
 import { Axis, Chart, Coord, Geom, Guide, Shape } from 'bizcharts';
+import { getLocale } from 'umi';
 
 import React from 'react';
 import autoHeight from '../autoHeight';
@@ -19,12 +20,24 @@ export interface GaugeProps {
 const defaultFormatter = (val: string): string => {
   switch (val) {
     case '2':
-      return 'rerence';
+      if (getLocale() === 'es-ES'){
+        return 'crítico';
+      }
+      return 'critical';
     case '4':
+      if (getLocale() === 'es-ES'){
+        return 'mal';
+      }
       return 'warn';
     case '6':
+      if (getLocale() === 'es-ES'){
+        return 'bien';
+      }
       return 'ok';
     case '8':
+      if (getLocale() === 'es-ES'){
+        return 'genial';
+      }
       return 'great';
     default:
       return '';

@@ -1,7 +1,7 @@
 import { Avatar, Card, Col, List, Skeleton, Row, Statistic } from 'antd';
 import React, { Component } from 'react';
 
-import { Link, Dispatch, connect } from 'umi';
+import { Link, Dispatch, connect, formatMessage } from 'umi';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import moment from 'moment';
 import Radar from './components/Radar';
@@ -60,9 +60,9 @@ const PageHeaderContent: React.FC<{ currentUser: CurrentUser }> = ({ currentUser
       </div>
       <div className={styles.content}>
         <div className={styles.contentTitle}>
-        Buenos días，
+        {formatMessage({ id: 'WORKPLACE.message.greeting' })} 
           {currentUser.name}
-          ，¡excelente semana！
+          ，{formatMessage({ id: 'WORKPLACE.message.week' })}
         </div>
         <div>
           {currentUser.title} |{currentUser.group}
@@ -75,13 +75,13 @@ const PageHeaderContent: React.FC<{ currentUser: CurrentUser }> = ({ currentUser
 const ExtraContent: React.FC<{}> = () => (
   <div className={styles.extraContent}>
     <div className={styles.statItem}>
-      <Statistic title="Número de items" value={56} />
+    <Statistic title={formatMessage({ id: 'WORKPLACE.number.item' })} value={56} />
     </div>
     <div className={styles.statItem}>
-      <Statistic title="Ranking dentro del equipo" value={8} suffix="/ 24" />
+    <Statistic title={formatMessage({ id: 'WORKPLACE.ranking.team' })}  value={8} suffix="/ 24" />
     </div>
     <div className={styles.statItem}>
-      <Statistic title="Acceso al proyecto" value={2223} />
+    <Statistic title={formatMessage({ id: 'WORKPLACE.access.project' })}  value={2223} />
     </div>
   </div>
 );
@@ -156,9 +156,9 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
             <Card
               className={styles.projectList}
               style={{ marginBottom: 24 }}
-              title="Proyecto en progreso"
+              title={formatMessage({ id: 'WORKPLACE.card.A.title' })} 
               bordered={false}
-              extra={<Link to="/">Todos los artículos</Link>}
+              extra={<Link to="/">{formatMessage({ id: 'WORKPLACE.extra.all' })}</Link>}
               loading={projectLoading}
               bodyStyle={{ padding: 0 }}
             >
@@ -190,7 +190,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
               bodyStyle={{ padding: 0 }}
               bordered={false}
               className={styles.activeCard}
-              title="Dinámica"
+              title={formatMessage({ id: 'WORKPLACE.card.B.title' })} 
               loading={activitiesLoading}
             >
               <List<ActivitiesType>
@@ -205,7 +205,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
           <Col xl={8} lg={24} md={24} sm={24} xs={24}>
             <Card
               style={{ marginBottom: 24 }}
-              title="Inicio rápido / navegación fácil"
+              title={formatMessage({ id: 'WORKPLACE.card.C.title' })} 
               bordered={false}
               bodyStyle={{ padding: 0 }}
             >
@@ -214,7 +214,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
             <Card
               style={{ marginBottom: 24 }}
               bordered={false}
-              title="XX índice"
+              title={formatMessage({ id: 'WORKPLACE.card.D.title' })} 
               loading={radarData.length === 0}
             >
               <div className={styles.chart}>
@@ -224,7 +224,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
             <Card
               bodyStyle={{ paddingTop: 12, paddingBottom: 12 }}
               bordered={false}
-              title="equipo"
+              title={formatMessage({ id: 'WORKPLACE.card.E.title' })} 
               loading={projectLoading}
             >
               <div className={styles.members}>

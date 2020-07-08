@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { FormattedMessage } from 'umi';
 import { Statistic } from 'antd';
 import { MiniArea } from '../Charts';
 import styles from './index.less';
@@ -59,7 +60,12 @@ export default class ActiveChart extends Component {
 
     return (
       <div className={styles.activeChart}>
-        <Statistic title="Target assessment" value="Expected to meet expectations" />
+        <Statistic title={
+          <FormattedMessage
+            id="BLOCK_NAME.monitor.target-assessment"
+            defaultMessage="Target assessment"
+          />
+        } />
         <div style={{ marginTop: 32 }}>
           <MiniArea
             animate={false}

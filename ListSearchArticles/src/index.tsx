@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { Button, Card, Col, Form, List, Row, Select, Tag } from 'antd';
 import { LoadingOutlined, StarOutlined, LikeOutlined, MessageOutlined } from '@ant-design/icons';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, formatMessage } from 'umi';
 import ArticleListContent from './components/ArticleListContent';
 import { StateType } from './model';
 import { ListItemDataType } from './data.d';
@@ -115,10 +115,10 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
       <Button onClick={fetchMore} style={{ paddingLeft: 48, paddingRight: 48 }}>
         {loading ? (
           <span>
-            <LoadingOutlined /> Cargando...
+            <LoadingOutlined /> {formatMessage({ id: 'SEARCH-ARTICLES.loading' })}
           </span>
         ) : (
-          'cargar más'
+          formatMessage({ id: 'SEARCH-ARTICLES.show.more' })
         )}
       </Button>
     </div>
@@ -142,27 +142,27 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
             });
           }}
         >
-          <StandardFormRow title="Afiliación" block style={{ paddingBottom: 11 }}>
+          <StandardFormRow title={formatMessage({ id: 'SEARCH-ARTICLES.membership' })} block style={{ paddingBottom: 11 }}>
             <FormItem name="category">
               <TagSelect expandable>
-                <TagSelect.Option value="cat1">Categoría 1</TagSelect.Option>
-                <TagSelect.Option value="cat2">Categoría 2</TagSelect.Option>
-                <TagSelect.Option value="cat3">Categoría 3</TagSelect.Option>
-                <TagSelect.Option value="cat4">Categoría 4</TagSelect.Option>
-                <TagSelect.Option value="cat5">Categoría 5</TagSelect.Option>
-                <TagSelect.Option value="cat6">Categoría 6</TagSelect.Option>
-                <TagSelect.Option value="cat7">Categoría 7</TagSelect.Option>
-                <TagSelect.Option value="cat8">Categoría 8</TagSelect.Option>
-                <TagSelect.Option value="cat9">Categoría 9</TagSelect.Option>
-                <TagSelect.Option value="cat10">Categoría 10</TagSelect.Option>
-                <TagSelect.Option value="cat11">Categoría 11</TagSelect.Option>
-                <TagSelect.Option value="cat12">Categoría 12</TagSelect.Option>
+              <TagSelect.Option value="cat1">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.A' })} </TagSelect.Option>
+                <TagSelect.Option value="cat2">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.B' })}</TagSelect.Option>
+                <TagSelect.Option value="cat3">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.C' })}</TagSelect.Option>
+                <TagSelect.Option value="cat4">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.D' })}</TagSelect.Option>
+                <TagSelect.Option value="cat5">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.E' })}</TagSelect.Option>
+                <TagSelect.Option value="cat6">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.F' })}</TagSelect.Option>
+                <TagSelect.Option value="cat7">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.G' })}</TagSelect.Option>
+                <TagSelect.Option value="cat8">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.H' })}</TagSelect.Option>
+                <TagSelect.Option value="cat9">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.I' })}</TagSelect.Option>
+                <TagSelect.Option value="cat10">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.J' })}</TagSelect.Option>
+                <TagSelect.Option value="cat11">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.K' })}</TagSelect.Option>
+                <TagSelect.Option value="cat12">{formatMessage({ id: 'SEARCH-ARTICLES.tagselect.L' })}</TagSelect.Option>
               </TagSelect>
             </FormItem>
           </StandardFormRow>
-          <StandardFormRow title="owner" grid>
+          <StandardFormRow title={formatMessage({ id: 'SEARCH-ARTICLES.owner' })} grid>
             <FormItem name="owner" noStyle>
-              <Select mode="multiple" placeholder="Seleccione owner">
+            <Select mode="multiple" placeholder={formatMessage({ id: 'SEARCH-ARTICLES.owner.placeholder' })}>
                 {owners.map((owner) => (
                   <Option key={owner.id} value={owner.id}>
                     {owner.name}
@@ -171,22 +171,22 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               </Select>
             </FormItem>
             <a className={styles.selfTrigger} onClick={setOwner}>
-              Solo mira el tuyo
+            {formatMessage({ id: 'SEARCH-ARTICLES.owner.self' })}
             </a>
           </StandardFormRow>
-          <StandardFormRow title="Otras opciones" grid last>
+          <StandardFormRow title={formatMessage({ id: 'SEARCH-ARTICLES.extra.options' })} grid last>
             <Row gutter={16}>
               <Col xl={8} lg={10} md={12} sm={24} xs={24}>
-                <FormItem {...formItemLayout} label="usuario activo" name="user">
-                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
+              <FormItem {...formItemLayout} label={formatMessage({ id: 'SEARCH-ARTICLES.extra.options.users' })} name="user">
+                  <Select placeholder={formatMessage({ id: 'SEARCH-ARTICLES.extra.options.placeholder' })} style={{ maxWidth: 200, width: '100%' }}>
                     <Option value="lisa">lisa</Option>
                   </Select>
                 </FormItem>
               </Col>
               <Col xl={8} lg={10} md={12} sm={24} xs={24}>
-                <FormItem {...formItemLayout} label="Rating" name="rate">
-                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
-                    <Option value="good">bueno</Option>
+              <FormItem {...formItemLayout} label={formatMessage({ id: 'SEARCH-ARTICLES.extra.options.rating' })} name="rate">
+                  <Select placeholder={formatMessage({ id: 'SEARCH-ARTICLES.extra.options.placeholder' })} style={{ maxWidth: 200, width: '100%' }}>
+                    <Option value="good">{formatMessage({ id: 'SEARCH-ARTICLES.extra.rating.good' })}</Option>
                   </Select>
                 </FormItem>
               </Col>

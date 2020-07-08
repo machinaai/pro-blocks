@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Steps } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { connect } from 'umi';
+import { connect, formatMessage } from 'umi';
 import { StateType } from './model';
 import Step1 from './components/Step1';
 import Step2 from './components/Step2';
@@ -10,7 +10,7 @@ import styles from './style.less';
 
 const { Step } = Steps;
 
-interface PAGE_NAME_UPPER_CAMEL_CASEProps {
+interface FormStepFormProps {
   current: StateType['current'];
 }
 
@@ -26,7 +26,7 @@ const getCurrentStepAndComponent = (current?: string) => {
   }
 };
 
-const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({ current }) => {
+const FormStepForm: React.FC<FormStepFormProps> = ({ current }) => {
   const [stepComponent, setStepComponent] = useState<React.ReactNode>(<Step1 />);
   const [currentStep, setCurrentStep] = useState<number>(0);
 
@@ -37,13 +37,13 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   }, [current]);
 
   return (
-    <PageHeaderWrapper content="Divida una tarea de formulario larga o desconocida en varios pasos para guiar al usuario a través de ella.">
+    <PageHeaderWrapper content={formatMessage({id: 'BLOCK NAME.divide.homework'})}>
       <Card bordered={false}>
         <>
           <Steps current={currentStep} className={styles.steps}>
-            <Step title="Complete la información" />
-            <Step title="Confirmar" />
-            <Step title="Envíar" />
+            <Step title={formatMessage({id: 'BLOCK_NAME.send'})} />
+            <Step title={formatMessage({id: 'BLOCK_NAME.confirm'})} />
+            <Step title={formatMessage({id: 'BLOCK_NAME.confirm.complete'})} />
           </Steps>
           {stepComponent}
         </>
@@ -52,6 +52,6 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
   );
 };
 
-export default connect(({ BLOCK_NAME_CAMEL_CASE }: { BLOCK_NAME_CAMEL_CASE: StateType }) => ({
-  current: BLOCK_NAME_CAMEL_CASE.current,
-}))(PAGE_NAME_UPPER_CAMEL_CASE);
+export default connect(({ formStepForm }: { formStepForm: StateType }) => ({
+  current: formStepForm.current,
+}))(FormStepForm);

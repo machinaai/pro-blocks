@@ -1,4 +1,4 @@
-import { Link } from 'umi';
+import { Link, formatMessage } from 'umi';
 import { Result, Button } from 'antd';
 import React from 'react';
 
@@ -9,10 +9,10 @@ export default () => (
     style={{
       background: 'none',
     }}
-    subTitle="Sorry, the server is reporting an error."
+    subTitle={formatMessage({ id: 'exception-500.description.500' })}
     extra={
       <Link to="/">
-        <Button type="primary">Back Home</Button>
+        <Button type="primary">{formatMessage({ id: 'exception-500.exception.back' })}</Button>
       </Link>
     }
   />

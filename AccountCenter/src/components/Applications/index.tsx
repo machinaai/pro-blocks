@@ -7,7 +7,7 @@ import {
 import { Avatar, Card, Dropdown, List, Menu, Tooltip } from 'antd';
 import React from 'react';
 
-import { connect } from 'umi';
+import { connect, FormattedMessage, formatMessage } from 'umi';
 import numeral from 'numeral';
 import { ModalState } from '../../model';
 import stylesApplications from './index.less';
@@ -44,17 +44,17 @@ const Applications: React.FC<Partial<ModalState>> = (props) => {
     <Menu>
       <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="https://www.alipay.com/">
-          1st menu item
+          <FormattedMessage id='BLOCK_NAME.menu.item1' />
         </a>
       </Menu.Item>
       <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="https://www.taobao.com/">
-          2nd menu item
+          <FormattedMessage id='BLOCK_NAME.menu.item2' />
         </a>
       </Menu.Item>
       <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="https://www.tmall.com/">
-          3d menu item
+          <FormattedMessage id='BLOCK_NAME.menu.item3' />
         </a>
       </Menu.Item>
     </Menu>
@@ -65,11 +65,11 @@ const Applications: React.FC<Partial<ModalState>> = (props) => {
   }> = ({ activeUser, newUser }) => (
     <div className={stylesApplications.cardInfo}>
       <div>
-        <p>usuario activo</p>
+        <p>< FormattedMessage id='BLOCK_NAME.active.user'/> </p>
         <p>{activeUser}</p>
       </div>
       <div>
-        <p>Usuario nuevo</p>
+        <p>< FormattedMessage id='BLOCK_NAME.new.user'/> </p>
         <p>{newUser}</p>
       </div>
     </div>
@@ -94,13 +94,13 @@ const Applications: React.FC<Partial<ModalState>> = (props) => {
             hoverable
             bodyStyle={{ paddingBottom: 20 }}
             actions={[
-              <Tooltip key="download" title="descargar">
+              <Tooltip key="download" title={formatMessage({id: 'BLOCK_NAME.list.item.download'})}>
                 <DownloadOutlined />
               </Tooltip>,
-              <Tooltip title="editar" key="editar">
+              <Tooltip title={formatMessage({id: 'BLOCK_NAME.list.item.edit'})} key="editar">
                 <EditOutlined />
               </Tooltip>,
-              <Tooltip title="compartir" key="compartir">
+              <Tooltip title={formatMessage({id: 'BLOCK_NAME.list.item.share'})} key="compartir">
                 <ShareAltOutlined />
               </Tooltip>,
               <Dropdown overlay={itemMenu} key="ellipsis">

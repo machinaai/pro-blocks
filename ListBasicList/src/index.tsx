@@ -17,7 +17,7 @@ import {
 
 import { findDOMNode } from 'react-dom';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, formatMessage } from 'umi';
 import moment from 'moment';
 import OperationModal from './components/OperationModal';
 import { StateType } from './model';
@@ -53,11 +53,11 @@ const ListContent = ({
 }) => (
   <div className={styles.listContent}>
     <div className={styles.listContentItem}>
-      <span>Owner</span>
+    <span>{formatMessage({ id: 'BASIC-LIST.content.owner' })}</span>
       <p>{owner}</p>
     </div>
     <div className={styles.listContentItem}>
-      <span>Tiempo de empezar</span>
+    <span>{formatMessage({ id: 'BASIC-LIST.content.time' })}</span>
       <p>{moment(createdAt).format('YYYY-MM-DD HH:mm')}</p>
     </div>
     <div className={styles.listContentItem}>
@@ -114,10 +114,10 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     if (key === 'edit') showEditModal(currentItem);
     else if (key === 'delete') {
       Modal.confirm({
-        title: 'Eliminar tarea',
-        content: '¿Seguro que quieres eliminar esta tarea?',
-        okText: 'confirmar',
-        cancelText: 'cancelar',
+        title: formatMessage({ id: 'BASIC-LIST.modal.delete.title' }),
+        content: formatMessage({ id: 'BASIC-LIST.modal.delete.content' }),
+        okText: formatMessage({ id: 'BASIC-LIST.modal.delete.confirm' }),
+        cancelText: formatMessage({ id: 'BASIC-LIST.modal.delete.cancel' }),
         onOk: () => deleteItem(currentItem.id),
       });
     }
@@ -126,11 +126,11 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
   const extraContent = (
     <div className={styles.extraContent}>
       <RadioGroup defaultValue="all">
-        <RadioButton value="all">Todas</RadioButton>
-        <RadioButton value="progress">Procesando</RadioButton>
-        <RadioButton value="waiting">Esperando</RadioButton>
+      <RadioButton value="all">{formatMessage({ id: 'BASIC-LIST.radiobutton.all' })}</RadioButton>
+        <RadioButton value="progress">{formatMessage({ id: 'BASIC-LIST.radiobutton.progress' })}</RadioButton>
+        <RadioButton value="waiting">{formatMessage({ id: 'BASIC-LIST.radiobutton.waiting' })}</RadioButton>
       </RadioGroup>
-      <Search className={styles.extraContentSearch} placeholder="por favor introduzca" onSearch={() => ({})} />
+      <Search className={styles.extraContentSearch} placeholder={formatMessage({ id: 'BASIC-LIST.placeholder.search' })}onSearch={() => ({})} />
     </div>
   );
 
@@ -140,13 +140,13 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     <Dropdown
       overlay={
         <Menu onClick={({ key }) => editAndDelete(key, item)}>
-          <Menu.Item key="edit">editar</Menu.Item>
-          <Menu.Item key="delete">borrar</Menu.Item>
+           <Menu.Item key="edit">{formatMessage({ id: 'BASIC-LIST.dropdown.edit' })}</Menu.Item>
+          <Menu.Item key="delete">{formatMessage({ id: 'BASIC-LIST.dropdown.delete' })}</Menu.Item>
         </Menu>
       }
     >
       <a>
-        Más <DownOutlined />
+      {formatMessage({ id: 'BASIC-LIST.dropdown.more' })} <DownOutlined />
       </a>
     </Dropdown>
   );
@@ -190,13 +190,13 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
           <Card bordered={false}>
             <Row>
               <Col sm={8} xs={24}>
-                <Info title="Tareas" value="8" bordered />
+              <Info title={formatMessage({ id: 'BASIC-LIST.number.task' })} value="8" bordered />
               </Col>
               <Col sm={8} xs={24}>
-                <Info title="Tiempo promedio de procesamiento de tareas esta semana" value="32 minutos" bordered />
+              <Info title={formatMessage({ id: 'BASIC-LIST.average.time' })} value="32 minutos" bordered />
               </Col>
               <Col sm={8} xs={24}>
-                <Info title="Tareas completadas esta semana" value="24" />
+              <Info title={formatMessage({ id: 'BASIC-LIST.completed.tasks' })} value="24" />
               </Col>
             </Row>
           </Card>
@@ -204,7 +204,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
           <Card
             className={styles.listCard}
             bordered={false}
-            title="Lista básica"
+            title={formatMessage({ id: 'BASIC-LIST.title' })} 
             style={{ marginTop: 24 }}
             bodyStyle={{ padding: '0 32px 40px 32px' }}
             extra={extraContent}
@@ -216,7 +216,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
               ref={addBtn}
             >
               <PlusOutlined />
-              añadir
+              {formatMessage({ id: 'BASIC-LIST.add' })}
             </Button>
 
             <List
@@ -235,7 +235,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
                         showEditModal(item);
                       }}
                     >
-                      editar
+                      {formatMessage({ id: 'BASIC-LIST.content.edit' })}
                     </a>,
                     <MoreBtn key="more" item={item} />,
                   ]}

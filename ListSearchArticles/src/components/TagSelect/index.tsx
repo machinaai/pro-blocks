@@ -5,6 +5,8 @@ import { UpOutlined, DownOutlined } from '@ant-design/icons';
 import classNames from 'classnames';
 import styles from './index.less';
 
+import { formatMessage } from 'umi';
+
 const { CheckableTag } = Tag;
 
 export interface TagSelectOptionProps {
@@ -54,9 +56,9 @@ class TagSelect extends Component<TagSelectProps, TagSelectState> {
   static defaultProps = {
     hideCheckAll: false,
     actionsText: {
-      expandText: 'Expander',
-      collapseText: 'Colapsar',
-      selectAllText: 'Todas',
+      expandText: formatMessage({ id: 'SEARCH-ARTICLES.expandText' }),
+      collapseText: formatMessage({ id: 'SEARCH-ARTICLES.collapseText' }),
+      selectAllText: formatMessage({ id: 'SEARCH-ARTICLES.selectAllText' }),
     },
   };
 

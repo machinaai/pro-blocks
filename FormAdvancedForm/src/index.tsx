@@ -3,7 +3,7 @@ import { Button, Card, Col, DatePicker, Form, Input, Popover, Row, Select, TimeP
 
 import React, { FC, useState } from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, FormattedMessage, formatMessage } from 'umi';
 import TableForm from './components/TableForm';
 import FooterToolbar from './components/FooterToolbar';
 import styles from './style.less';
@@ -14,18 +14,18 @@ const { Option } = Select;
 const { RangePicker } = DatePicker;
 
 const fieldLabels = {
-   nombre: 'Nombre del almacén',
-   url: 'Nombre de dominio de almacén',
-   propietario: 'Administrador de almacén',
-   aprobador: 'Aprobador',
-   dateRange: 'Fecha efectiva',
-   tipo: 'Tipo de almacén',
-   nombre2: 'Nombre de la tarea',
-   url2: 'Descripción de la tarea',
-   propietario2: 'Ejecutor',
-   approver2: 'Persona responsable',
-   dateRange2: 'Fecha efectiva',
-   type2: 'Tipo de tarea',
+   nombre: formatMessage({id: 'BLOCK_NAME.variable.nombre'}),
+   url: formatMessage({id: 'BLOCK_NAME.variable.url'}),
+   propietario: formatMessage({id: 'BLOCK_NAME.variable.propietario'}),
+   aprobador: formatMessage({id: 'BLOCK_NAME.variable.aprobador'}),
+   dateRange: formatMessage({id: 'BLOCK_NAME.variable.dateRange'}),
+   tipo: formatMessage({id: 'BLOCK_NAME.variable.tipo'}),
+   nombre2: formatMessage({id: 'BLOCK_NAME.variable.nombre2'}),
+   url2: formatMessage({id: 'BLOCK_NAME.variable.url2'}),
+   propietario2: formatMessage({id: 'BLOCK_NAME.variable.propietario2'}),
+   approver2: formatMessage({id: 'BLOCK_NAME.variable.aprovador2'}),
+   dateRange2: formatMessage({id: 'BLOCK_NAME.variable.dateRange2'}),
+   type2: formatMessage({id: 'BLOCK_NAME.variable.type2'}),
 };
 
 const tableData = [
@@ -92,7 +92,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
     return (
       <span className={styles.errorIcon}>
         <Popover
-          title="Información de verificación de formulario"
+          title={formatMessage({id: 'BLOCK_NAME.span.popover'})}
           content={errorList}
           overlayClassName={styles.errorPopover}
           trigger="click"
@@ -131,29 +131,29 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
     >
-      <PageHeaderWrapper content="Los formularios avanzados se usan comúnmente para ingresar y enviar grandes cantidades de datos a la vez.">
-        <Card title="Gestion de almacenes" className={styles.card} bordered={false}>
+      <PageHeaderWrapper content={formatMessage({id: 'BLOCK_NAME.form.wrapper'})}>
+        <Card title={formatMessage({id: 'BLOCK_NAME.form.card'})} className={styles.card} bordered={false}>
           <Row gutter={16}>
             <Col lg={6} md={12} sm={24}>
               <Form.Item
                 label={fieldLabels.name}
                 name="name"
-                rules={[{ required: true, message: 'Por favor ingrese el nombre del almacén' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.form.item'}) }]}
               >
-                <Input placeholder="Por favor ingrese el nombre del almacén" />
+                <Input placeholder={formatMessage({id: 'BLOCK_NAME.form.item'})} />
               </Form.Item>
             </Col>
             <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
               <Form.Item
                 label={fieldLabels.url}
                 name="url"
-                rules={[{ required: true, message: 'por favor elige' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.form.item.rules'}) }]}
               >
                 <Input
                   style={{ width: '100%' }}
                   addonBefore="http://"
                   addonAfter=".com"
-                  placeholder="por favor escriba"
+                  placeholder={formatMessage({id: 'BLOCK_NAME.form.input'})}
                 />
               </Form.Item>
             </Col>
@@ -161,9 +161,9 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.owner}
                 name="owner"
-                rules={[{ required: true, message: 'Por favor seleccione un administrador' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.col.form.item'}) }]}
               >
-                <Select placeholder="Por favor seleccione un administrador">
+                <Select placeholder={formatMessage({id: 'BLOCK_NAME.select.placeholder'})}>
                   <Option value="hernandez">Hernández</Option>
                   <Option value="lopez">López</Option>
                 </Select>
@@ -175,9 +175,9 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.approver}
                 name="approver"
-                rules={[{ required: true, message: 'Por favor seleccione un aprobador' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.row.form.item'}) }]}
               >
-                <Select placeholder="Por favor seleccione un aprobador">
+                <Select placeholder={formatMessage({id: 'BLOCK_NAME.row.form.item'})}>
                   <Option value="hernandez">Hernández</Option>
                   <Option value="lopez">López</Option>
                 </Select>
@@ -187,18 +187,18 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.dateRange}
                 name="dateRange"
-                rules={[{ required: true, message: 'Por favor seleccione fecha de vigencia' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.row.col.form.item'}) }]}
               >
-                <RangePicker placeholder={['fecha de inicio', 'Fecha final']} style={{ width: '100%' }} />
+                <RangePicker placeholder={formatMessage({id: ['BLOCK_NAME.tange.placeholder.date.start', 'BLOCK_NAME.tange.placeholder.date.end']})} style={{ width: '100%' }} />
               </Form.Item>
             </Col>
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
               <Form.Item
                 label={fieldLabels.type}
                 name="type"
-                rules={[{ required: true, message: 'Por favor seleccione el tipo de almacén' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.range.form.item'}) }]}
               >
-                <Select placeholder="Por favor seleccione el tipo de almacén">
+                <Select placeholder={formatMessage({id: 'BLOCK_NAME.range.form.item'})}>
                   <Option value="private">privado</Option>
                   <Option value="public">público</Option>
                 </Select>
@@ -206,33 +206,33 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
             </Col>
           </Row>
         </Card>
-        <Card title="Administración de tareas" className={styles.card} bordered={false}>
+        <Card title={formatMessage({id: 'BLOCK_NAME.card.title'})} className={styles.card} bordered={false}>
           <Row gutter={16}>
             <Col lg={6} md={12} sm={24}>
               <Form.Item
                 label={fieldLabels.name2}
                 name="name2"
-                rules={[{ required: true, message: 'por favor escribe' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.form.input'}) }]}
               >
-                <Input placeholder="por favor escribe" />
+                <Input placeholder={formatMessage({id: 'BLOCK_NAME.form.input'})} />
               </Form.Item>
             </Col>
             <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
               <Form.Item
                 label={fieldLabels.url2}
                 name="url2"
-                rules={[{ required: true, message: 'por favor escribe' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.form.input'}) }]}
               >
-                <Input placeholder="por favor escribe" />
+                <Input placeholder={formatMessage({id: 'BLOCK_NAME.form.input'})} />
               </Form.Item>
             </Col>
             <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
               <Form.Item
                 label={fieldLabels.owner2}
                 name="owner2"
-                rules={[{ required: true, message: 'Por favor seleccione un administrador' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.col.form.item'}) }]}
               >
-                <Select placeholder="Por favor seleccione un administrador">
+                <Select placeholder={formatMessage({id: 'BLOCK_NAME.col.form.item'})}>
                   <Option value="hernandez">Hernández</Option>
                   <Option value="lopez">López</Option>
                 </Select>
@@ -244,9 +244,9 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.approver2}
                 name="approver2"
-                rules={[{ required: true, message: 'Por favor seleccione un aprobador' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.row.form.item'}) }]}
               >
-                <Select placeholder="Por favor seleccione un aprobador">
+                <Select placeholder={formatMessage({id: 'BLOCK_NAME.row.form.item'})}>
                   <Option value="hernandez">Hernández</Option>
                   <Option value="lopez">López</Option>
                 </Select>
@@ -256,10 +256,10 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.dateRange2}
                 name="dateRange2"
-                rules={[{ required: true, message: 'por favor escribe' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.form.input'}) }]}
               >
                 <TimePicker
-                  placeholder="Tiempo recordatorio"
+                  placeholder={formatMessage({id: 'BLOCK_NAME.time.picker'})}
                   style={{ width: '100%' }}
                   getPopupContainer={(trigger) => {
                     if (trigger && trigger.parentNode) {
@@ -274,9 +274,9 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
               <Form.Item
                 label={fieldLabels.type2}
                 name="type2"
-                rules={[{ required: true, message: 'Por favor seleccione el tipo de almacén' }]}
+                rules={[{ required: true, message: formatMessage({id: 'BLOCK_NAME.range.form.item'}) }]}
               >
-                <Select placeholder="Por favor seleccione el tipo de almacén">
+                <Select placeholder={formatMessage({id: 'BLOCK_NAME.range.form.item'})}>
                   <Option value="private">privado</Option>
                   <Option value="public">público</Option>
                 </Select>
@@ -284,7 +284,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
             </Col>
           </Row>
         </Card>
-        <Card title="Gestión de miembros" bordered={false}>
+        <Card title={formatMessage({id: 'BLOCK_NAME.end.card.title'})} bordered={false}>
           <Form.Item name="members">
             <TableForm />
           </Form.Item>
@@ -293,7 +293,7 @@ const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = ({
       <FooterToolbar>
         {getErrorInfo(error)}
         <Button type="primary" onClick={() => form?.submit()} loading={submitting}>
-         enviar
+         <FormattedMessage id='BLOCK_NAME.button' />
         </Button>
       </FooterToolbar>
     </Form>
