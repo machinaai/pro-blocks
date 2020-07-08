@@ -1,4 +1,5 @@
 import { CanvasPanel, DetailPanel, NodePanel } from 'gg-editor';
+import { formatMessage } from 'umi';
 
 import { Card } from 'antd';
 import React from 'react';
@@ -8,10 +9,15 @@ import styles from './index.less';
 const MindDetailPanel = () => (
   <DetailPanel className={styles.detailPanel}>
     <NodePanel>
-      <DetailForm type="node" />
+      <DetailForm type="node" text={formatMessage({ id: 'BLOCK_NAME.node' })} />
     </NodePanel>
     <CanvasPanel>
-      <Card type="inner" size="small" title="Canvas" bordered={false} />
+      <Card
+        type="inner"
+        size="small"
+        title={formatMessage({ id: 'BLOCK_NAME.canvas' })}
+        bordered={false}
+      />
     </CanvasPanel>
   </DetailPanel>
 );

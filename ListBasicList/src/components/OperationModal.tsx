@@ -3,6 +3,7 @@ import moment from 'moment';
 import { Modal, Result, Button, Form, DatePicker, Input, Select } from 'antd';
 import { BasicListItemDataType } from '../data.d';
 import styles from '../style.less';
+import { formatMessage } from 'umi';
 
 interface OperationModalProps {
   done: boolean;
@@ -51,18 +52,18 @@ const OperationModal: FC<OperationModalProps> = (props) => {
 
   const modalFooter = done
     ? { footer: null, onCancel: onDone }
-    : { okText: 'Salvar', onOk: handleSubmit, onCancel };
+    : { okText: formatMessage({ id: 'BASIC-LIST.modal.edit.save' }), onOk: handleSubmit, onCancel };
 
   const getModalContent = () => {
     if (done) {
       return (
         <Result
           status="success"
-          title="Operación exitosa"
-          subTitle="Una serie de descripciones de información que son cortas y que también pueden puntuarse."
+          title={formatMessage({ id: 'BASIC-LIST.modal.success.title' })}
+          subTitle={formatMessage({ id: 'BASIC-LIST.modal.success.subtitle' })}
           extra={
             <Button type="primary" onClick={onDone}>
-              entendido
+              {formatMessage({ id: 'BASIC-LIST.modal.success.button' })}
             </Button>
           }
           className={styles.formResult}
@@ -73,37 +74,42 @@ const OperationModal: FC<OperationModalProps> = (props) => {
       <Form {...formLayout} form={form} onFinish={handleFinish}>
         <Form.Item
           name="title"
-          label="nombre de la tarea"
+          label={formatMessage({ id: 'BASIC-LIST.form.task.name' })}
           rules={[{ required: true, message: 'Por favor ingrese un nombre de tarea' }]}
         >
-          <Input placeholder="por favor escribe" />
+          <Input placeholder={formatMessage({ id: 'BASIC-LIST.form.task.name.placeholder' })} />
         </Form.Item>
         <Form.Item
           name="createdAt"
-          label="Iniciado en"
+          label={formatMessage({ id: 'BASIC-LIST.form.task.time' })}
           rules={[{ required: true, message: 'Por favor seleccione una hora de inicio' }]}
         >
           <DatePicker
             showTime
-            placeholder="por favor elige"
+            placeholder={formatMessage({ id: 'BASIC-LIST.form.task.time.placeholder' })}
             format="YYYY-MM-DD HH:mm:ss"
             style={{ width: '100%' }}
           />
         </Form.Item>
         <Form.Item
           name="owner"
-          label="Líder de la tarea"
+          label={formatMessage({ id: 'BASIC-LIST.form.task.leader' })}
           rules={[{ required: true, message: 'Por favor seleccione la persona a cargo' }]}
         >
-          <Select placeholder="por favor elige">
+          <Select placeholder={formatMessage({ id: 'BASIC-LIST.form.task.leader.placeholder' })}>
             <Select.Option value="hernandez">Hernández</Select.Option>
             <Select.Option value="lopez">López</Select.Option>
           </Select>
         </Form.Item>
         <Form.Item
           name="subDescription"
-          label="Descripción del producto"
-          rules={[{ message: '¡Ingrese una descripción del producto de al menos cinco caracteres!', min: 5 }]}
+          label={formatMessage({ id: 'BASIC-LIST.form.task.description' })}
+          rules={[
+            {
+              message: '¡Ingrese una descripción del producto de al menos cinco caracteres!',
+              min: 5,
+            },
+          ]}
         >
           <TextArea rows={4} placeholder="Por favor ingrese al menos cinco caracteres" />
         </Form.Item>

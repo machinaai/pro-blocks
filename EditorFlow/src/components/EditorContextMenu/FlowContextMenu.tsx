@@ -1,4 +1,5 @@
 import { CanvasMenu, ContextMenu, EdgeMenu, GroupMenu, MultiMenu, NodeMenu } from 'gg-editor';
+import { formatMessage } from 'umi';
 
 import React from 'react';
 import MenuItem from './MenuItem';
@@ -7,27 +8,39 @@ import styles from './index.less';
 const FlowContextMenu = () => (
   <ContextMenu className={styles.contextMenu}>
     <NodeMenu>
-      <MenuItem command="copy" />
-      <MenuItem command="delete" />
+      <MenuItem command="copy" text={formatMessage({ id: 'BLOCK_NAME.copy' })} />
+      <MenuItem command="delete" text={formatMessage({ id: 'BLOCK_NAME.delete' })} />
     </NodeMenu>
     <EdgeMenu>
-      <MenuItem command="delete" />
+      <MenuItem command="delete" text={formatMessage({ id: 'BLOCK_NAME.delete' })} />
     </EdgeMenu>
     <GroupMenu>
-      <MenuItem command="copy" />
-      <MenuItem command="delete" />
-      <MenuItem command="unGroup" icon="ungroup" text="Ungroup" />
+      <MenuItem command="copy" text={formatMessage({ id: 'BLOCK_NAME.copy' })} />
+      <MenuItem command="delete" text={formatMessage({ id: 'BLOCK_NAME.delete' })} />
+      <MenuItem
+        command="unGroup"
+        icon="ungroup"
+        text={formatMessage({ id: 'BLOCK_NAME.ungroup' })}
+      />
     </GroupMenu>
     <MultiMenu>
-      <MenuItem command="copy" />
-      <MenuItem command="paste" />
-      <MenuItem command="addGroup" icon="group" text="Add Group" />
-      <MenuItem command="delete" />
+      <MenuItem command="copy" text={formatMessage({ id: 'BLOCK_NAME.copy' })} />
+      <MenuItem command="paste" text={formatMessage({ id: 'BLOCK_NAME.paste' })} />
+      <MenuItem
+        command="addGroup"
+        icon="group"
+        text={formatMessage({ id: 'BLOCK_NAME.addgroup' })}
+      />
+      <MenuItem command="delete" text={formatMessage({ id: 'BLOCK_NAME.delete' })} />
     </MultiMenu>
     <CanvasMenu>
-      <MenuItem command="undo" />
-      <MenuItem command="redo" />
-      <MenuItem command="pasteHere" icon="paste" text="Paste Here" />
+      <MenuItem command="undo" text={formatMessage({ id: 'BLOCK_NAME.undo' })} />
+      <MenuItem command="redo" text={formatMessage({ id: 'BLOCK_NAME.redo' })} />
+      <MenuItem
+        command="pasteHere"
+        icon="paste"
+        text={formatMessage({ id: 'BLOCK_NAME.pastehere' })}
+      />
     </CanvasMenu>
   </ContextMenu>
 );
