@@ -31,4 +31,5 @@ export default {
   'BLOCK_NAME.table.search-keyword': 'Palavra chave',
   'BLOCK_NAME.table.users': 'Usuários',
   'BLOCK_NAME.table.weekly-range': 'Faixa Semanal',
+  'BLOCK_NAME.analysis.option1': 'Opção 1',
 };

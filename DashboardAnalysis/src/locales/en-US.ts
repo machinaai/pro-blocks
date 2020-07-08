@@ -31,4 +31,6 @@ export default {
   'BLOCK_NAME.table.search-keyword': 'Keyword',
   'BLOCK_NAME.table.users': 'Users',
   'BLOCK_NAME.table.weekly-range': 'Weekly Range',
+  'BLOCK_NAME.analysis.option1': 'Option 1',
+  'BLOCK_NAME.analysis.option2': 'Option 2',
 };

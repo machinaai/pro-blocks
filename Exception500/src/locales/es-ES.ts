@@ -1,4 +1,4 @@
 export default {
-  'BLOCK_NAME.exception.back': 'Back to home',
-  'BLOCK_NAME.description.500': 'Sorry, the server is reporting an error.',
+  'BLOCK_NAME.exception.back': 'Volver al inicio',
+  'BLOCK_NAME.description.500': 'Lo sentimos, el servidor informa un error.',
 };

@@ -15,4 +15,7 @@ export default {
   'BLOCK_NAME.monitor.popular-searches': 'Popular Searches',
   'BLOCK_NAME.monitor.resource-surplus': 'Resource Surplus',
   'BLOCK_NAME.monitor.fund-surplus': 'Fund Surplus',
+  'BLOCK_NAME.exception.back': 'Back to home',
+  'BLOCK_NAME.monitor.target-assessment': 'Target assessment',
+  'BLOCK_NAME.monitor.target': 'Expected to meet expectations',
 };
