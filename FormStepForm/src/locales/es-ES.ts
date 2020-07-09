@@ -1,6 +1,7 @@
 export default {
   'formstepform.form.label.myBank': 'Mi banco',
   'formstepform.form.label.otherBank': 'Otro banco',
+  'formstepform.form.label.required.transferAmmount': 'Cantidad de transferencia requerida',
   'BLOCK_NAME.basic.title': 'Forma basica',
   'BLOCK NAME.divide.homework':
     'Divida una tarea de formulario larga o desconocida en varios pasos para guiar al usuario a través de ella.',
