@@ -1,9 +1,9 @@
 import { Divider } from 'antd';
 import React from 'react';
+import { formatMessage } from 'umi';
 import { Toolbar } from 'gg-editor';
 import ToolbarButton from './ToolbarButton';
 import styles from './index.less';
-import { formatMessage } from 'umi';
 
 const FlowToolbar = () => (
   <Toolbar className={styles.toolbar}>

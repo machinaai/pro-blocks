@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import { Tag } from 'antd';
 import { UpOutlined, DownOutlined } from '@ant-design/icons';
-
+import { formatMessage } from 'umi';
 import classNames from 'classnames';
 import styles from './index.less';
-
-
-import { formatMessage } from 'umi';
 
 const { CheckableTag } = Tag;
 
@@ -136,7 +133,11 @@ class TagSelect extends Component<TagSelectProps, TagSelectState> {
     const { value, expand } = this.state;
     const { children, hideCheckAll, className, style, expandable, actionsText = {} } = this.props;
     const checkedAll = this.getAllTags().length === value.length;
-    const { expandText = 'Expandir', collapseText = 'Colapsar', selectAllText = 'Todo' } = actionsText;
+    const {
+      expandText = 'Expandir',
+      collapseText = 'Colapsar',
+      selectAllText = 'Todo',
+    } = actionsText;
 
     const cls = classNames(styles.tagSelect, className, {
       [styles.hasExpandTag]: expandable,
