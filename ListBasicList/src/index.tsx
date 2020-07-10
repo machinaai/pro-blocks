@@ -14,10 +14,10 @@ import {
   Radio,
   Row,
 } from 'antd';
+import { connect, Dispatch, formatMessage } from 'umi';
 
 import { findDOMNode } from 'react-dom';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { connect, Dispatch, formatMessage } from 'umi';
 import moment from 'moment';
 import OperationModal from './components/OperationModal';
 import { StateType } from './model';
@@ -53,11 +53,11 @@ const ListContent = ({
 }) => (
   <div className={styles.listContent}>
     <div className={styles.listContentItem}>
-    <span>{formatMessage({ id: 'BASIC-LIST.content.owner' })}</span>
+      <span>{formatMessage({ id: 'BASIC-LIST.content.owner' })}</span>
       <p>{owner}</p>
     </div>
     <div className={styles.listContentItem}>
-    <span>{formatMessage({ id: 'BASIC-LIST.content.time' })}</span>
+      <span>{formatMessage({ id: 'BASIC-LIST.content.time' })}</span>
       <p>{moment(createdAt).format('YYYY-MM-DD HH:mm')}</p>
     </div>
     <div className={styles.listContentItem}>
@@ -126,11 +126,19 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
   const extraContent = (
     <div className={styles.extraContent}>
       <RadioGroup defaultValue="all">
-      <RadioButton value="all">{formatMessage({ id: 'BASIC-LIST.radiobutton.all' })}</RadioButton>
-        <RadioButton value="progress">{formatMessage({ id: 'BASIC-LIST.radiobutton.progress' })}</RadioButton>
-        <RadioButton value="waiting">{formatMessage({ id: 'BASIC-LIST.radiobutton.waiting' })}</RadioButton>
+        <RadioButton value="all">{formatMessage({ id: 'BASIC-LIST.radiobutton.all' })}</RadioButton>
+        <RadioButton value="progress">
+          {formatMessage({ id: 'BASIC-LIST.radiobutton.progress' })}
+        </RadioButton>
+        <RadioButton value="waiting">
+          {formatMessage({ id: 'BASIC-LIST.radiobutton.waiting' })}
+        </RadioButton>
       </RadioGroup>
-      <Search className={styles.extraContentSearch} placeholder={formatMessage({ id: 'BASIC-LIST.placeholder.search' })}onSearch={() => ({})} />
+      <Search
+        className={styles.extraContentSearch}
+        placeholder={formatMessage({ id: 'BASIC-LIST.placeholder.search' })}
+        onSearch={() => ({})}
+      />
     </div>
   );
 
@@ -140,13 +148,13 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     <Dropdown
       overlay={
         <Menu onClick={({ key }) => editAndDelete(key, item)}>
-           <Menu.Item key="edit">{formatMessage({ id: 'BASIC-LIST.dropdown.edit' })}</Menu.Item>
+          <Menu.Item key="edit">{formatMessage({ id: 'BASIC-LIST.dropdown.edit' })}</Menu.Item>
           <Menu.Item key="delete">{formatMessage({ id: 'BASIC-LIST.dropdown.delete' })}</Menu.Item>
         </Menu>
       }
     >
       <a>
-      {formatMessage({ id: 'BASIC-LIST.dropdown.more' })} <DownOutlined />
+        {formatMessage({ id: 'BASIC-LIST.dropdown.more' })} <DownOutlined />
       </a>
     </Dropdown>
   );
@@ -190,13 +198,17 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
           <Card bordered={false}>
             <Row>
               <Col sm={8} xs={24}>
-              <Info title={formatMessage({ id: 'BASIC-LIST.number.task' })} value="8" bordered />
+                <Info title={formatMessage({ id: 'BASIC-LIST.number.task' })} value="8" bordered />
               </Col>
               <Col sm={8} xs={24}>
-              <Info title={formatMessage({ id: 'BASIC-LIST.average.time' })} value="32 minutos" bordered />
+                <Info
+                  title={formatMessage({ id: 'BASIC-LIST.average.time' })}
+                  value="32 minutos"
+                  bordered
+                />
               </Col>
               <Col sm={8} xs={24}>
-              <Info title={formatMessage({ id: 'BASIC-LIST.completed.tasks' })} value="24" />
+                <Info title={formatMessage({ id: 'BASIC-LIST.completed.tasks' })} value="24" />
               </Col>
             </Row>
           </Card>
@@ -204,7 +216,7 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
           <Card
             className={styles.listCard}
             bordered={false}
-            title={formatMessage({ id: 'BASIC-LIST.title' })} 
+            title={formatMessage({ id: 'BASIC-LIST.title' })}
             style={{ marginTop: 24 }}
             bodyStyle={{ padding: '0 32px 40px 32px' }}
             extra={extraContent}

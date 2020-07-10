@@ -1,9 +1,9 @@
 import { CanvasMenu, ContextMenu, EdgeMenu, GroupMenu, MultiMenu, NodeMenu } from 'gg-editor';
 
 import React from 'react';
+import { formatMessage } from 'umi';
 import MenuItem from './MenuItem';
 import styles from './index.less';
-import { formatMessage } from 'umi';
 
 const FlowContextMenu = () => (
   <ContextMenu className={styles.contextMenu}>
