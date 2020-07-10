@@ -1,9 +1,8 @@
 import React from 'react';
 import { Form, Alert, Button, Descriptions, Divider, Statistic, Input } from 'antd';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, formatMessage } from 'umi';
 import { StateType } from '../../model';
 import styles from './index.less';
-import { formatMessage } from 'umi';
 
 const formItemLayout = {
   labelCol: {
@@ -67,20 +66,29 @@ const Step2: React.FC<Step2Props> = (props) => {
       <Alert
         closable
         showIcon
-        message={formatMessage({id: 'BLOCK_NAME.transfer-alert'})}
+        message={formatMessage({ id: 'BLOCK_NAME.transfer-alert' })}
         style={{ marginBottom: 24 }}
       />
       <Descriptions column={1}>
-        <Descriptions.Item label={formatMessage({id: 'BLOCK_NAME.pay-account'})}> {payAccount}</Descriptions.Item>
-        <Descriptions.Item label={formatMessage({id: 'BLOCK_NAME.accounts-receivable'})}> {receiverAccount}</Descriptions.Item>
-        <Descriptions.Item label={formatMessage({id: 'BLOCK_NAME.beneficiary-account'})}> {receiverName}</Descriptions.Item>
-        <Descriptions.Item label={formatMessage({id: 'BLOCK_NAME.transfer-amount'})}>
+        <Descriptions.Item label={formatMessage({ id: 'BLOCK_NAME.pay-account' })}>
+          {' '}
+          {payAccount}
+        </Descriptions.Item>
+        <Descriptions.Item label={formatMessage({ id: 'BLOCK_NAME.accounts-receivable' })}>
+          {' '}
+          {receiverAccount}
+        </Descriptions.Item>
+        <Descriptions.Item label={formatMessage({ id: 'BLOCK_NAME.beneficiary-account' })}>
+          {' '}
+          {receiverName}
+        </Descriptions.Item>
+        <Descriptions.Item label={formatMessage({ id: 'BLOCK_NAME.transfer-amount' })}>
           <Statistic value={amount} suffix="$" />
         </Descriptions.Item>
       </Descriptions>
       <Divider style={{ margin: '24px 0' }} />
       <Form.Item
-        label={formatMessage({id: 'BLOCK_NAME.transfer-password'})}
+        label={formatMessage({ id: 'BLOCK_NAME.transfer-password' })}
         name="password"
         required={false}
         rules={[
@@ -106,10 +114,10 @@ const Step2: React.FC<Step2Props> = (props) => {
         }}
       >
         <Button type="primary" onClick={onValidateForm} loading={submitting}>
-          {formatMessage({id: 'BLOCK_NAME.transfer-btn-next'})}
+          {formatMessage({ id: 'BLOCK_NAME.transfer-btn-next' })}
         </Button>
         <Button onClick={onPrev} style={{ marginLeft: 8 }}>
-         {formatMessage({id: 'BLOCK_NAME.transfer-btn-prev'})}
+          {formatMessage({ id: 'BLOCK_NAME.transfer-btn-prev' })}
         </Button>
       </Form.Item>
     </Form>

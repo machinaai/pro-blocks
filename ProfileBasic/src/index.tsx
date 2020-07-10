@@ -2,10 +2,9 @@ import { Badge, Card, Descriptions, Divider, Table } from 'antd';
 import React, { Component } from 'react';
 
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, formatMessage } from 'umi';
 import { BasicProfileDataType } from './data.d';
 import styles from './style.less';
-import { formatMessage } from 'umi';
 
 const progressColumns = [
   {
@@ -13,7 +12,7 @@ const progressColumns = [
     dataIndex: 'time',
     key: 'time',
   },
-  { 
+  {
     title: formatMessage({ id: 'PROFILE.basic.progress.colum-B' }),
     dataIndex: 'rate',
     key: 'rate',
@@ -102,7 +101,11 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
             return <a href="">{text}</a>;
           }
           return {
-            children: <span style={{ fontWeight: 600 }}>{formatMessage({ id: 'PROFILE.basic.total' })}</span>,
+            children: (
+              <span style={{ fontWeight: 600 }}>
+                {formatMessage({ id: 'PROFILE.basic.total' })}
+              </span>
+            ),
             props: {
               colSpan: 4,
             },
@@ -156,22 +159,48 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     return (
       <PageHeaderWrapper>
         <Card bordered={false}>
-        <Descriptions title= {formatMessage({ id: 'PROFILE.basic.descriptions.title-A' })}  style={{ marginBottom: 32 }}>
-            <Descriptions.Item label= {formatMessage({ id: 'PROFILE.basic.descriptions.item-A' })} >1000000000</Descriptions.Item>
-            <Descriptions.Item label= {formatMessage({ id: 'PROFILE.basic.descriptions.item-B' })} >Recogido</Descriptions.Item>
-            <Descriptions.Item label= {formatMessage({ id: 'PROFILE.basic.descriptions.item-C' })} >1234123421</Descriptions.Item>
-            <Descriptions.Item label= {formatMessage({ id: 'PROFILE.basic.descriptions.item-D' })} >3214321432</Descriptions.Item>
+          <Descriptions
+            title={formatMessage({ id: 'PROFILE.basic.descriptions.title-A' })}
+            style={{ marginBottom: 32 }}
+          >
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-A' })}>
+              1000000000
+            </Descriptions.Item>
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-B' })}>
+              Recogido
+            </Descriptions.Item>
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-C' })}>
+              1234123421
+            </Descriptions.Item>
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-D' })}>
+              3214321432
+            </Descriptions.Item>
           </Descriptions>
           <Divider style={{ marginBottom: 32 }} />
-          <Descriptions title={formatMessage({ id: 'PROFILE.basic.descriptions.title-B' })}  style={{ marginBottom: 32 }}>
-            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-E' })}>Juan</Descriptions.Item>
-            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-F' })}>18100000000</Descriptions.Item>
-            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-G' })}>Nuevo almacenamiento</Descriptions.Item>
-            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-H' })}>Avenida 14, numero 23 interior 3</Descriptions.Item>
-            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-I' })}>No</Descriptions.Item>
+          <Descriptions
+            title={formatMessage({ id: 'PROFILE.basic.descriptions.title-B' })}
+            style={{ marginBottom: 32 }}
+          >
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-E' })}>
+              Juan
+            </Descriptions.Item>
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-F' })}>
+              18100000000
+            </Descriptions.Item>
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-G' })}>
+              Nuevo almacenamiento
+            </Descriptions.Item>
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-H' })}>
+              Avenida 14, numero 23 interior 3
+            </Descriptions.Item>
+            <Descriptions.Item label={formatMessage({ id: 'PROFILE.basic.descriptions.item-I' })}>
+              No
+            </Descriptions.Item>
           </Descriptions>
           <Divider style={{ marginBottom: 32 }} />
-          <div className={styles.title}>{formatMessage({ id: 'PROFILE.basic.descriptions.title-C' })} </div>
+          <div className={styles.title}>
+            {formatMessage({ id: 'PROFILE.basic.descriptions.title-C' })}{' '}
+          </div>
           <Table
             style={{ marginBottom: 24 }}
             pagination={false}
@@ -180,7 +209,9 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
             columns={goodsColumns}
             rowKey="id"
           />
-          <div className={styles.title}>{formatMessage({ id: 'PROFILE.basic.descriptions.title-D' })} </div>
+          <div className={styles.title}>
+            {formatMessage({ id: 'PROFILE.basic.descriptions.title-D' })}{' '}
+          </div>
           <Table
             style={{ marginBottom: 16 }}
             pagination={false}
