@@ -167,6 +167,8 @@ const Login: React.FC<LoginProps> = (props) => {
           className={styles.obelisco}
           name="userKey"
           maxLength={20}
+          onPasteDisabled
+          onCopyDisabled
           onChanged={(event) => onChangeHandlerUserKey(event)}
           placeholder={intl.formatMessage({
             id: 'login.customer',
@@ -188,6 +190,8 @@ const Login: React.FC<LoginProps> = (props) => {
           className={styles.obelisco}
           name="userName"
           maxLength={20}
+          onPasteDisabled
+          onCopyDisabled
           onChanged={(event) => onChangeHandlerUserName(event)}
           placeholder={intl.formatMessage({
             id: 'login.user',
@@ -210,6 +214,8 @@ const Login: React.FC<LoginProps> = (props) => {
           className={styles.obelisco}
           name="password"
           maxLength={20}
+          onPasteDisabled
+          onCopyDisabled
           onChanged={(event) => onChangeHandlerPassword(event)}
           placeholder={intl.formatMessage({
             id: 'login.password',

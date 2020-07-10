@@ -77,6 +77,11 @@ export interface InputProps extends Partial<FormItemProps> {
    */
   onPasteDisabled?: boolean;
   /*
+   * Disabled copy on Input
+   */
+  onCopyDisabled?: boolean;
+
+  /*
    * Blur input event
    */
   onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void;
