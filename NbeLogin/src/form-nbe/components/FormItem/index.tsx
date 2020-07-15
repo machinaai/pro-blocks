@@ -2,7 +2,7 @@ import { Form } from 'antd';
 import React from 'react';
 
 import { InputProps } from './input-auto-label.interface';
-import InputAuto from './Input';
+import Input from './Input';
 
 const FormItem = Form.Item;
 /*
@@ -41,7 +41,7 @@ const LoginItem: React.FC<InputProps> = (props) => {
 
   return (
     <FormItem name={name} {...options}>
-      <InputAuto inputPassword={inputPassword} {...customProps} {...otherProps} />
+      <Input inputPassword={inputPassword} {...customProps} {...otherProps} />
     </FormItem>
   );
 };
