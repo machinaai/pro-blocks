@@ -1,7 +1,7 @@
 import React from 'react';
-import FooterLogin from './FooterLogin/index';
-import HeaderLogin from './HeaderLogin/index';
-import FormLogin from './LoginNbe/index';
+import FooterLogin from './footer-nbe';
+import HeaderLogin from './header-nbe';
+import FormLogin from './form-nbe';
 
 
 const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = () => {
