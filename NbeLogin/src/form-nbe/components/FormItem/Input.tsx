@@ -47,7 +47,7 @@ const InputAuto: React.FC<InputProps> = (props) => {
     <div className={`${styles.main} ${LabelState ? styles.activeLabel : ''}`}>
       <p className={styles.floating}>
         {LabelState && (
-          <label className={`${error ? styles.floating : ''}`}>
+          <label className={`${error ? styles.floating : ''}` htmlFor="labelInput"}>
             {props.placeholder}
             {error && '*'}
           </label>

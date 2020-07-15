@@ -1,11 +1,10 @@
-// import { useIntl } from 'umi';
-import styles from './index.less';
 import { useIntl } from 'umi';
 import React from 'react';
 import SelectLang from './components/SelectLang/index';
 import logo from './assets/logos/bne-logo.svg';
+import styles from './index.less';
 
-const Block: React.FC = (props) => {
+const Block: React.FC = () => {
 
   
   const intl = useIntl();
