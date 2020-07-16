@@ -1,3 +1,5 @@
+**** dinamico 3 input
+
 import { Alert, Checkbox } from 'antd';
 import Form from 'antd/lib/form';
 import React, { useState } from 'react';
@@ -156,14 +158,14 @@ const Login: React.FC<LoginProps> = (props) => {
           prefix={<UserOutlined />}
           className={styles.obelisco}
           name="userKey"
-          maxLength={20}
+          maxLength={50}
           onPasteDisabled
-          onCopyDisabled
           onChanged={(event) => onChangeHandlerUserKey(event)}
           placeholder={intl.formatMessage({
             id: 'login.customer',
             defaultMessage: 'Número de cliente',
           })}
+          disabled
           rules={[
             {
               required: true,
@@ -179,14 +181,14 @@ const Login: React.FC<LoginProps> = (props) => {
           prefix={<UserOutlined />}
           className={styles.obelisco}
           name="userName"
-          maxLength={20}
+          maxLength={50}
           onPasteDisabled
-          onCopyDisabled
           onChanged={(event) => onChangeHandlerUserName(event)}
           placeholder={intl.formatMessage({
             id: 'login.user',
             defaultMessage: 'Usuario',
           })}
+          disabled
           rules={[
             {
               required: true,
@@ -203,7 +205,7 @@ const Login: React.FC<LoginProps> = (props) => {
           inputPassword
           className={styles.obelisco}
           name="password"
-          maxLength={20}
+          maxLength={8}
           onPasteDisabled
           onCopyDisabled
           onChanged={(event) => onChangeHandlerPassword(event)}
