@@ -1,5 +1,3 @@
-**** dinamico 3 input
-
 import { Alert, Checkbox } from 'antd';
 import Form from 'antd/lib/form';
 import React, { useState } from 'react';
