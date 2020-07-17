@@ -1,11 +1,11 @@
-# @umi-blocks/ant-design-pro/flow
+# @machinaai/pro-blocks/EditorFlow
 
 flow
 
 ## Usage
 
 ```sh
-umi block add ant-design-pro/flow
+umi block add @machinaai/pro-blocks/EditorFlow
 ```
 
 ## SNAPSHOT
