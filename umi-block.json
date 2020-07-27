@@ -23,6 +23,7 @@
       "path": "AccountCenter",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/AccountCenter/snapshot.png?raw=true",
@@ -90,6 +91,7 @@
       "path": "DashboardWorkplace",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/DashboardWorkplace/snapshot.png?raw=true",
@@ -153,7 +155,8 @@
       "url": "https://github.com/machinaai/pro-blocks/tree/master/Exception403",
       "path": "Exception403",
       "features": [
-        "antd"
+        "antd",
+        "i18n"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/Exception403/snapshot.png?raw=true",
       "tags": [
@@ -168,7 +171,8 @@
       "url": "https://github.com/machinaai/pro-blocks/tree/master/Exception404",
       "path": "Exception404",
       "features": [
-        "antd"
+        "antd",
+        "i18n"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/Exception404/snapshot.png?raw=true",
       "tags": [
@@ -200,6 +204,7 @@
       "path": "FormAdvancedForm",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/FormAdvancedForm/snapshot.png?raw=true",
@@ -252,6 +257,7 @@
       "path": "ListBasicList",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListBasicList/snapshot.png?raw=true",
@@ -269,6 +275,7 @@
       "path": "ListCardList",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListCardList/snapshot.png?raw=true",
@@ -284,7 +291,8 @@
       "url": "https://github.com/machinaai/pro-blocks/tree/master/ListSearch",
       "path": "ListSearch",
       "features": [
-        "antd"
+        "antd",
+        "i18n"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListSearch/snapshot.png?raw=true",
       "tags": [
@@ -301,6 +309,7 @@
       "path": "ListSearchApplications",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListSearchApplications/snapshot.png?raw=true",
@@ -318,6 +327,7 @@
       "path": "ListSearchArticles",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ListSearchArticles/snapshot.png?raw=true",
@@ -368,6 +378,7 @@
       "path": "ProfileAdvanced",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ProfileAdvanced/snapshot.png?raw=true",
@@ -385,6 +396,7 @@
       "path": "ProfileBasic",
       "features": [
         "antd",
+        "i18n",
         "dva"
       ],
       "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/ProfileBasic/snapshot.png?raw=true",

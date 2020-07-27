@@ -3,7 +3,7 @@ import { Button, Card, List, Typography } from 'antd';
 import React, { Component } from 'react';
 
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, formatMessage } from 'umi';
 import { StateType } from './model';
 import { CardListItemDataType } from './data.d';
 import styles from './style.less';
@@ -43,22 +43,19 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
 
     const content = (
       <div className={styles.pageHeaderContent}>
-        <p>
-          Párrafo: Plataforma de Diseño de Servicios Financieros，permite acceder sin esfuerzo al ecosistemas de microservicios，
-          brinda una solución de experiencia que abarca diseño y desarrollo front-end.
-        </p>
+        <p>{formatMessage({ id: 'CARD-LIST.page.description' })}</p>
         <div className={styles.contentLink}>
           <a>
             <img alt="" src="https://gw.alipayobjects.com/zos/rmsportal/MjEImQtenlyueSmVEfUD.svg" />{' '}
-            Inicio rápido
+            {formatMessage({ id: 'CARD-LIST.page.link.A' })}
           </a>
           <a>
             <img alt="" src="https://gw.alipayobjects.com/zos/rmsportal/NbuDUAuBlIApFuDvWiND.svg" />{' '}
-            Producto breve
+            {formatMessage({ id: 'CARD-LIST.page.link.B' })}
           </a>
           <a>
             <img alt="" src="https://gw.alipayobjects.com/zos/rmsportal/ohOEPSYdDTNnyMbGuyLb.svg" />{' '}
-            Documentación del producto
+            {formatMessage({ id: 'CARD-LIST.page.link.C' })}
           </a>
         </div>
       </div>
@@ -96,7 +93,10 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
                     <Card
                       hoverable
                       className={styles.card}
-                      actions={[<a key="option1">Opcion 1</a>, <a key="option2">Opcion 2</a>]}
+                      actions={[
+                        <a key="option1">{formatMessage({ id: 'CARD-LIST.card.option1' })}</a>,
+                        <a key="option2">{formatMessage({ id: 'CARD-LIST.card.option2' })}</a>,
+                      ]}
                     >
                       <Card.Meta
                         avatar={<img alt="" className={styles.cardAvatar} src={item.avatar} />}
@@ -114,7 +114,7 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
               return (
                 <List.Item>
                   <Button type="dashed" className={styles.newButton}>
-                    <PlusOutlined /> Nuevo producto
+                    <PlusOutlined /> {formatMessage({ id: 'CARD-LIST.add.item' })}
                   </Button>
                 </List.Item>
               );

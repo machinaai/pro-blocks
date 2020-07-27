@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Input } from 'antd';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { history } from 'umi';
+import { history, formatMessage } from 'umi';
 
 interface PAGE_NAME_UPPER_CAMEL_CASEProps {
   match: {
@@ -52,23 +52,23 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<PAGE_NAME_UPPER_CAMEL_CASEPro
     const tabList = [
       {
         key: 'articles',
-        tab: 'artículo',
+        tab: formatMessage({ id: 'LIST-SEARCH.tablist.colum-A' }),
       },
       {
         key: 'projects',
-        tab: 'proyecto',
+        tab:  formatMessage({ id: 'LIST-SEARCH.tablist.colum-B' }),
       },
       {
         key: 'applications',
-        tab: 'solicitud',
+        tab:  formatMessage({ id: 'LIST-SEARCH.tablist.colum-C' }),
       },
     ];
 
     const mainSearch = (
       <div style={{ textAlign: 'center' }}>
         <Input.Search
-          placeholder="por favor escribe"
-          enterButton="buscar"
+          placeholder= {formatMessage({ id: 'LIST-SEARCH.placeholder' })}
+          enterButton= {formatMessage({ id: 'LIST-SEARCH.button' })}
           size="large"
           onSearch={this.handleFormSubmit}
           style={{ maxWidth: 522, width: '100%' }}

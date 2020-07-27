@@ -1,4 +1,4 @@
-import { Link } from 'umi';
+import { Link, formatMessage  } from 'umi';
 import { Result, Button } from 'antd';
 import React from 'react';
 
@@ -9,10 +9,10 @@ export default () => (
     style={{
       background: 'none',
     }}
-    subTitle="Sorry, you don't have access to this page."
+    subTitle={formatMessage({ id: 'exception-403.description' })}
     extra={
       <Link to="/">
-        <Button type="primary">Back to home</Button>
+        <Button type="primary">{formatMessage({ id: 'exception-403.exception.back' })}</Button>
       </Link>
     }
   />

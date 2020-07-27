@@ -1,7 +1,7 @@
 import { PlusOutlined } from '@ant-design/icons';
 import { Button, Divider, Input, Popconfirm, Table, message } from 'antd';
 import React, { FC, useState } from 'react';
-
+import { FormattedMessage, formatMessage } from 'umi';
 import styles from '../style.less';
 
 interface TableFormDateType {
@@ -135,7 +135,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
 
   const columns = [
     {
-      title: 'Nombre del miembro',
+      title: formatMessage({ id: 'BLOCK_NAME.staff.name' }),
       dataIndex: 'name',
       key: 'name',
       width: '20%',
@@ -147,7 +147,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
               autoFocus
               onChange={(e) => handleFieldChange(e, 'name', record.key)}
               onKeyPress={(e) => handleKeyPress(e, record.key)}
-              placeholder="Nombre del miembro"
+              placeholder={formatMessage({ id: 'BLOCK_NAME.staff.name' })}
             />
           );
         }
@@ -155,7 +155,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
       },
     },
     {
-      title: 'Número de trabajo',
+      title: formatMessage({ id: 'BLOCK_NAME.number.work' }),
       dataIndex: 'workId',
       key: 'workId',
       width: '20%',
@@ -166,7 +166,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
               value={text}
               onChange={(e) => handleFieldChange(e, 'workId', record.key)}
               onKeyPress={(e) => handleKeyPress(e, record.key)}
-              placeholder="Número de trabajo"
+              placeholder={formatMessage({ id: 'BLOCK_NAME.number.work' })}
             />
           );
         }
@@ -174,7 +174,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
       },
     },
     {
-      title: 'Departamento',
+      title: formatMessage({ id: 'BLOCK_NAME.Department' }),
       dataIndex: 'department',
       key: 'department',
       width: '40%',
@@ -185,7 +185,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
               value={text}
               onChange={(e) => handleFieldChange(e, 'department', record.key)}
               onKeyPress={(e) => handleKeyPress(e, record.key)}
-              placeholder="Departamento"
+              placeholder={formatMessage({ id: 'BLOCK_NAME.Department' })}
             />
           );
         }
@@ -193,7 +193,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
       },
     },
     {
-      title: 'Operación',
+      title: formatMessage({ id: 'BLOCK_NAME.operation' }),
       key: 'action',
       render: (text: string, record: TableFormDateType) => {
         if (!!record.editable && loading) {
@@ -203,28 +203,47 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
           if (record.isNew) {
             return (
               <span>
-                <a onClick={(e) => saveRow(e, record.key)}>añadir</a>
+                <a onClick={(e) => saveRow(e, record.key)}>
+                  <FormattedMessage id="BLOCK_NAME.add" />
+                </a>
                 <Divider type="vertical" />
-                <Popconfirm title="¿Quieres eliminar éste registro?" onConfirm={() => remove(record.key)}>
-                  <a>Eliminar</a>
+                <Popconfirm
+                  title={formatMessage({ id: 'BLOCK_NAME.confirm.delete' })}
+                  onConfirm={() => remove(record.key)}
+                >
+                  <a>
+                    <FormattedMessage id="BLOCK_NAME.delete" />
+                  </a>
                 </Popconfirm>
               </span>
             );
           }
           return (
             <span>
-              <a onClick={(e) => saveRow(e, record.key)}>guardar</a>
+              <a onClick={(e) => saveRow(e, record.key)}>
+                {' '}
+                <FormattedMessage id="BLOCK_NAME.save" />
+              </a>
               <Divider type="vertical" />
-              <a onClick={(e) => cancel(e, record.key)}>cancelar</a>
+              <a onClick={(e) => cancel(e, record.key)}>
+                <FormattedMessage id="BLOCK_NAME.cancel" />
+              </a>
             </span>
           );
         }
         return (
           <span>
-            <a onClick={(e) => toggleEditable(e, record.key)}>editar</a>
+            <a onClick={(e) => toggleEditable(e, record.key)}>
+              <FormattedMessage id="BLOCK_NAME.edit" />
+            </a>
             <Divider type="vertical" />
-            <Popconfirm title="¿Quieres eliminar ésta registro?" onConfirm={() => remove(record.key)}>
-              <a>Eliminar</a>
+            <Popconfirm
+              title={formatMessage({ id: 'BLOCK_NAME.confirm.delete' })}
+              onConfirm={() => remove(record.key)}
+            >
+              <a>
+                <FormattedMessage id="BLOCK_NAME.confirm.delete" />
+              </a>
             </Popconfirm>
           </span>
         );
@@ -247,7 +266,7 @@ const TableForm: FC<TableFormProps> = ({ value, onChange }) => {
         onClick={newMember}
       >
         <PlusOutlined />
-        Nuevo miembro
+        <FormattedMessage id="BLOCK_NAME.new.member" />
       </Button>
     </>
   );

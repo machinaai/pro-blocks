@@ -25,7 +25,7 @@ export interface ModelType {
 }
 
 const Model: ModelType = {
-  namespace: 'BLOCK_NAME_CAMEL_CASE',
+  namespace: 'formStepForm',
 
   state: {
     current: 'info',

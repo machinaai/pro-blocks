@@ -1,7 +1,7 @@
 import { AlipayCircleOutlined, TaobaoCircleOutlined, WeiboCircleOutlined } from '@ant-design/icons';
 import { Alert, Checkbox } from 'antd';
 import React, { useState } from 'react';
-import { Dispatch, Link, connect } from 'umi';
+import { Dispatch, Link, connect, formatMessage, FormattedMessage } from 'umi';
 import { StateType } from './model';
 import styles from './style.less';
 import { LoginParamsType } from './service';
@@ -46,84 +46,86 @@ const PAGE_NAME_UPPER_CAMEL_CASE: React.FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (p
   return (
     <div className={styles.main}>
       <LoginFrom activeKey={type} onTabChange={setType} onSubmit={handleSubmit}>
-        <Tab key="account" tab="Inicio de sesión con contraseña">
+        <Tab key="account" tab={formatMessage({id: 'USER_Name.text.title'})}>
           {status === 'error' && loginType === 'account' && !submitting && (
-            <LoginMessage content="Cuenta o contraseña incorrecta（admin/machina.ai）" />
+            <LoginMessage content={formatMessage({id: 'USER_Name.text.subtitle'})} />
           )}
 
           <UserName
-            name="userName"
-            placeholder="nombre de usuario: admin or user"
+            name={formatMessage({id: 'USER_Name.text.name'})}
+            placeholder={formatMessage({id: 'USER_Name.text.placeholder'})}
             rules={[
               {
                 required: true,
-                message: 'por favor ingrese el nombre de usuario!',
+                message: formatMessage({id: 'USER_Name.userName.message'}),
               },
             ]}
           />
           <Password
-            name="password"
-            placeholder="password: machina.ai"
+            name={formatMessage({id: 'USER_Name.password.title'})}
+            placeholder={formatMessage({id: 'USER_Name.password.placeholder'})}
             rules={[
               {
                 required: true,
-                message: '¡Por favor introduzca la contraseña!',
+                message: formatMessage({id: 'USER_Name.password.message'}),
               },
             ]}
           />
         </Tab>
-        <Tab key="mobile" tab="Inicio de sesión móvil">
+        <Tab key="mobile" tab={formatMessage({id: 'USER_Name.text.mobile.title'})}>
           {status === 'error' && loginType === 'mobile' && !submitting && (
-            <LoginMessage content="Error de código de verificación" />
+            <LoginMessage content={formatMessage({id: 'USER_Name.text.mobile.error'})} />
           )}
           <Mobile
             name="mobile"
-            placeholder="número de teléfono"
+            placeholder={formatMessage({id: 'USER_Name.mobile.placeholder'})}
             rules={[
               {
                 required: true,
-                message: 'Por favor, introduzca el número de teléfono!',
+                message: formatMessage({id: 'USER_Name.mobile.message.number'}),
               },
               {
                 pattern: /^1\d{10}$/,
-                message: '¡Número de teléfono mal formado!',
+                message: formatMessage({id: 'USER_Name.mobile.message.error.number'}),
               },
             ]}
           />
           <Captcha
             name="captcha"
-            placeholder="Captcha"
+            placeholder={formatMessage({id: 'USER_Name.captcha.placeholder'})}
             countDown={120}
             getCaptchaButtonText=""
             getCaptchaSecondText="verificación"
             rules={[
               {
                 required: true,
-                message: 'por favor ingrese el código de verificación!',
+                message: formatMessage({id: 'USER_Name.captcha.message'}),
               },
             ]}
           />
         </Tab>
         <div>
           <Checkbox checked={autoLogin} onChange={(e) => setAutoLogin(e.target.checked)}>
-          recordar
+             <FormattedMessage id='USER_Name.checkbox' />
           </Checkbox>
           <a
             style={{
               float: 'right',
             }}
           >
-            recuperar contraseña
+          <FormattedMessage id='USER_Name.forgo.password' />
           </a>
         </div>
-        <Submit loading={submitting}>Iniciar Sesión</Submit>
+        <Submit loading={submitting}>
+          <FormattedMessage id='USER_Name.log.in' />
+        </Submit>
         <div className={styles.other}>
-          Otros métodos de inicio de sesión
+        <FormattedMessage id='USER_Name.loging.methods' /> 
           <AlipayCircleOutlined className={styles.icon} />
           <TaobaoCircleOutlined className={styles.icon} />
           <WeiboCircleOutlined className={styles.icon} />
           <Link className={styles.register} to="/user/register">
-          Registrar Cuenta
+          <FormattedMessage id='USER_Name.register.account' />
           </Link>
         </div>
       </LoginFrom>

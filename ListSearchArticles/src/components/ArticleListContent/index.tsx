@@ -1,5 +1,6 @@
 import { Avatar } from 'antd';
 import React from 'react';
+import { formatMessage } from 'umi';
 import moment from 'moment';
 import styles from './index.less';
 
@@ -20,7 +21,8 @@ const ArticleListContent: React.FC<ArticleListContentProps> = ({
     <div className={styles.description}>{content}</div>
     <div className={styles.extra}>
       <Avatar src={avatar} size="small" />
-      <a href={href}>{owner}</a> Publicado en <a href={href}>{href}</a>
+      <a href={href}>{owner}</a> {formatMessage({ id: 'SEARCH-ARTICLES.source' })}{' '}
+      <a href={href}>{href}</a>
       <em>{moment(updatedAt).format('YYYY-MM-DD HH:mm')}</em>
     </div>
   </div>

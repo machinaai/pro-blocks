@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Input, Select, Form } from 'antd';
 import { withPropsAPI } from 'gg-editor';
+import { formatMessage } from 'umi';
 
 const upperFirst = (str: string) =>
   str.toLowerCase().replace(/( |^)[a-z]/g, (l: string) => l.toUpperCase());
@@ -57,7 +58,11 @@ class DetailForm extends React.Component<DetailFormProps> {
 
     return (
       <Form initialValues={{ label }}>
-        <Item label="Label" name="label" {...inlineFormItemLayout}>
+        <Item
+          label={formatMessage({ id: 'BLOCK_NAME.label' })}
+          name="label"
+          {...inlineFormItemLayout}
+        >
           <Input onBlur={this.handleInputBlur('label')} />
         </Item>
       </Form>
@@ -69,14 +74,24 @@ class DetailForm extends React.Component<DetailFormProps> {
 
     return (
       <Form initialValues={{ label, shape }}>
-        <Item label="Label" name="label" {...inlineFormItemLayout}>
+        <Item
+          label={formatMessage({ id: 'BLOCK_NAME.label' })}
+          name="label"
+          {...inlineFormItemLayout}
+        >
           <Input onBlur={this.handleInputBlur('label')} />
         </Item>
-        <Item label="Shape" name="shape" {...inlineFormItemLayout}>
+        <Item
+          label={formatMessage({ id: 'BLOCK_NAME.shape' })}
+          name="shape"
+          {...inlineFormItemLayout}
+        >
           <Select onChange={(value) => this.handleFieldChange({ shape: value })}>
-            <Option value="flow-smooth">Smooth</Option>
-            <Option value="flow-polyline">Polyline</Option>
-            <Option value="flow-polyline-round">Polyline Round</Option>
+            <Option value="flow-smooth">{formatMessage({ id: 'BLOCK_NAME.smooth' })}</Option>
+            <Option value="flow-polyline">{formatMessage({ id: 'BLOCK_NAME.polyline' })}</Option>
+            <Option value="flow-polyline-round">
+              {formatMessage({ id: 'BLOCK_NAME.polyline-round' })}
+            </Option>
           </Select>
         </Item>
       </Form>
@@ -88,7 +103,11 @@ class DetailForm extends React.Component<DetailFormProps> {
 
     return (
       <Form initialValues={{ label }}>
-        <Item label="Label" name="label" {...inlineFormItemLayout}>
+        <Item
+          label={formatMessage({ id: 'BLOCK_NAME.label' })}
+          name="label"
+          {...inlineFormItemLayout}
+        >
           <Input onBlur={this.handleInputBlur('label')} />
         </Item>
       </Form>

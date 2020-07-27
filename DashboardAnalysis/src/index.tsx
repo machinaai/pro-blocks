@@ -5,7 +5,7 @@ import { GridContent } from '@ant-design/pro-layout';
 import { RadioChangeEvent } from 'antd/es/radio';
 import { RangePickerProps } from 'antd/es/date-picker/generatePicker';
 import moment from 'moment';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, FormattedMessage } from 'umi';
 
 import PageLoading from './components/PageLoading';
 import { getTimeDistance } from './utils/utils';
@@ -141,8 +141,8 @@ class PAGE_NAME_UPPER_CAMEL_CASE extends Component<
     }
     const menu = (
       <Menu>
-        <Menu.Item>Option 1</Menu.Item>
-        <Menu.Item>Option 2</Menu.Item>
+        <Menu.Item><FormattedMessage id='BLOCK_NAME.analysis.option1'/> </Menu.Item>
+        <Menu.Item><FormattedMessage id='BLOCK_NAME.analysis.option2'/></Menu.Item>
       </Menu>
     );
 

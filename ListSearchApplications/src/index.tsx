@@ -6,7 +6,7 @@ import {
 } from '@ant-design/icons';
 import { Avatar, Card, Col, Dropdown, List, Menu, Row, Select, Tooltip, Form } from 'antd';
 import React, { FC, useEffect } from 'react';
-import { connect, Dispatch } from 'umi';
+import { connect, Dispatch, formatMessage } from 'umi';
 import numeral from 'numeral';
 import { ListItemDataType } from './data.d';
 import StandardFormRow from './components/StandardFormRow';
@@ -61,11 +61,11 @@ const CardInfo: React.FC<{
 }> = ({ activeUser, newUser }) => (
   <div className={styles.cardInfo}>
     <div>
-      <p>usuario activo</p>
+    <p>{formatMessage({ id: 'SEARCH-APPLICATIONS.card.info.active.users' })}</p>
       <p>{activeUser}</p>
     </div>
     <div>
-      <p>Usuarios nuevos</p>
+    <p>{formatMessage({ id: 'SEARCH-APPLICATIONS.card.info.new.users' })}</p>
       <p>{newUser}</p>
     </div>
   </div>
@@ -100,17 +100,17 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     <Menu>
       <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="https://www.alipay.com/">
-          1st menu item
+        {formatMessage({ id: 'SEARCH-APPLICATIONS.menu.item.1st' })}
         </a>
       </Menu.Item>
       <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="https://www.taobao.com/">
-          2nd menu item
+        {formatMessage({ id: 'SEARCH-APPLICATIONS.menu.item.2nd' })}
         </a>
       </Menu.Item>
       <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="https://www.tmall.com/">
-          3d menu item
+        {formatMessage({ id: 'SEARCH-APPLICATIONS.menu.item.3d' })}
         </a>
       </Menu.Item>
     </Menu>
@@ -120,38 +120,38 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
     <div className={styles.filterCardList}>
       <Card bordered={false}>
         <Form onValuesChange={handleValuesChange}>
-          <StandardFormRow title="Afiliación" block style={{ paddingBottom: 11 }}>
+        <StandardFormRow title={formatMessage({ id: 'SEARCH-APPLICATIONS.membership' })} block style={{ paddingBottom: 11 }}>
             <Form.Item name="category">
               <TagSelect expandable>
-                <TagSelect.Option value="cat1">Categoría 1</TagSelect.Option>
-                <TagSelect.Option value="cat2">Categoría 2</TagSelect.Option>
-                <TagSelect.Option value="cat3">Categoría 3</TagSelect.Option>
-                <TagSelect.Option value="cat4">Categoría 4</TagSelect.Option>
-                <TagSelect.Option value="cat5">Categoría 5</TagSelect.Option>
-                <TagSelect.Option value="cat6">Categoría 6</TagSelect.Option>
-                <TagSelect.Option value="cat7">Categoría 7</TagSelect.Option>
-                <TagSelect.Option value="cat8">Categoría 8</TagSelect.Option>
-                <TagSelect.Option value="cat9">Categoría 9</TagSelect.Option>
-                <TagSelect.Option value="cat10">Categoría 10</TagSelect.Option>
-                <TagSelect.Option value="cat11">Categoría 11</TagSelect.Option>
-                <TagSelect.Option value="cat12">Categoría 12</TagSelect.Option>
+              <TagSelect.Option value="cat1">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.A' })} </TagSelect.Option>
+                <TagSelect.Option value="cat2">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.B' })}</TagSelect.Option>
+                <TagSelect.Option value="cat3">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.C' })}</TagSelect.Option>
+                <TagSelect.Option value="cat4">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.D' })}</TagSelect.Option>
+                <TagSelect.Option value="cat5">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.E' })}</TagSelect.Option>
+                <TagSelect.Option value="cat6">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.F' })}</TagSelect.Option>
+                <TagSelect.Option value="cat7">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.G' })}</TagSelect.Option>
+                <TagSelect.Option value="cat8">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.H' })}</TagSelect.Option>
+                <TagSelect.Option value="cat9">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.I' })}</TagSelect.Option>
+                <TagSelect.Option value="cat10">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.J' })}</TagSelect.Option>
+                <TagSelect.Option value="cat11">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.K' })}</TagSelect.Option>
+                <TagSelect.Option value="cat12">{formatMessage({ id: 'SEARCH-APPLICATIONS.tagselect.L' })}</TagSelect.Option>
               </TagSelect>
             </Form.Item>
           </StandardFormRow>
-          <StandardFormRow title="Otras opciones" grid last>
+          <StandardFormRow title={formatMessage({ id: 'SEARCH-APPLICATIONS.extra.options' })} grid last>
             <Row gutter={16}>
               <Col lg={8} md={10} sm={10} xs={24}>
-                <Form.Item {...formItemLayout} name="author" label="Autor">
-                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
+              <Form.Item {...formItemLayout} name="author" label={formatMessage({ id: 'SEARCH-APPLICATIONS.extra.options.author' })} >
+              <Select placeholder={formatMessage({ id: 'SEARCH-APPLICATIONS.extra.options.placeholder' })}  style={{ maxWidth: 200, width: '100%' }}>
                     <Option value="lisa">Autor número 1</Option>
                   </Select>
                 </Form.Item>
               </Col>
               <Col lg={8} md={10} sm={10} xs={24}>
-                <Form.Item {...formItemLayout} name="rate" label="Rating">
-                  <Select placeholder="Ilimitado" style={{ maxWidth: 200, width: '100%' }}>
-                    <Option value="good">excelente</Option>
-                    <Option value="normal">normal</Option>
+              <Form.Item {...formItemLayout} name="rate" label={formatMessage({ id: 'SEARCH-APPLICATIONS.extra.options.rating' })}>
+                  <Select placeholder={formatMessage({ id: 'SEARCH-APPLICATIONS.extra.options.placeholder' })} style={{ maxWidth: 200, width: '100%' }}>
+                    <Option value="good">{formatMessage({ id: 'SEARCH-APPLICATIONS.extra.rating.good' })}</Option>
+                    <Option value="normal">{formatMessage({ id: 'SEARCH-APPLICATIONS.extra.rating.normal' })}</Option>
                   </Select>
                 </Form.Item>
               </Col>
@@ -179,13 +179,13 @@ export const PAGE_NAME_UPPER_CAMEL_CASE: FC<PAGE_NAME_UPPER_CAMEL_CASEProps> = (
               hoverable
               bodyStyle={{ paddingBottom: 20 }}
               actions={[
-                <Tooltip key="download" title="descargar">
+                <Tooltip key="download" title={formatMessage({ id: 'SEARCH-APPLICATIONS.tooltip.download' })}>
                   <DownloadOutlined />
                 </Tooltip>,
-                <Tooltip key="edit" title="editar">
+                <Tooltip key="edit" title={formatMessage({ id: 'SEARCH-APPLICATIONS.tooltip.edit' })}>
                   <EditOutlined />
                 </Tooltip>,
-                <Tooltip title="share" key="compartir">
+                <Tooltip title={formatMessage({ id: 'SEARCH-APPLICATIONS.tooltip.share' })} key="compartir">
                   <ShareAltOutlined />
                 </Tooltip>,
                 <Dropdown key="ellipsis" overlay={itemMenu}>

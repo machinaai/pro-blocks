@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Tag } from 'antd';
 import { UpOutlined, DownOutlined } from '@ant-design/icons';
-
+import { formatMessage } from 'umi';
 import classNames from 'classnames';
 import styles from './index.less';
 
@@ -54,9 +54,9 @@ class TagSelect extends Component<TagSelectProps, TagSelectState> {
   static defaultProps = {
     hideCheckAll: false,
     actionsText: {
-      expandText: 'Expander',
-      collapseText: 'Colapsar',
-      selectAllText: 'Todas',
+      expandText: formatMessage({ id: 'SEARCH-ARTICLES.expandText' }),
+      collapseText: formatMessage({ id: 'SEARCH-ARTICLES.collapseText' }),
+      selectAllText: formatMessage({ id: 'SEARCH-ARTICLES.selectAllText' }),
     },
   };
 
@@ -133,7 +133,11 @@ class TagSelect extends Component<TagSelectProps, TagSelectState> {
     const { value, expand } = this.state;
     const { children, hideCheckAll, className, style, expandable, actionsText = {} } = this.props;
     const checkedAll = this.getAllTags().length === value.length;
-    const { expandText = 'Expandir', collapseText = 'Colapsar', selectAllText = 'Todas' } = actionsText;
+    const {
+      expandText = 'Expandir',
+      collapseText = 'Colapsar',
+      selectAllText = 'Todas',
+    } = actionsText;
 
     const cls = classNames(styles.tagSelect, className, {
       [styles.hasExpandTag]: expandable,

@@ -4,6 +4,7 @@ import { Button } from 'antd';
 
 import styles from './index.less';
 
+import { formatMessage } from 'umi';
 export interface EditableLink {
   title: string;
   href: string;
@@ -32,7 +33,7 @@ const EditableLinkGroup: React.FC<EditableLinkGroupProps> = (props) => {
         ),
       )}
       <Button size="small" type="primary" ghost onClick={onAdd}>
-        <PlusOutlined /> añadir
+      <PlusOutlined /> {formatMessage({ id: 'WORKPLACE.card.add' })} 
       </Button>
     </div>
   );
