@@ -1,13 +1,12 @@
+import styles from './index.less';
 import { useIntl } from 'umi';
 import React from 'react';
 import SelectLang from './components/SelectLang/index';
 import logo from './assets/logos/bne-logo.svg';
-import styles from './index.less';
 
-const Block: React.FC = () => {
+const Block: React.FC = (props) => {
 
-  
-  const intl = useIntl();
+const intl = useIntl();
   
   return (
 
@@ -30,7 +29,6 @@ const Block: React.FC = () => {
               </span>
             </div>
           </div>
-  
         </div>
       </div>
   );
