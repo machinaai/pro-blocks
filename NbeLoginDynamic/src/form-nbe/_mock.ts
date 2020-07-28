@@ -11,21 +11,18 @@ export default {
         maskedBusinessName: 'N*** S******* S****** SA de CV',
         maskedUserName: 'J*** P**** L***',
       });
-      return;
     } else if (password === 'E500') {
       res.status(500).send({
         messageError: 'Missing or invalid Parameters',
         errorCode: '500',
         system: 'error',
       });
-      return;
     } else {
       res.status(400).send({
         messageError: 'Missing or invalid Parameters',
         errorCode: '400',
         system: 'error',
       });
-      return;
     }
   },
   /**
@@ -38,21 +35,18 @@ export default {
         token:
           'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NjA2MDU2MSIsImRpbm5udiI6Ijk2MDYwNTYxIiwiY29udHJhY3QiOiI4OTQyNTgzIiwiZXhwIjoxNTg1MDAxMjA5LCJpYXQiOjE1ODUwMDA5MDl9.UPF108YFjE0wvPPjHmjGnFm_DSzXZJuBDcT-C_JeRt-ELyn_ALTyq9EseE1Kx6XO6mTVVNCX0LyHOqJcoqK0lw',
       });
-      return;
     } else if (OTP === 'E500') {
       res.status(500).send({
         messageError: 'Missing or invalid Parameters',
         errorCode: '500',
         system: 'error',
       });
-      return;
     } else {
       res.status(400).send({
         messageError: 'Missing or invalid Parameters',
         errorCode: '400',
         system: 'error',
       });
-      return;
     }
   },
   /**

@@ -1,6 +1,6 @@
-import styles from './index.less';
 import { useIntl } from 'umi';
 import React from 'react';
+import styles from './index.less';
 import SelectLang from './components/SelectLang/index';
 import logo from './assets/logos/bne-logo.svg';
 
