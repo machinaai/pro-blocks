@@ -4,7 +4,7 @@ import styles from './index.less';
 import SelectLang from './components/SelectLang/index';
 import logo from './assets/logos/bne-logo.svg';
 
-const Block: React.FC = (props) => {
+const Block: React.FC = () => {
 
 const intl = useIntl();
   
