@@ -1,7 +1,7 @@
 {
-  "name": "@pro-blocks/splah-screen",
+  "name": "@pro-blocks/splash-screen",
   "version": "0.0.1",
-  "description": "Inicio de aplicaión ban-bajio.",
+  "description": "Inicio de aplicación ban-bajio.",
   "repository": {
     "type": "git",
     "url": "https://github.com/machinaai/umi-blocks/ant-design-pro/splashscreen"
