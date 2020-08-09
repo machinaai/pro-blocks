@@ -439,6 +439,21 @@
       "previewUrl": "https://preview.pro.ant.design/result/success"
     },
     {
+      "key": "SplashScreen",
+      "description": "Inicio de aplicación ban-bajio.",
+      "url": "https://github.com/machinaai/pro-blocks/tree/master/SplashScreen",
+      "path": "SplashScreen",
+      "features": [
+        "antd"
+      ],
+      "img": "https://raw.githubusercontent.com/machinaai/pro-blocks/master/SplashScreen/snapshot.png?raw=true",
+      "tags": [
+        "splash",
+        "screen"
+      ],
+      "previewUrl": "https://preview.pro.ant.design/splash/screen"
+    },
+    {
       "name": "Página de inicio de sesión",
       "key": "UserLogin",
       "description": "Interfaz de inicio de sesión de usuario, contraseña de nombre de usuario de soporte e inicio de sesión de número de teléfono móvil.",
